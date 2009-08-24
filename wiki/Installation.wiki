@@ -1,0 +1,18 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+
+
+
+= Details =
+
+Three steps are necessary to install project valerie.
+
+  * Copy the e2control bin to your /bin folder.
+  Add an autostart entry in your rcS file similar to 
+{{{
+export BOXSYSTEM="MANUFACTOR=Kathrein;MODEL=UFS910;"
+/bin/e2control &
+}}}
+
