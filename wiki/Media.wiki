@@ -12,3 +12,25 @@ _Valerie on ufs910 some details_ by *hellmaster*
 <wiki:video url="http://www.youtube.com/watch?v=oGHZsuzC69w"/>
 
 _valerie on ufs910 series_ by *hellmaster*
+
+<br />
+
+== Screenshots == 
+
+Mainmenu: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/mainmenu_mini.jpg
+
+<br />
+
+Movies: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/movies_mini.jpg
+
+<br />
+
+Series: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/series_mini.jpg
+
+<br />
+
+PC: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/pc.JPG
