@@ -2,3 +2,4 @@
   * [Installation Installation]
   * [Media Media]
     * [Media#Videos Videos]
+    * [Media#Screenshots Screenshots]
