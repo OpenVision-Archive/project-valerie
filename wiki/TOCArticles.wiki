@@ -3,3 +3,4 @@
   * [Media Media]
     * [Media#Videos Videos]
     * [Media#Screenshots Screenshots]
+  * [MediaProviders Media Providers]
