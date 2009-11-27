@@ -2,6 +2,14 @@
 
 <br />
 
+Note: In the following videos, no patched enigma2 binary was used and for so the performance is quite low.
+
+<wiki:video url="http://www.youtube.com/watch?v=BVAKFeZfhd0"/>
+
+_Project Valerie on ufs910_ by *hellmaster*
+
+<br />
+
 <wiki:video url="http://www.youtube.com/watch?v=5IRqEqv0xHk"/>
 
 _Valerie on ufs910 some details_ by *hellmaster*
