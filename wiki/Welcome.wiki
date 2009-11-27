@@ -4,4 +4,4 @@ Welcome to Project Valerie
 
   * [Installation Installation guide]
   * [Media View watch movies and view pictures about project valerie]
-  * [issue Questions or Problems, please use the Issues Tab]
+  * [http://code.google.com/p/project-valerie/issues/list Questions or Problems, please use the Issues Tab]
