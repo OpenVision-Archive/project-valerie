@@ -8,31 +8,3 @@ NOTE: This Guide is not up to date!
 = Details =
 
 Three steps are necessary to install project valerie.
-
-  * Copy the e2control bin to your /bin folder.
-  Add an autostart entry in your rcS file similar to 
-{{{
-export BOXSYSTEM="MANUFACTOR=Kathrein;MODEL=UFS910;"
-/bin/e2control &
-}}}
-  _Note: Without the export line e2control will crash!_
-
-
-  * Replace enimga2 with the patched enigma2 binary.
-  Replace the following Python files 
-{{{
-mytest.py
-skin.py
-PluginComponent.py
-}}}
-  Copy 
-{{{
-DMC_MainMenu.py
-DMC_Movies.py
-DMC_Series.py
-MC_AudioPlayer.py
-MediaCenter/
-}}}
-  into your Python Screens Folder
-
-  * Install the Java PC Application on your PC.
