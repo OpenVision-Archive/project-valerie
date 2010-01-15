@@ -1,6 +1,6 @@
   * [Welcome ↑ Home]
   * [Installation Installation]
-  * [Faq Faq]
+  * [FAQ FAQ]
   * [Media Media]
     * [Media#Videos Videos]
     * [Media#Screenshots Screenshots]
