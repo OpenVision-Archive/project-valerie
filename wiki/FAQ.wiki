@@ -1,5 +1,7 @@
 = FAQ =
 
- Q: Autosearch does not work for me!<br>
- A: Try changing the priority of you Network Adapters<br>
+ Q: Autosearch Feature does not work for me! What can i do?<br>
+ A1: Try changing the priority of you Network Adapters<br>
    [http://www.windowsreference.com/windows-vista/change-network-adapter-priority-in-vista/ Howto for Win Vista and Win 7 ]
+ A2: If changing the priority does not help, try to deactivate alle unused Network Adapters.
+ A3: As a last resort, it is possible to set the IP manually. This explanation will follow later.
