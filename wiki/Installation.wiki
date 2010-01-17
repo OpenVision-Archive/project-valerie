@@ -5,6 +5,29 @@
 NOTE: This Guide is not up to date!
 
 
-= Details =
+= Before we start =
 
-Three steps are necessary to install project valerie.
+ * All: Java Runtime 6 SE is required.
+
+ * Windows: No extra packages are required.
+ * Linux: "mencoder" and "pngquant" have to be installed.
+ * Mac: ???
+
+= Installation = 
+
+Download the newest version of
+valerie_pc_revXXX.zip
+where XXX is the version number.
+This archive contains the application running on your pc.
+Just extract this to a folder of your choosing.
+
+Download the newest version of
+enigma2-plugin-extensions-mediacenter_V.V.V_CPU.tar.gz
+where V.V.V is the version number and CPU is the string for your box:
+sh = Kathrein ufs910 + ufs922, Topfield HDPVR7700, Cubrevo *, Ipbox *, Octagon 10xx
+mipsel = Dreambox
+Extract this in the plugin directory "Extensions" on your box.
+
+= Finishing up =
+
+You are now ready to use Project Valerie
