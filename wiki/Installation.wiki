@@ -10,7 +10,7 @@ NOTE: This Guide is not up to date!
  * All: Java Runtime 6 SE is required.
 
  * Windows: No extra packages are required.
- * Linux: "mencoder" and "pngquant" have to be installed.
+ * Linux: "mencoder" and "pngquant (Version 1.1, newer ones dont work proberly)" have to be installed.
  * Mac: ???
 
 = Installation = 
