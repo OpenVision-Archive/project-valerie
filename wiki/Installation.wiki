@@ -24,8 +24,11 @@ Just extract this to a folder of your choosing.
 Download the newest version of
 enigma2-plugin-extensions-mediacenter_V.V.V_CPU.tar.gz
 where V.V.V is the version number and CPU is the string for your box:
+
 sh = Kathrein ufs910 + ufs922, Topfield HDPVR7700, Cubrevo *, Ipbox *, Octagon 10xx
+
 mipsel = Dreambox
+
 Extract this in the plugin directory "Extensions" on your box.
 
 = Finishing up =
