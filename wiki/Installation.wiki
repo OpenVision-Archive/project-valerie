@@ -29,7 +29,8 @@ where V.V.V is the version number and CPU is the string for your box:
 
 <b>mipsel</b> = Dreambox
 
-Extract this in the plugin directory "Extensions" on your box.
+Extract this in the plugin directory "Extensions" on your box. <br>
+For example:  /usr/lib/enigma2/python/Plugins/Extensions/
 
 = Finishing up =
 
