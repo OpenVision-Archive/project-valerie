@@ -15,22 +15,30 @@ NOTE: This Guide is not up to date!
 
 = Installation = 
 
+== PC-Application ==
 Download the newest version of
 valerie_pc_revXXX.zip
 where XXX is the version number.
 This archive contains the application running on your pc.
 Just extract this to a folder of your choosing.
 
+== Kathrein/Topfield/Cubrevo/Ipbox/Octagon ==
 Download the newest version of
 enigma2-plugin-extensions-mediacenter_V.V.V_CPU.tar.gz
 where V.V.V is the version number and CPU is the string for your box:
 
 <b>sh</b> = Kathrein ufs910 + ufs922, Topfield HDPVR7700, Cubrevo xx, Ipbox xx, Octagon 10xx
 
-<b>mipsel</b> = Dreambox
-
 Extract this in the plugin directory "Extensions" on your box. <br>
 For example:  /usr/lib/enigma2/python/Plugins/Extensions/
+
+== Dreambox ==
+Download the newest version of
+project-valerie_V.V.V-DM8XXX_mipsel.ipk
+where V.V.V is the version number and XXX is the box type. The package is available for DM8000 and DM800.
+Copy the ipk-file to the box by FTP (/hdd or /var/tmp)
+Perform a manual package install. (Newnigma: blue button)
+Reboot the box.
 
 = Finishing up =
 
