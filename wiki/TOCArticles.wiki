@@ -1,6 +1,6 @@
   * [Welcome ↑ Home]
   * [Installation Installation]
-  * [Configuration Configuration]
+  * [PC-Application PC-Application]
   * [FAQ FAQ]
   * [Media Media]
     * [Media#Videos Videos]
