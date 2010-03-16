@@ -48,4 +48,4 @@ Reboot the box.
 = Finishing up =
 Valerie starts automatically with enigma!
 You are now ready to use Project Valerie <br>
-How to get your MovieDatabase filled see chapter "PC-Application"
+How to get your Movie/Series Database filled see chapter "PC-Application"
