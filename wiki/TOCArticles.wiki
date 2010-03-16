@@ -1,5 +1,6 @@
   * [Welcome ↑ Home]
   * [Installation Installation]
+  * [Configuration Configuration]
   * [FAQ FAQ]
   * [Media Media]
     * [Media#Videos Videos]
