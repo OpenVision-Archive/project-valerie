@@ -1,5 +1,5 @@
   * [Welcome ↑ Home]
-  * [Installation Installation]
+  * [EasyInstallation Installation]
   * [Configuration PC-Application]
   * [FAQ FAQ]
   * [Media Media]
