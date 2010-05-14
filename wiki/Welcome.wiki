@@ -2,7 +2,7 @@ Welcome to Project Valerie
 
 == What do you want to learn today? ==
 
-  * [Installation Howto install Project Valerie?]
+  * [EasyInstallation Howto install Project Valerie?]
   * [Media How does it look? Watch movies and view pictures about project valerie.]
 
   * [http://code.google.com/p/project-valerie/issues/list Questions or Problems, please use the Issues Tab.]
