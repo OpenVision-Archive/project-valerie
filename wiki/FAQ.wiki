@@ -1,6 +1,6 @@
 = FAQ =
 
- Q:  Autosearch Feature does not work for me! What can i do?<br>
+ Q:  The Autosearch Feature does not work for me! What can I do?<br>
  A:  It is also possible to set the IP manually:<br>
   {{{
   Open the file "valerie.properties" in your working direcotry and append
