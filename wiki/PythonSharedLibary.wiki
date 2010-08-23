@@ -7,8 +7,13 @@ import time
 showiframe = dlopen("libshowiframe.so.0.0.0")
 
 print type(showiframe)
-showSinglePic = dlsym(showiframe, "_Z13showSinglePicPKc")
-finishShowSinglePic = dlsym(showiframe, "_Z19finishShowSinglePicv")
+try: 
+    showSinglePic = dlsym(showiframe, "showSinglePic") 
+    finishShowSinglePic = dlsym(showiframe, "finishShowSinglePic") 
+except OSError, e:  
+    showSinglePic = dlsym(showiframe, "_Z13showSinglePicPKc") 
+    finishShowSinglePic = dlsym(showiframe, "_Z19finishShowSinglePicv") 
+
 print "Objects binded"
 print [showSinglePic,
 	finishShowSinglePic]
