@@ -1,1 +1,1 @@
-http://duckbox.info/files/projectvalerie/img/installation.png
+http://project-valerie.googlecode.com/svn/trunk/images/installation.png
