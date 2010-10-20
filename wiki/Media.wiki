@@ -21,6 +21,12 @@ _valerie on ufs910 series_ by *hellmaster*
 
 <br />
 
+<wiki:video url="http://www.youtube.com/watch?v=tSGGgqOZtF4"/>
+
+_valerie on DM8000_ by *andreas...er*
+
+<br />
+
 == Screenshots == 
 
 Mainmenu: <br />
@@ -39,4 +45,4 @@ http://project-valerie.googlecode.com/svn/trunk/images/series_mini.jpg
 <br />
 
 PC: <br />
-http://project-valerie.googlecode.com/svn/trunk/images/pc.JPG
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie_movie.JPG
