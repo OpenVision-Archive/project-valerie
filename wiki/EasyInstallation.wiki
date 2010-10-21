@@ -57,5 +57,4 @@ Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Fi
 Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs S01E04 – My xxxx.avi)
 <br><br>
 == English HowTo ==
-
 http://project-valerie.googlecode.com/svn/trunk/images/installation.png
