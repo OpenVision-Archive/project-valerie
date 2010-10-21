@@ -1,1 +1,60 @@
+== Deutsch `HowTo` ==
+
+Lade dir dir neueste Version von Project Valerie herunter.
+
+•	für alle mipsel basierten Settop Boxen (z.B. Dreambox DM800)
+        --> `Project-valerie_newest_mipsel_oe16.ipk`
+        (bei OpenEmbedded 1.6, z.B. Newnigma2 v3xx)
+
+        --> `Project-valerie_newest_mipsel_oe15.ipk`
+        (bei OpenEmbedded 1.5, z.B. Newnigma2 v2xx)
+
+•	für alle anderen Boxen (z.B. Kathrein UFS910)
+        --> `Project-valerie_newest_sh4.ipk`
+
+•	Die PC-App zum Editieren der Datenbank
+        --> `Project-valerie_newest_PC.jar`
+
+Kopiere `Project-valerie_newest_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
+Alternativ kann Valerie auch in einer SSH oder Telnet Sitzung herunter geladen werden: <br><br>
+_`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
+Danach kann Valerie installiert werden. Du kannst das entweder über den MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
+_`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
+Starte danach deine Box durch; der Project Valerie Assistent wird nach dem Neustart ausgeführt. Valerie ist bereit zu ersten Verwendung!
+<br>
+<br>
+
+Füllen der Datenbank:
+Valerie kann entweder über die interne Sync Funktion, oder über die PC-App gefüttert werden. Die Standardpfade bei Valerie sind: <br>
+_/hdd/movie_ <br>
+_/hdd/series_ <br>
+Sie können im Valerie Hauptmenü über Sync --> Settings --> change search path
+geändert werden.
+ <br><br>
+Interne Sync Funktion: <br>
+Sync starten und abwarten. Je nach Anzahl der Titel kann das Ganze etwas dauern…
+<br>
+
+PC-App:
+
+Die Bedienung der App besteht aus 6 wesentlichen Punkten: <br>
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie.png
+<br>
+
+-->	(1) Connect zur Box. Die Verbundene Box kann im rechten Dropdown Menü ausgewählt werden. <br>
+-->	(2) Download des bestehenden Archivs der Box zum Editieren und Hinzufügen neuer Titel. <br>
+-->	(3) Das Syncen der Medienpfade gegen das Archiv um neue Titel hinzuzufügen. <br>
+-->	(4) Das Parsen der neu gefundenen Titel über IMDB, etc <br>
+-->	(5) Download der Poster und Hintergrundbilder <br>
+-->	(6) Upload des aktualisierten Archivs zurück auf die Box <br>
+ <br>
+Falls ein Titel nicht richtig erkannt wird, kannst du den Searchstring ändern, oder gleich die IMDB-ID des Films in das Suchfeld eintragen. <br>
+Danach nochmal auf Parsen klicken, und der Film sollte korrekt gefunden werden. <br>
+
+Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Filme benannt habt. <br>
+Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs S01E04 – My xxxx.avi)
+<br><br>
+== English ==
+
 http://project-valerie.googlecode.com/svn/trunk/images/installation.png
