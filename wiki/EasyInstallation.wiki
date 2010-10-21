@@ -1,4 +1,4 @@
-== Deutsch `HowTo` ==
+== Deutsch HowTo ==
 
 Lade dir dir neueste Version von Project Valerie herunter.
 
@@ -24,8 +24,9 @@ Starte danach deine Box durch; der Project Valerie Assistent wird nach dem Neust
 <br>
 <br>
 
-Füllen der Datenbank:
-Valerie kann entweder über die interne Sync Funktion, oder über die PC-App gefüttert werden. Die Standardpfade bei Valerie sind: <br>
+Füllen der Datenbank:<br>
+Valerie kann entweder über die interne Sync Funktion, oder über die PC-App gefüttert werden. <br>
+Die Standardpfade bei Valerie sind: <br>
 _/hdd/movie_ <br>
 _/hdd/series_ <br>
 Sie können im Valerie Hauptmenü über Sync --> Settings --> change search path
@@ -55,6 +56,6 @@ Danach nochmal auf Parsen klicken, und der Film sollte korrekt gefunden werden. 
 Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Filme benannt habt. <br>
 Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs S01E04 – My xxxx.avi)
 <br><br>
-== English ==
+== English HowTo ==
 
 http://project-valerie.googlecode.com/svn/trunk/images/installation.png
