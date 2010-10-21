@@ -26,19 +26,19 @@ Starte danach deine Box durch; der Project Valerie Assistent wird nach dem Neust
 <br>
 <br>
 
-Füllen der Datenbank:<br>
+====Füllen der Datenbank:====
 Valerie kann entweder über die interne Sync Funktion, oder über die PC-App gefüttert werden. <br>
 Die Standardpfade bei Valerie sind: <br>
 _/hdd/movie_ <br>
 _/hdd/series_ <br>
 Sie können im Valerie Hauptmenü über Sync --> Settings --> change search path
 geändert werden.
- <br><br>
-Interne Sync Funktion: <br>
+
+====Interne Sync Funktion:====
 Sync starten und abwarten. Je nach Anzahl der Titel kann das Ganze etwas dauern…
 <br>
 
-PC-App:
+====PC-App:====
 
 Die Bedienung der App besteht aus 6 wesentlichen Punkten: <br>
 <br>
@@ -59,4 +59,60 @@ Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Fi
 Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs S01E04 – My xxxx.avi)
 <br><br>
 == English HowTo ==
-http://project-valerie.googlecode.com/svn/trunk/images/installation.png
+===You want to install and use Valerie, but you don´t know how? Here you will find all necessary information!!===
+
+Start by downloading the newest version of Project Valerie.
+
+•	for all mipsel based settop boxes (e.g. Dreambox DM800)
+        --> `Project-valerie_newest_mipsel_oe16.ipk`
+        (for OpenEmbedded 1.6, e.g. Newnigma2 v3xx)
+
+        --> `Project-valerie_newest_mipsel_oe15.ipk`
+        (for OpenEmbedded 1.5, e.g. Newnigma2 v2xx)
+
+•	for all other boxes (z.B. Kathrein UFS910)
+        --> `Project-valerie_newest_sh4.ipk`
+
+•	the PC-App to edit the database
+        --> `Project-valerie_newest_PC.jar`
+
+Upload `Project-valerie_newest_<version>.ipk` to your box (e.g. with WinSCP or via FTP). <br>
+Alternately you can download Project Valerie via command line in a Telnet or SSH session: <br><br>
+_`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
+After that you are ready for installing Valerie. You can do it via the MediaScanner (Expansion panel), or via a SSH/Telnet Session:  <br><br>
+_`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
+Finally reboot Enigma2; the Project Valerie assistant will guide you through the first steps. Valerie is now ready for use!
+<br>
+<br>
+
+====Filling the database:====
+You can update your database via the internal sync function, or via the PC-App. <br>
+The default media path where Valerie is searching for titles is: <br>
+_/hdd/movie_ <br>
+_/hdd/series_ <br>
+You can change them in the Valerie main menu via Sync --> Settings --> change search path
+
+====Internal sync function:====
+Hit sync and wait. It can take a while, depending how much movies you own  :-)
+<br>
+
+====PC-App:====
+
+Handling the app consists mainly of the following 6 tasks: <br>
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie.png
+<br>
+
+-->	(1) Connect your box. You can select your connected box in the dropdown on the right. <br>
+-->	(2) download the archive on the box to edit and fill your database. <br>
+-->	(3) Sync with your movie and series folder to add new titles. <br>
+-->	(4) parse newly added titles via IMDB, etc. <br>
+-->	(5) Download posters and backdrops <br>
+-->	(6) Upload the edited archive back to your box <br>
+ <br>
+If a search result is not what you are expecting, you can alter the searchstring or replace the string with the IMDB-ID of your movie. <br>
+After clicking parse again, the correct movie should be displayed. <br>
+
+The quality of the parse process relies mainly on the naming of your movies and series. <br>
+Series will be indicated by season and episode in the title (e.g. Scrubs S01E04 – My xxxx.avi)
+<br><br>
