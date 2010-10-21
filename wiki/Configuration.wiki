@@ -1,6 +1,6 @@
 #summary How to interact with the PC-Application
 
-== HowTo interact == 
+== How to interact == 
 <br />
 1. Hit the search button to let the PC app search for connectable boxes
 select from the dropdown on the right the box which you want to interact <br />
