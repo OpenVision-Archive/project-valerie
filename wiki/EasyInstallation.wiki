@@ -1,5 +1,5 @@
 == Deutsch HowTo ==
-For English scroll down please!
+ [https://code.google.com/p/project-valerie/wiki/EasyInstallation#English For English version scroll down please]
 ===Du willst Valerie installiern und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!!===
 
 Lade dir dir neueste Version von Project Valerie herunter.
