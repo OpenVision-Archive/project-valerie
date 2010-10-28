@@ -1,6 +1,6 @@
   * [Welcome ↑ Home]
   * [EasyInstallation Installation]
-    * [EasyInstallation# Valerie in use]
+    * [EasyUse Valerie in use]
   * [Configuration PC-Application]
   * [FAQ FAQ]
   * [Media Media]
