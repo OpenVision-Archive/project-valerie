@@ -1,4 +1,4 @@
-== Deutsch HowTo ==
+== Deutsch !HowTo ==
  [https://code.google.com/p/project-valerie/wiki/EasyInstallation#English For English version scroll down please]
 ===Du willst Valerie installiern und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!!===
 
@@ -58,7 +58,7 @@ Danach nochmal auf Parsen klicken, und der Film sollte korrekt gefunden werden. 
 Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Filme benannt habt. <br>
 Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs S01E04 – My xxxx.avi)
 <br><br>
-== English HowTo ==
+== English !HowTo ==
 ===You want to install and use Valerie, but you don´t know how? Here you will find all necessary information!!===
 
 Start by downloading the newest version of Project Valerie.
