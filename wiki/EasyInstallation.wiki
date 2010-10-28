@@ -56,7 +56,7 @@ Falls ein Titel nicht richtig erkannt wird, kannst du den Searchstring ändern, 
 Danach nochmal auf Parsen klicken, und der Film sollte korrekt gefunden werden. <br>
 
 Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Filme benannt habt. <br>
-Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs S01E04 – My xxxx.avi)
+Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs !S01E04 – My xxxx.avi)
 <br><br>
 == English !HowTo ==
 ===You want to install and use Valerie, but you don´t know how? Here you will find all necessary information!!===
@@ -114,5 +114,5 @@ If a search result is not what you are expecting, you can alter the searchstring
 After clicking parse again, the correct movie should be displayed. <br>
 
 The quality of the parse process relies mainly on the naming of your movies and series. <br>
-Series will be indicated by season and episode in the title (e.g. Scrubs S01E04 – My xxxx.avi)
+Series will be indicated by season and episode in the title (e.g. Scrubs !S01E04 – My xxxx.avi)
 <br><br>
