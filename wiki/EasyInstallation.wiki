@@ -20,7 +20,7 @@ Lade dir dir neueste Version von Project Valerie herunter.
 Kopiere `Project-valerie_newest_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
 Alternativ kann Valerie auch in einer SSH oder Telnet Sitzung herunter geladen werden: <br><br>
 _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
-Danach kann Valerie installiert werden. Du kannst das entweder über den MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
+Danach kann Valerie installiert werden. Du kannst das entweder über den !MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
 _`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
 Starte danach deine Box durch; der Project Valerie Assistent wird nach dem Neustart ausgeführt. Valerie ist bereit zu ersten Verwendung!
 <br>
@@ -65,10 +65,10 @@ Start by downloading the newest version of Project Valerie.
 
 •	for all mipsel based settop boxes (e.g. Dreambox DM800)
         --> `Project-valerie_newest_mipsel_oe16.ipk`
-        (for OpenEmbedded 1.6, e.g. Newnigma2 v3xx)
+        (for !OpenEmbedded 1.6, e.g. Newnigma2 v3xx)
 
         --> `Project-valerie_newest_mipsel_oe15.ipk`
-        (for OpenEmbedded 1.5, e.g. Newnigma2 v2xx)
+        (for !OpenEmbedded 1.5, e.g. Newnigma2 v2xx)
 
 •	for all other boxes (z.B. Kathrein UFS910)
         --> `Project-valerie_newest_sh4.ipk`
@@ -79,7 +79,7 @@ Start by downloading the newest version of Project Valerie.
 Upload `Project-valerie_newest_<version>.ipk` to your box (e.g. with WinSCP or via FTP). <br>
 Alternately you can download Project Valerie via command line in a Telnet or SSH session: <br><br>
 _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
-After that you are ready for installing Valerie. You can do it via the MediaScanner (Expansion panel), or via a SSH/Telnet Session:  <br><br>
+After that you are ready for installing Valerie. You can do it via the !MediaScanner (Expansion panel), or via a SSH/Telnet Session:  <br><br>
 _`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
 Finally reboot Enigma2; the Project Valerie assistant will guide you through the first steps. Valerie is now ready for use!
 <br>
