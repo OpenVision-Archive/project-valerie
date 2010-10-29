@@ -6,7 +6,7 @@
 <br>
 http://project-valerie.googlecode.com/svn/trunk/images/MainMenu.png
 
-*This is the homescreen after you start Project Valerie. *
+*This is the homescreen after you start Project Valerie. *<br>
 On the left is the Sync menu where you can update your database. The Listen section is for furture use. On Watch you can switch between movies and series. MyTV brings you back to normal tv and on options you can change settings for Valerie.
 
 <br><br><br><br><br>
