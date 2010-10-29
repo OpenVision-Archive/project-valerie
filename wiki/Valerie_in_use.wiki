@@ -1,6 +1,6 @@
 #summary !HowTo interact with Valerie
 
-= Homescreen =
+= The Homescreen =
 
 <br>
 <br>
