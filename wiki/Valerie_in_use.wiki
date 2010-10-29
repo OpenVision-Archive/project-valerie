@@ -1,13 +1,27 @@
 #summary !HowTo interact with Valerie
 
-= Introduction =
+= Homescreen =
 
-Add your content here.
+<br>
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/MainMenu.png
 
+This is the homescreen after you start Project Valerie. 
+<br><br><br><br><br>
+If you use Valerie the first time, your database should be empty. Go to Sync on the left and select settings. 
 
-= Details =
+http://project-valerie.googlecode.com/svn/trunk/images/settings.png
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+After selecting the path and other settings you can sync your movies with the movieproviders. This can take a while pending on the number of your movies and the speed of your internet connection. Take a cup of coffee until the sync is completed ;-)
+<br><br><br><br><br>
+Now you can switch to the movies and series section.
+
+http://project-valerie.googlecode.com/svn/trunk/images/movies.png
+<br><br><br><br><br>
+Within movies you can sort your titles by name, release date, and popularity with pressing the red button. 
+
+http://project-valerie.googlecode.com/svn/trunk/images/sort_red.png
+<br><br><br><br><br>
+With the blue button you can select the movies by category.
+
+http://project-valerie.googlecode.com/svn/trunk/images/sort_blue.png
