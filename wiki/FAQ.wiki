@@ -3,8 +3,6 @@
  Q:  The Autosearch Feature does not work for me! What can I do?<br>
  A:  It is also possible to set the IP manually:<br>
   {{{
-  Open the file "valerie.properties" in your working direcotry and append
-  MANUAL_SETTOPBOX=MANUFACTOR=My;MODEL=box;IPADDR=127.0.0.1;
-  at the end. Where 127.0.0.1 should be the IP of your settop box.
+  This can be done in the settings menu (since rev341)
   }}}
   
