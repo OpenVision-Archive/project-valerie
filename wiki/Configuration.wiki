@@ -2,8 +2,9 @@
 
 == How to interact == 
 <br />
-1. Hit the search button to let the PC app search for connectable boxes
-select from the dropdown on the right the box which you want to interact <br />
+1. Select from the dropdown on the right the box which you want to interact <br />
+   If your box does not appear automatically in the list, goto "Edit --> Settings" <br />
+   and add your box via IP manually
 <br />
 2. Download your archive from the box.<br />
 <br />
@@ -20,4 +21,5 @@ is not what you are expecting.<br />
 <br />
 <br />
 == Screenshots == 
-http://project-valerie.googlecode.com/svn/trunk/images/Valerie.png
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie.png <br />
+http://project-valerie.googlecode.com/svn/trunk/images/valerie_settings.png
