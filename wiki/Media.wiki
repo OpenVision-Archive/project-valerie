@@ -34,12 +34,12 @@ _valerie on ufs910 series_ by *hellmaster*
 == Screenshots == 
 
 Mainmenu: <br />
-http://project-valerie.googlecode.com/svn/trunk/images/mainmenu_mini.jpg
+http://project-valerie.googlecode.com/svn/trunk/images/mainmenu_mini.png
 
 <br />
 
 Movies: <br />
-http://project-valerie.googlecode.com/svn/trunk/images/movies_mini.jpg
+http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png
 
 <br />
 
