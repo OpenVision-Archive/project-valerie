@@ -4,21 +4,21 @@
 
 <br>
 <br>
-http://project-valerie.googlecode.com/svn/trunk/images/MainMenu.png
+http://project-valerie.googlecode.com/svn/trunk/images/main_menu.png
 
 *This is the homescreen after you start Project Valerie. *<br>
-On the left is the Sync menu where you can update your database. The Listen section is for furture use. On Watch you can switch between movies and series. MyTV brings you back to normal tv and on options you can change settings for Valerie.
+Within Settings you can change Valerie startup behaviour, etc. In the Sync menu you can update your database. LiveTV brings you back to normal tv. Movies lists all your movie titles and TV Shows all your series.
 
 <br><br><br><br><br>
-If you use Valerie the first time, your database should be empty. Go to Sync on the left and select settings.
+If you use Valerie the first time, your database should be empty. Go to Sync and select settings.
 
 http://project-valerie.googlecode.com/svn/trunk/images/settings.png
 
 After selecting the path and other settings you can sync your movies with the movieproviders. This can take a while pending on the number of your movies and the speed of your internet connection. Take a cup of coffee until the sync is completed ;-)
 <br><br><br><br><br>
-Now you can switch to the movies and series section.
+Now you can switch to the movies or series section.
 
-http://project-valerie.googlecode.com/svn/trunk/images/movies.png
+http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png
 <br><br><br><br><br>
 Within movies you can sort your titles by name, release date, and popularity with pressing the red button. 
 
@@ -27,3 +27,5 @@ http://project-valerie.googlecode.com/svn/trunk/images/sort_red.png
 With the blue button you can select the movies by category.
 
 http://project-valerie.googlecode.com/svn/trunk/images/sort_blue.png
+
+The info button shows the complete plot.
