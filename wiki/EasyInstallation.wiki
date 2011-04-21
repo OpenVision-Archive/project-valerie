@@ -1,5 +1,16 @@
 == Deutsches !HowTo ==
  [https://code.google.com/p/project-valerie/wiki/EasyInstallation#English_HowTo For English version scroll down please]
+<br>Project Valerie ist ein MediaCenter Plugin für enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:<br><br>
+
+•	Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)<br>
+•	Azbox (Elite, Premium, Premium+)<br>
+•	Kathrein (UFS-910, UFS-912, UFS-922)<br>
+•	Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)<br>
+•	Topfield HDPVR-7700<br>
+•	Fortis HDbox<br>
+...und weitere Enigma2 basierte Boxen mit mispel oder sh Architektur
+<br><br><br>
+
 ===Du willst Valerie installiern und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!!===
 
 Lade dir dir neueste Version von Project Valerie herunter.
