@@ -1,6 +1,6 @@
   * [Welcome ↑ Home]
-  * [EasyInstallation Installation]
-  * [Valerie_in_use Valerie in use]
+  * [EasyInstallation Valerie Installation]
+  * [Valerie_in_use Valerie usage]
   * [FAQ FAQ]
   * [Media Media]
     * [Media#Videos Videos]
