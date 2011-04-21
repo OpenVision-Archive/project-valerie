@@ -32,24 +32,13 @@ _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valeri
 Danach kann Valerie installiert werden. Du kannst das entweder über den !MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
 _`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
 Starte danach Enigma2 durch; der Project Valerie Assistent wird nach dem Neustart ausgeführt. Valerie ist bereit zu ersten Verwendung!
-<br>
-<br>
-
-====Füllen der Datenbank:====
-Valerie kann entweder über die interne Sync Funktion, oder über die PC-App gefüttert werden. <br>
-Die Standardpfade bei Valerie sind: <br>
-_/hdd/movie_ <br>
-_/hdd/series_ <br>
-Sie können im Valerie Hauptmenü über Sync --> Settings --> change search path
-geändert werden.
-
-====Interne Sync Funktion:====
-Sync starten und abwarten. Je nach Anzahl der Titel kann das Ganze etwas dauern…
-<br>
-
-
-Die Qualität der Ergebnisse richtet sich im Wesentlichen daran, wie ihr eure Filme benannt habt. <br>
-Serien werden daran erkannt, dass sie Staffel und Episode im Namen haben (z.B. Scrubs !S01E04 – My xxxx.avi)
+<br><br>
+*Hinweis*<br>
+Valerie installiert sich in folgenden Pfaden:<br>
+Die Anwendung selbst: /usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie<br>
+Das Sync Plugin:	/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync<br>
+Config und Datenbank:	/media/hdd/valerie<br>
+Log und Cache:		/tmp/valerie<br>
 <br><br>
 == English !HowTo ==
 <br>Project Valerie is a !MediaCenter plugin for enimga2 based settop boxes. Currently it has been reported as running on following systems:<br><br>
@@ -82,20 +71,12 @@ _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valeri
 After that you are ready for installing Valerie. You can do it via the !MediaScanner (Expansion panel), or via a SSH/Telnet Session:  <br><br>
 _`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
 Finally reboot Enigma2; the Project Valerie assistant will guide you through the first steps. Valerie is now ready for use!
-<br>
-<br>
-
-====Filling the database:====
-You can update your database via the internal sync function, or via the PC-App. <br>
-The default media path where Valerie is searching for titles is: <br>
-_/hdd/movie_ <br>
-_/hdd/series_ <br>
-You can change them in the Valerie main menu via Sync --> Settings --> change search path
-
-====Internal sync function:====
-Hit sync and wait. It can take a while, depending how much movies you own  :-)
-<br>
-
-The quality of the parse process relies mainly on the naming of your movies and series. <br>
-Series will be indicated by season and episode in the title (e.g. Scrubs !S01E04 – My xxxx.avi)
 <br><br>
+*Note*<br>
+Valerie will be installed in the following paths:<br>
+The application itself: /usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie<br>
+The sync plugin:	/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync<br>
+Config and database:	/media/hdd/valerie<br>
+Log and cache:		/tmp/valerie<br>
+<br><br>
+<br>
