@@ -1,4 +1,4 @@
-== Deutsch !HowTo ==
+== Deutsches !HowTo ==
  [https://code.google.com/p/project-valerie/wiki/EasyInstallation#English_HowTo For English version scroll down please]
 ===Du willst Valerie installiern und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!!===
 
@@ -20,7 +20,7 @@ Alternativ kann Valerie auch in einer SSH oder Telnet Sitzung herunter geladen w
 _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
 Danach kann Valerie installiert werden. Du kannst das entweder über den !MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
 _`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
-Starte danach deine Box durch; der Project Valerie Assistent wird nach dem Neustart ausgeführt. Valerie ist bereit zu ersten Verwendung!
+Starte danach Enigma2 durch; der Project Valerie Assistent wird nach dem Neustart ausgeführt. Valerie ist bereit zu ersten Verwendung!
 <br>
 <br>
 
