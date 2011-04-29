@@ -1,6 +1,16 @@
 == Videos ==
 <br />
 
+Video Review<br />
+This video was taken from Valerie r550 on Dreambox 8000
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=7VZAZIndVlA"/>
+
+_valerie on Dreambox 8000_ by *skywatcher*
+http://wp10596541.wp260.webpack.hosteurope.de/wp/wp-trackback.php?p=291
+<br />
+
+
 This video was taken from Valerie r457 on Kathrein UFS-912
 <br />
 <wiki:video url="http://www.youtube.com/watch?v=dNNFfwUFxwI"/>
