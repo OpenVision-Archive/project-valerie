@@ -1,0 +1,8 @@
+  * [Welcome ↑ Home]
+  * [EasyInstallation Valerie Installation]
+  * [Valerie_in_use Valerie usage]
+  * [FAQ FAQ]
+  * [Media Media]
+    * [Media#Videos Videos]
+    * [Media#Screenshots Screenshots]
+  * [MediaProviders Media Providers]

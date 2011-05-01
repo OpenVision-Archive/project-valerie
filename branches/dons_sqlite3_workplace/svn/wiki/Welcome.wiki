@@ -1,0 +1,10 @@
+Welcome to Project Valerie
+
+== What do you want to learn today? ==
+
+  * [EasyInstallation Howto install Project Valerie?]
+  * [Media How does it look? Watch movies and view pictures about project valerie.]
+
+  * [TraktTV What is this Trakt.tv feature?]]
+
+  * [http://code.google.com/p/project-valerie/issues/list Questions or Problems, please use the Issues Tab.]

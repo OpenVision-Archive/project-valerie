@@ -1,0 +1,72 @@
+== Videos ==
+<br />
+
+=== Video Review by skywatcher ===
+This video was taken from Valerie r550 on Dreambox 8000
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=7VZAZIndVlA"/>
+
+_valerie on Dreambox 8000_ by *skywatcher*
+[http://wp10596541.wp260.webpack.hosteurope.de/wp/wp-trackback.php?p=291 Traceback]
+<br />
+
+
+This video was taken from Valerie r457 on Kathrein UFS-912
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=dNNFfwUFxwI"/>
+
+_valerie on UFS912_ by *schischu*
+<br />
+
+
+This video was taken from Valerie v291 on Dreambox DM8000
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=tSGGgqOZtF4"/>
+
+_valerie on DM8000_ by *slugshot*
+<br />
+<br />
+
+Older videos:
+
+<wiki:video url="http://www.youtube.com/watch?v=BVAKFeZfhd0"/>
+
+_Project Valerie on ufs910_ by *hellmaster*
+
+<br />
+
+<wiki:video url="http://www.youtube.com/watch?v=5IRqEqv0xHk"/>
+
+_Valerie on ufs910 some details_ by *hellmaster*
+
+
+<br />
+
+<wiki:video url="http://www.youtube.com/watch?v=oGHZsuzC69w"/>
+
+_valerie on ufs910 series_ by *hellmaster*
+
+
+<br />
+
+== Screenshots == 
+
+Mainmenu: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/mainmenu_mini.png
+
+<br />
+
+Movies: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png
+
+<br />
+
+Series: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/series_mini.jpg
+
+<br />
+
+PC: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie_movie.jpg
+
+<br />

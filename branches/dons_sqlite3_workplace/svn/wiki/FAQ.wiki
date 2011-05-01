@@ -1,0 +1,8 @@
+= FAQ =
+
+ Q:  The Autosearch Feature does not work for me! What can I do?<br>
+ A:  It is also possible to set the IP manually:<br>
+  {{{
+  This can be done in the settings menu (since rev341)
+  }}}
+  

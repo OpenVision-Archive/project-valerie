@@ -1,0 +1,82 @@
+== Deutsches !HowTo ==
+ [https://code.google.com/p/project-valerie/wiki/EasyInstallation#English_HowTo For English version scroll down please]
+<br>Project Valerie ist ein !MediaCenter Plugin für enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:<br><br>
+
+•	Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)<br>
+•	Azbox (Elite, Premium, Premium+)<br>
+•	Kathrein (UFS-910, UFS-912, UFS-922)<br>
+•	Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)<br>
+•	Topfield HDPVR-7700<br>
+•	Fortis HDbox<br>
+...und weitere Enigma2 basierte Boxen mit mispel oder sh Architektur
+<br><br><br>
+
+===Du willst Valerie installiern und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!!===
+
+Lade dir dir neueste Version von Project Valerie herunter.
+
+•	für alle mipsel basierten Settop Boxen (z.B. Dreambox DM800)
+        --> `Project-valerie_newest_mipsel_oe16.ipk`
+        (bei !OpenEmbedded 1.6, z.B. Newnigma2 v3xx)
+
+        --> `Project-valerie_newest_mipsel_oe15.ipk`
+        (bei !OpenEmbedded 1.5, z.B. Newnigma2 v2xx)
+
+•	für alle anderen Boxen (z.B. Kathrein UFS910)
+        --> `Project-valerie_newest_sh4.ipk`
+
+
+Kopiere `Project-valerie_newest_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
+Alternativ kann Valerie auch in einer SSH oder Telnet Sitzung herunter geladen werden: <br><br>
+_`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
+Danach kann Valerie installiert werden. Du kannst das entweder über den !MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
+_`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
+Starte danach Enigma2 durch; der Project Valerie Assistent wird nach dem Neustart ausgeführt. Valerie ist bereit zu ersten Verwendung!
+<br><br>
+*Hinweis*<br>
+Valerie installiert sich in folgenden Pfaden:<br>
+Die Anwendung selbst: /usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie<br>
+Das Sync Plugin:	/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync<br>
+Config und Datenbank:	/media/hdd/valerie<br>
+Log und Cache:		/tmp/valerie<br>
+<br><br>
+== English !HowTo ==
+<br>Project Valerie is a !MediaCenter plugin for enimga2 based settop boxes. Currently it has been reported as running on following systems:<br><br>
+
+•	Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)<br>
+•	Azbox (Elite, Premium, Premium+)<br>
+•	Kathrein (UFS-910, UFS-912, UFS-922)<br>
+•	Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)<br>
+•	Topfield HDPVR-7700<br>
+•	Fortis HDbox<br>
+...and a lot more Enigma2 based settop boxes with mispel or sh architecture.
+<br><br><br>
+===You want to install and use Valerie, but you don´t know how? Here you will find all necessary information!!===
+
+Start by downloading the newest version of Project Valerie.
+
+•	for all mipsel based settop boxes (e.g. Dreambox DM800)
+        --> `Project-valerie_newest_mipsel_oe16.ipk`
+        (for !OpenEmbedded 1.6, e.g. Newnigma2 v3xx)
+
+        --> `Project-valerie_newest_mipsel_oe15.ipk`
+        (for !OpenEmbedded 1.5, e.g. Newnigma2 v2xx)
+
+•	for all other boxes (z.B. Kathrein UFS910)
+        --> `Project-valerie_newest_sh4.ipk`
+
+Upload `Project-valerie_newest_<version>.ipk` to your box (e.g. with WinSCP or via FTP). <br>
+Alternately you can download Project Valerie via command line in a Telnet or SSH session: <br><br>
+_`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
+After that you are ready for installing Valerie. You can do it via the !MediaScanner (Expansion panel), or via a SSH/Telnet Session:  <br><br>
+_`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_newest_<version>.ipk`_   <br><br>
+Finally reboot Enigma2; the Project Valerie assistant will guide you through the first steps. Valerie is now ready for use!
+<br><br>
+*Note*<br>
+Valerie will be installed in the following paths:<br>
+The application itself: /usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie<br>
+The sync plugin:	/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync<br>
+Config and database:	/media/hdd/valerie<br>
+Log and cache:		/tmp/valerie<br>
+<br><br>
+<br>
