@@ -117,7 +117,10 @@ FOR /F "delims=." %%a IN ('dir /b <path_to_jpg>\*_backdrop.jpg') do ("<path_to_f
 Die erstellten Dateien können dann in das Verzeichnis in „/…/valerie/media“ auf der Box kopiert werden.<br><br>
 
 = Animiertes Hauptmenü =
-Dieses Feature ist bis jetzt nur per Hand freischaltbar. Hierzu muss die verwendete skin.xml aus dem entsprechenden Skin-Verzeichnis editiert werden.<br>
+Dieses Feature wird bis jetzt nur vom blackSwan Skin unterstützt.
+Hierzu einfach unter */hdd/valerie/dreamscene/* einen animierten Hintergründ (Siehe Downloadlink weiter unten) als *blackSwan.mp4* abspeichern.
+
+Alternativ lässt sich dieses Feature auch für andere Skins von Hand freischalten. Hierzu muss die verwendete skin.xml aus dem entsprechenden Skin-Verzeichnis editiert werden. (z.B. ProjectValerie/skins/default/1280x720/skin.xml)<br>
 In der Sektion „<!-- PVMC Main Menu -->“ muss folgende Zeile abgeändert werden:<br>
 Von:	
 {{{
