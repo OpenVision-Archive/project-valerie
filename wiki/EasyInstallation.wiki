@@ -16,17 +16,17 @@
 Lade dir dir neueste Version von Project Valerie herunter.
 
 •	für alle mipsel basierten Settop Boxen (z.B. Dreambox DM800)
-        --> `Project-valerie_newest_mipsel_oe16.ipk`
+        --> `project-valerie_newest_mipsel_oe16.ipk`
         (bei !OpenEmbedded 1.6, z.B. Newnigma2 v3xx)
 
-        --> `Project-valerie_newest_mipsel_oe15.ipk`
+        --> `project-valerie_newest_mipsel_oe15.ipk`
         (bei !OpenEmbedded 1.5, z.B. Newnigma2 v2xx)
 
 •	für alle anderen Boxen (z.B. Kathrein UFS910)
-        --> `Project-valerie_newest_sh4.ipk`
+        --> `project-valerie_newest_sh4.ipk`
 
 
-Kopiere `Project-valerie_newest_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
+Kopiere `project-valerie_newest_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
 Alternativ kann Valerie auch in einer SSH oder Telnet Sitzung herunter geladen werden: <br><br>
 _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-Valerie_newest_<version>.ipk`_  <br><br>
 Danach kann Valerie installiert werden. Du kannst das entweder über den !MediaScanner (Erweiterungen) machen, oder über die SSH/Telnet Session:  <br><br>
