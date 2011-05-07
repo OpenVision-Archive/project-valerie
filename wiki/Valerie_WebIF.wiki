@@ -1,0 +1,1 @@
+http://project-valerie.googlecode.com/svn/trunk/images/webif_main.png
