@@ -1,6 +1,7 @@
   * [Welcome ↑ Home]
   * [EasyInstallation Valerie Installation]
   * [Valerie_in_use Valerie usage]
+  * [Valerie_WebIF Webinterface]
   * [FAQ FAQ]
   * [Media Media]
     * [Media#Videos Videos]
