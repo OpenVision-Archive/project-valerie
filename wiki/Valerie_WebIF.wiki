@@ -1,1 +1,3 @@
 http://project-valerie.googlecode.com/svn/trunk/images/webif_main.PNG
+
+http://project-valerie.googlecode.com/svn/trunk/images/webif_movie.png
