@@ -1,7 +1,6 @@
   * [Welcome ↑ Home]
   * [EasyInstallation Valerie Installation]
   * [Valerie_in_use Valerie usage]
-     * [MainMenu Main Menu]
      * [Options Options]
      * [Sync Synchronize]
      * [skin Skin & co.]
