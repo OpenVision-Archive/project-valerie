@@ -1,10 +1,12 @@
-Welcome to Project Valerie
+Welcome to Project Valerie<br>
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie_LOGOv2.png
 
 == What do you want to learn today? ==
 
   * [EasyInstallation Howto install Project Valerie?]
+  * [Valerie_in_use Howto use Project Valerie?]
   * [Media How does it look? Watch movies and view pictures about project valerie.]
 
-  * [TraktTV What is this Trakt.tv feature?]]
+  * [TraktTV What is this Trakt.tv feature?]
 
   * [http://code.google.com/p/project-valerie/issues/list Questions or Problems, please use the Issues Tab.]
