@@ -1,7 +1,7 @@
 ﻿#summary Sync & more.
 
 = Synchronize =
-Es stehen 2 Sync-Typen zur Auswahl. Eine komplette Synchronisation über die grüne Taste, sowie ein „fast Sync“ (gelbe Taste). Eine komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die angegebenen Verzeichnisse und gleicht diese mit der DB ab. Falls die Einstellung „Film löschen wenn Datei nicht gefunden“ aktiv ist, werden die Einträge aus der DB entfernt, zu denen keine Dateien mehr gefunden werden. Die „schnelle Synchronisation“ fügt nur neue Titel hinzu, läuft dadurch auch schneller durch.<br>
+Es stehen 2 Sync-Typen zur Auswahl. Eine komplette Synchronisation über die grüne Taste, sowie ein „fast Sync“ (gelbe Taste). Eine komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die angegebenen Verzeichnisse und gleicht diese mit der DB ab. Falls die Einstellung „Film löschen wenn Datei nicht gefunden“ aktiv ist, werden die Einträge aus der DB entfernt, zu denen keine Dateien mehr gefunden werden. Die „schnelle Synchronisation“ fügt nur neue Titel hinzu, läuft dadurch auch schneller durch.<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
 <br>
 == Medienprovider ==
@@ -28,16 +28,16 @@ Mehr zu Regular Expressions kann auf [http://www.zdnet.de/anwendungsentwicklung_
 <br>
 Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Sync Menü korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der DB löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
 Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die IMDB-ID (über "MORE") eingeben und speichern.
-<br>
+<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/manage_small.png<br>
 <br>
-*HINWEIS:*
+*HINWEIS:*<br>
 Besteht ein Titel aus mehreren Dateien, so wird nur der erste Teil in die Datenbank aufgenommen, die anderen Teile landen in der failded.db. Wird der erste Teil abgespielt, so startet im Anschluss an den ersten der nächste Teil. Damit Valerie erkennt, dass es sich um Multipart Titel handelt, muss eine der folgenden Syntaxmöglichkeiten (+ laufende Nummer, startend mit 1) verwendet werden:<br>
-* disk
-* cd
-* dvd
-* part
-* pt
+  * disk<br>
+  * cd<br>
+  * dvd<br>
+  * part<br>
+  * pt
 <br>
 z.B: Film XY - disk1.avi, Film XY - disk2.avi<br>
 
@@ -45,8 +45,8 @@ z.B: Film XY - disk1.avi, Film XY - disk2.avi<br>
 Valerie bietet auch die Möglichkeit über eine valerie.info Datei die Suche zu beeinflussen, oder auch ganze Verzeichnisse von der Suche auszuklammern. Hierzu muss im jeweiligen Ordner eine Datei names valerie.info erstellt werden.<br>
 Um einen Ordner von der Suche auszuschließen muss die Datei valerie.info das Wort INGNORE als Inhalt haben.<br>
 Neben der Möglichkeit in einer NFO den IMDB Link zu einem Bestimmten Film/Titel bereit zu stellen, kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
-Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.<br>
-*<big>HINWEIS:*<br>
+Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.<br><br>
+*HINWEIS:*<br>
 Der bereitgestellte Suchbegriff gilt nur für den Inhalt des Ordners, aber nicht für etwaige vorhandene Unterordner.
 
 <br>
