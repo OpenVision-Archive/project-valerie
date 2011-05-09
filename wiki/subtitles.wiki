@@ -5,12 +5,12 @@ Valerie hat einen Subtitle Downloader, mit dem zum susgewählten Titel der entsp
 Hierzu muss im Movie Menü der gewünschte Titel ausgewählt werden. Über die Menü Taste ist nun der Subtitle-Downloader aufrufbar. Entsprechend konfiguriertem Optionsbereich für Subtitles stehen jetzt die verschiedenen Sub-Provider zur Auswahl.<br>
 http://project-valerie.googlecode.com/svn/trunk/images/sub_small.png<br><br>
 Derzeit können Untertitel von folgenden Providern geladen werden:<br>
-* [http://www.opensubtitles.org Opensubtitles]
-* [http://bierdopje.com Bierdopje]
-* [http://napiprojekt.pl Napiprojekt]
-* [http://www.ondertitel.com Ondertitel]
-* [http://www.sratim.co.il Sratim]
-* [http://www.subdivx.com Subdivx]
-* [http://swesub.nu Swesub]
-* [http://titlovi.com/titlovi/titlovi.aspx? Titlovi]
-* [http://www.undertexter.se Undertexter]
+ * [http://www.opensubtitles.org Opensubtitles]<br>
+ * [http://bierdopje.com Bierdopje]<br>
+ * [http://napiprojekt.pl Napiprojekt]<br>
+ * [http://www.ondertitel.com Ondertitel]<br>
+ * [http://www.sratim.co.il Sratim]<br>
+ * [http://www.subdivx.com Subdivx]<br>
+ * [http://swesub.nu Swesub]<br>
+ * [http://titlovi.com/titlovi/titlovi.aspx? Titlovi]<br>
+ * [http://www.undertexter.se Undertexter]<br>
