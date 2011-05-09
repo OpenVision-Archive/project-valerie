@@ -1,13 +1,30 @@
-#summary One-sentence summary of this page.
- 
-= Main Menu =
+#summary Ressources/config of Valerie
+= Datenbank Dateien =
+Valerie verwaltet die Film und Serieninformationen in einer internen Datenbank (Python Pickle Dateien). Diese befindet sich im fest definierten Verzeichnis "/hdd/valerie" und besteht aus den Dateien:<br>
+  * movies.db	(alle Filme)<br>
+  * tvshows.db	(alle Serien)<br>
+  * episodes.db	(alle Episoden der Serien)<br>
+  * failed.db	(alle fehlgeschlagenen Syncs sowie multipart Filme, wie z.B. `*`_cd2, `*`_part2, etc.)<br>
+<br>
+= Config Dateien =
+Die Konfigurationsdateien von Valerie befinden sich im Verzeichnis /hdd/valerie:<br>
+  * valerie.conf		(Suchsprache und Verhalten bei nicht mehr vorhanden Medien-Files im Suchpfad)<br>
+  * paths.conf		(Suchpfad, Filter für Dateierweiterung [z.B. avi,mkv, etc ], und flaggen von Suchordnern)<br>
+  * pre.conf			(Regular Expressions für den Suchstring)<br>
+  * post_movie.conf	(Regular Expressions für den Suchstring - nur Filme)<br>
+  * post_tv.conf		(Regular Expressions für den Suchstring - nur Serien)<br>
+  * blacklist.conf	(aus der DB ausgeblendete/gelöschte Filme)
+<br>
+= Startup Datei =
+Das Shellskript /hdd/valerie/start.sh kann verwendet werden um mit Valerie weitere Dienste oder Skripte zu starten.
+= spezielle Dateien =
+  * valerie.info (für Excludes oder Suchhilfen)
 
-Add your content here.
-Stuff
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Skins =
+Derzeit stehen folgende Skins zur Verfügung:<br>
+  * Default<br>
+  * BlackSwan<br>
+  * GreySkies<br>
+Weitere Infos zu Skins im  Kapitel "Skin"
+= Log Files =
+Die Logfiles von Valerie befinden sich in /tmp/valerie/ und können auch über den Browser aufgerufen werden. Weitere Infos siehe Kapitel [WebIf "Webinterface"].
