@@ -1,6 +1,6 @@
 = Webinterface =
 
-Das Webinterface ist über die Adresse standardmäßig über den Port 8888 ereichbar.
+Das Webinterface ist Ã¼ber die Adresse standardmÃ¤ÃŸig Ã¼ber den Port 8888 ereichbar.
 
 z.B. http://IP_DER_BOX:8888/
 
