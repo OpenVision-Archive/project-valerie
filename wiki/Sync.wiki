@@ -5,7 +5,7 @@ Es stehen 2 Sync-Typen zur Auswahl. Eine komplette Synchronisation über die gr�
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
 <br>
 == Medienprovider ==
-Als Datenquelle dienen [www.imdb.com IMDB.com], [www.themoviedb.org TheMovieDB.org] und [www.thetvdb.org TheTVDB.org]. IMDB liefert primär die ID. Über die anderen Quellen werden Plot, Poster, Hintergrund usw. bezogen. Liegen diese nicht in der ausgewählten Sprache vor, wird IMDB befragt. Liegen diese dort auch nicht vor, wird der englische Text von TheMovieDB, resp. TheTVDB genommen. Ist dieser dort auch nicht vorhanden, wieder Failback zu IMDB.<br>
+Als Datenquelle dienen [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org] und [http://www.thetvdb.org TheTVDB.org]. IMDB liefert primär die ID. Über die anderen Quellen werden Plot, Poster, Hintergrund usw. bezogen. Liegen diese nicht in der ausgewählten Sprache vor, wird IMDB befragt. Liegen diese dort auch nicht vor, wird der englische Text von TheMovieDB, resp. TheTVDB genommen. Ist dieser dort auch nicht vorhanden, wieder Failback zu IMDB.<br>
 == Suchstrukturen ==
 In der Datei paths.conf ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird, bzw. wie die Ordner kategorisiert sind:<br>
 mkv|ts|avi|m2ts<br>
