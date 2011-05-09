@@ -3,9 +3,9 @@ Folgende Skins stehen derzeit zur Auswahl:<br>
  * default (der Standard-Skin von Valerie)<br>
 http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br>
  * BlackSwan <br>
-http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br>
+http://project-valerie.googlecode.com/svn/trunk/images/blackswan_small.png<br>
  * greySkies
-http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br><br>
+http://project-valerie.googlecode.com/svn/trunk/images/greyskies_small.png<br><br>
 HINWEIS:<br>
 Aufgrund der derzeitigen rasanten Entwicklung von Valerie stehen nicht immer alle neu entwickelten Punkte unter jeden Skin zur Verfügung, wir sind jedoch bestrebt dies nach und nach zu aktualisieren.<br>
 = Animiertes Hauptmenü =
