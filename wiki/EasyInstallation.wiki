@@ -1,4 +1,4 @@
-== Deutsches !HowTo ==
+= Deutsches !HowTo =
  [https://code.google.com/p/project-valerie/wiki/EasyInstallation#English_HowTo For English version scroll down please]
 <br>Project Valerie ist ein !MediaCenter Plugin für enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:<br><br>
 
@@ -25,7 +25,6 @@ Lade dir dir neueste Version von Project Valerie herunter.
 •	für alle anderen Boxen (z.B. Kathrein UFS910)
         --> `project-valerie_<rev>_sh4.ipk`
 
-
 Kopiere `project-valerie_<rev>_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
 Alternativ kann Valerie auch in einer SSH oder Telnet Sitzung herunter geladen werden: <br><br>
 _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-valerie_<rev>_<version>.ipk`_  <br><br>
@@ -40,7 +39,10 @@ Das Sync Plugin:	/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync<
 Config und Datenbank:	/media/hdd/valerie<br>
 Log und Cache:		/tmp/valerie<br>
 <br><br>
-== English !HowTo ==
+== Deinstallation ==
+UM Valerie zu deinstallieren entweder über die Erweiterungen entfernen, oder über SSH/Telnet folgendes eingeben:<br><br>
+_`root@dm8000:~# opkg remove project-valerie*`_
+= English !HowTo =
 <br>Project Valerie is a !MediaCenter plugin for enimga2 based settop boxes. Currently it has been reported as running on following systems:<br><br>
 
 •	Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)<br>
@@ -79,4 +81,7 @@ The sync plugin:	/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync<
 Config and database:	/media/hdd/valerie<br>
 Log and cache:		/tmp/valerie<br>
 <br><br>
+== Remove ==
+To remove Project Valerie this can be done via extension panel or via SSH/Telnet by typing:<br>
+_`root@dm8000:~# opkg remove project-valerie*`_
 <br>
