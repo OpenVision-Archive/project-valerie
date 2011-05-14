@@ -24,7 +24,7 @@ Beispiel:<br>
 Angenommen der Titel hat folgenden Dateinamen:<br> „The.Beach.2000.720p.HDTV.x264-ESiR.mkv“<br>
 Valerie würde mit Standardeinstellungen folgendes als Suchstring verwenden: „The Beach 2000 ESiR“<br>
 Da das Ergebnis nicht eindeutig ist, wird der „best match“ verwendet. In diesem Fall „Beach Tennis USA: The Road to Long Beach 2009“. Um dem vorzubeugen, können über die Regular Expressions bestimmte Wörter oder Zeichenketten herausgefiltert werden, damit ein möglichst eindeutiger Suchbegriff übergeben wird.<br>
-Mehr zu Regular Expressions kann auf [http://www.zdnet.de/anwendungsentwicklung_regular_expressions_syntax_entraetselt_story-20000201-20000839-1.htm ZDNET] nachgelesen werden.<br>
+Mehr zu Regular Expressions kann auf [http://www.zdnet.de/anwendungsentwicklung_regular_expressions_syntax_entraetselt_story-20000201-20000839-1.htm ZDNET] nachgelesen werden. Um eigene Regural Expressions zu überprüfen eignet sich folgedes online [http://gskinner.com/RegExr RegEx Tool]<br>
 <br>
 Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Sync Menü korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der DB löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
 Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die IMDB-ID (über "MORE") eingeben und speichern.
