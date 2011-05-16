@@ -70,8 +70,21 @@ Backdrops<br>
 -	ffmpeg von [http://ffmpeg.arrozcru.org/autobuilds/ffmpeg/mingw32/static/ ffmpeg.arrozcru.org]<br>
 Vorhegen ist das Gleiche wie bei den Covers, allerdings als IMDB-ID`_`backdrop.jpg ablegen.<br>
 Den folgenden Code in einer `*`.bat, oder direkt in der Eingabeaufforderung ausführen, allerdings dann aus den doppelten Prozentzeichen nur eines machen:<br>
+<br>
+Die Backdrops in das richtige Format bringen <br><br>
+(1280x720)
 {{{
-FOR /F "delims=." %%a IN ('dir /b <path_to_jpg>\*_backdrop.jpg') do ("<path_to_ffmpeg>\ffmpeg" -i <path_to_jpg>\%%a.jpg -an -f mpeg2video -r 30.0 -vcodec mpeg2video -intra -sc_threshold 1000000000 -flags +mv0+cgop -dc 8 -g 1 -me_method zero -qscale 5 -bf 0 -aspect 16:9 <path_for_output>\%%a.m1v)
+FOR /F "delims=." %%a IN ('dir /b <path to image>\*_backdrop.jpg') do (<path to convert>\convert.exe <path to image>\%%a.jpg -colorspace YUV -resize 1280x720! -gravity Center -crop 1280x720+0+0 +repage <output>\%%a.jpg)
+}}}
+<br>
+ODER (1920x1080)
+{{{
+FOR /F "delims=." %%a IN ('dir /b <path to image>\*_backdrop.jpg') do (<path to convert>\convert.exe <path to image>\%%a.jpg -colorspace YUV -resize 1920x1088! -gravity Center -crop 1920x1080+0+0 +repage <output>\%%a.jpg)
+}}}
+<br>
+Umwandeln in eine m1v Datei:
+{{{
+FOR /F "delims=." %%a IN ('dir /b <path_to_jpg>\*_backdrop.jpg') do ("<path_to_ffmpeg>\ffmpeg" -i <path_to_jpg>\%%a.jpg -an -f mpeg2video -r 25.0 -vcodec mpeg2video -intra -sc_threshold 1000000000 -flags +mv0+cgop -dc 8 -g 1 -me_method zero -qscale 5 -bf 0 -aspect 16:9 <path_for_output>\%%a.m1v)
 }}}
 <br><br>
 Die erstellten Dateien können dann in das Verzeichnis in „/…/valerie/media“ auf der Box kopiert werden.<br><br>
