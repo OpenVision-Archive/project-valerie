@@ -1,0 +1,12 @@
+Herzlich willkommen bei Project Valerie<br>
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie_LOGOv2.png
+
+== Ein paar ausgewählte Wiki-Seiten ==
+
+  * [EasyInstallation Anleitung zur Installation]
+  * [Valerie_in_use Anleitung zur grundlegenden Bedienung]
+  * [Media Bilder und Videos von Project Valerie in Aktion]
+
+  * [TraktTV Was ist Trakt.tv?]
+
+  * [http://code.google.com/p/project-valerie/issues/list bei Fragen oder Problemen bitte die "Issues" benutzen!]
