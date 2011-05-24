@@ -1,0 +1,17 @@
+== Datenquellen ==
+
+Project Valerie nutzt die Film- und Serien-Datenbanken nachfolgend genannter Anbieter - an dieser Stelle ein herzliches Dankeschön für die Möglichkeit zur kostenlosen Nutzung dieser Informationen: <br />
+
+[http://imdb.com/ http://project-valerie.googlecode.com/svn/trunk/images/imdb.gif]
+
+ <br />
+
+[http://themoviedb.org/ http://project-valerie.googlecode.com/svn/trunk/images/tmdb_logo.jpg]
+
+ <br />
+
+[http://thetvdb.com/ http://project-valerie.googlecode.com/svn/trunk/images/thetvdbcom.jpg]
+
+
+
+

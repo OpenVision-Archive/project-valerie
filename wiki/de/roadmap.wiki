@@ -1,0 +1,11 @@
+#summary Roadmap
+= Roadmap =
+Project Valerie ist ein Projekt das von Schischu in seiner Freizeit entstanden ist und von Slugshot und DonDavinci, sowie weiteren Freiwilligen mitgestaltet wird. Die hier genannten verschiedenen Features werden ohne Gewähr auf Funktion, zeitlicher Umsetzung oder einer bestimmten Reihenfolge / Gewichtung umgesetzt (oder auch nicht :)).<br>
+<br>Für alles gilt: "When it´s done" und "If it´s done". :)
+<br>
+ * Umstellung auf SQL Datenbank<br>
+ * Bearbeiten von Filmen über das Webinterface<br>
+ * Implementierung von weiteren MediaCenter Features<br>
+ * Übersetzung des HowTo in Englisch<br>
+ * Releasemanagement<br>
+ * usw...<br>

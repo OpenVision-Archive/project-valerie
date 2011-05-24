@@ -1,0 +1,15 @@
+#summary Beschreibung der verschiedenen Einstellungen
+= Einstellungen =
+Es gibt unterschiedliche Konfigurationsmöglichkeiten. Zum einen kann über die Einstellungen (aus dem Haupmenü erreichbar) das Startverhalten von Valerie, sowie das Aussehen und Einstellungen zu Diensten vorgenommen werden.<br>
+http://project-valerie.googlecode.com/svn/trunk/images/settings_small.png<br>
+http://project-valerie.googlecode.com/svn/trunk/images/settings2_small.png<br><br>
+Zum anderen kann über die Einstellungen aus dem Sync-Bereich der / die Ordnerpfade, die Suchsprache und die Datenbank bearbeitet werden.<br>
+http://project-valerie.googlecode.com/svn/trunk/images/sync_options_small.png<br>
+http://project-valerie.googlecode.com/svn/trunk/images/sync_options2_small.png<br>
+<br><br>
+= Datenbank Dateien =
+Valerie verwaltet die Film- und Serieninformationen in einer internen Datenbank. Diese befindet sich im fest definierten Verzeichnis "`/hdd/valerie`" und besteht aus den Dateien:<br>
+  * `movies.db` (alle Filme)<br>
+  * `tvshows.db` (alle Serien)<br>
+  * `episodes.db` (alle Episoden der Serien)<br>
+  * `failed.db` (alle fehlgeschlagenen Syncs sowie multipart Filme, wie z.B. `*`_cd, `*`_part2, etc.)<br>

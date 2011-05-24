@@ -1,0 +1,45 @@
+= Skins =
+Folgende Skins stehen derzeit zur Auswahl:<br>
+ * default (der Standard-Skin von Valerie)<br>
+http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br>
+ * BlackSwan <br>
+http://project-valerie.googlecode.com/svn/trunk/images/blackswan_small.png<br>
+ * greySkies
+http://project-valerie.googlecode.com/svn/trunk/images/greyskies_small.png<br><br>
+HINWEIS:<br>
+Aufgrund der derzeitigen rasanten Entwicklung von Valerie stehen nicht immer alle neu entwickelten Punkte unter jedem Skin zur Verfügung - wir sind jedoch bestrebt dies nach und nach zu aktualisieren.<br>
+<br><br>
+= Animiertes Hauptmenü =
+Dieses Feature wird bis jetzt nur vom blackSwan Skin unterstützt.
+Hierzu einfach unter `/hdd/valerie/dreamscene/` einen animierten Hintergrund (siehe Downloadlink weiter unten) als `blackSwan.mp4` abspeichern.
+<br>
+Alternativ lässt sich dieses Feature auch für andere Skins von Hand freischalten. Hierzu muss die verwendete `skin.xml` aus dem entsprechenden Skin-Verzeichnis editiert werden. (z.B. `ProjectValerie/skins/default/1280x720/skin.xml`)<br>
+In der Sektion "<!-- PVMC Main Menu -->" muss folgende Zeile abgeändert werden:<br>
+Von:	
+{{{
+    <widget name="API" text="2" position="0,0" zPosition="0" size="1,1"/>
+}}}
+<br>
+Nach:
+{{{	
+    <widget name="API" text="3" position="0,0" zPosition="0" size="1,1"/>
+}}}
+<br>
+Folgende Zeile im Anschluss einfügen:<br>
+{{{
+    <widget name="stillpicture_usedreamscene" text="/hdd/valerie/dreamscene/<Dateiname>.mp4" position="0,0" zPosition="0" size="1,1"/>
+}}}
+<br>
+Das ganze sieht dann etwa so aus:<br>
+{{{
+<screen name="PVMC_MainMenu" position="0,0" size="1280,720" title=" " backgroundColor="#FF000000" flags="wfNoBorder"><br>
+    <widget name="API" text="3" position="0,0" zPosition="0" size="1,1"/><br>
+    <widget name="stillpicture_usedreamscene" text="/hdd/valerie/dreamscene/blackSwan.mp4" position="0,0" zPosition="0" size="1,1"/><br>
+    <widget name="showiframe" position="0,0" zPosition="0" size="1280,720" text="/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/skins/blackSwan/background.m1v"/><br>
+
+}}}
+<br>
+Den Dateinamen entsprechend ersetzen. Eine Auswahl an animierten Hintergründen ist hier zu finden:<br>
+[http://duckbox.info/files/public/val/dreamscene/]
+
+<br><br>

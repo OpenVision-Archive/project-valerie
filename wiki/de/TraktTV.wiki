@@ -1,0 +1,12 @@
+#summary Trakt.tv
+
+= Einführung =
+trakt.tv hilft dabei, den Überblick über die bereits gesehenen Serien und Filme zu behalten. Als zusätzliches Feature kann trakt.tv auf Basis von gewählten Favoriten auch zusätzliche Empfehlungen für Serien und Filme geben, die einem evtl. gefallen könnten.
+<br><br>
+= Details =
+  * [http://trakt.tv/ Trakt.tv Homepage]
+  * Um trakt.tv nutzen zu können, muss man einen trakt.tv Account anlegen
+  * Die Account-Informationen (Benutzername & Kennwort) werden anschließend in den Valerie-Einstellungen eingetragen
+  * Wenn die trakt.tv Funktionalität aktiviert ist, wird Valerie den Status der gesehenen Serien und Filme automatisch bei trakt.tv updaten
+
+  * Hier kann man sehen, was der "Mastermind" hinter Project Valerie schaut, wenn er nicht gerade coded: [http://trakt.tv/user/Schischu Link]

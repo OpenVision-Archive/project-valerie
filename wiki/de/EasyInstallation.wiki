@@ -1,0 +1,42 @@
+= Deutsches !HowTo =
+<br>Project Valerie ist ein !MediaCenter Plugin für Enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:<br>
+
+ * Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)
+ * Azbox (Elite, Premium, Premium+)
+ * Kathrein (UFS-910, UFS-912, UFS-922)
+ * Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)
+ * Topfield HDPVR-7700
+ * Fortis HDbox
+...und weitere Enigma2 basierte Boxen mit mipsel oder sh Architektur
+<br><br>
+
+===Du willst Project Valerie installieren und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!===
+
+1. Lade dir die neueste Project Valerie Version - abhängig von der Architektur deiner Box - von der [http://code.google.com/p/project-valerie/downloads/list Download-Seite] herunter:
+
+ * für alle mipsel basierten Settop Boxen (z.B. Dreambox DM800) mit !OpenEmbedded 1.6 (z.B. Newnigma2 v3xx): 
+        `project-valerie_<rev>_mipsel_oe16.ipk`
+ * für alle mipsel basierten Settop Boxen mit !OpenEmbedded 1.5 (z.B. Newnigma2 v2xx): 
+        `project-valerie_<rev>_mipsel_oe15.ipk`
+ * für alle anderen Boxen (z.B. Kathrein UFS910)
+        `project-valerie_<rev>_sh4.ipk`
+
+2. Kopiere `project-valerie_<rev>_<version>.ipk` auf deine Box (z.B. mit WinSCP oder per FTP). <br>
+Alternativ kann Project Valerie auch in einer SSH oder Telnet Sitzung herunter geladen werden: <br><br>
+_`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-valerie_<rev>_<version>.ipk`_  <br><br>
+3. Danach kann Valerie installiert werden. Du kannst das entweder über den !MediaScanner (Erweiterungen) machen, oder über eine SSH/Telnet Session:  <br><br>
+_`root@dm8000:~# opkg install <Pfad zur Datei>/project-valerie_<rev>_<version>.ipk`_   <br><br>
+Nach einem Neustart von Enigma2 wird der Project Valerie Assistent ausgeführt. Project Valerie ist bereit zur ersten Verwendung!
+<br><br>
+*Hinweis*<br>
+Project Valerie installiert sich in folgenden, z.Zt. *nicht* konfigurierbaren, Verzeichnissen:<br>
+Die Anwendung selbst: `/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie`<br>
+Das Sync Plugin:	`/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync`<br>
+Config und Datenbank: `/media/hdd/valerie`<br>
+Log und Cache: `/tmp/valerie`<br><br>
+== Deinstallation ==
+Um Project Valerie zu deinstallieren gibt es zwei Varianten:
+ * entweder über das "Erweiterungen" Menu von Enigma2
+ * oder über SSH/Telnet folgendes eingeben:<br>
+_`root@dm8000:~# opkg remove project-valerie*`_
+<br>

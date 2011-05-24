@@ -1,0 +1,90 @@
+#summary !HowTo interact with Valerie
+
+= Hauptmenü =
+
+<br>
+*Das Hauptmenü von Project Valerie: *<br><br>
+http://project-valerie.googlecode.com/svn/trunk/images/main_menu_small.png
+
+= Einstellungen =
+In den Einstellungen können alle Settings zur Benutzeroberfläche und Startoptionen vorgenommen werden.
+<br><br>
+http://project-valerie.googlecode.com/svn/trunk/images/settings_small.png
+<br><br>
+= Sync =
+http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/sync_options_small.png
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/sync_options2_small.png
+<br><br>
+Im Sync Menü können die Filme und Serien verwaltet, sowie neue Titel eingelesen werden.<br>
+Außerdem werden hier über die Einstellungen die Suchpfade festgelegt, die Suchsprache eingestellt, oder die DB zurückgesetzt.<br><br>
+Die Spracheinstellung bezieht sich auf den Sync mit den Media-Providern, also in welcher Sprache der Plot gesynct wird. Die Sprache in den Menüs usw. ist abhängig von der Systemsprache der Box. <br>
+Weitere Infos zum Sync findest du im Sync-Kapitel<br>
+<br>
+<br>
+= Live TV =
+Hier gelangt man – wie der Name schon sagt – wieder zurück zum normalen Live-TV<br><br>
+= Filme =
+http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br>
+Falls der Plot nicht komplett in die Darstellung passt, kann über die INFO Taste der Plot extra dargestellt werden.<br><br>
+
+Es können über die *rote Taste* verschiedene Filter zu Darstellung der Titelliste gesetzt werden <br> (sortiert nach Name, nach Release Jahr, nach Erstellungsdatum im Dateisystem und nach Beliebtheit.<br>
+http://project-valerie.googlecode.com/svn/trunk/images/sort_red.png<br><br>
+
+Über die *blaue Taste* können Filter für das Genre gesetzt werden. Diese erweitern sich, je nach Genre der gesyncten Titel automatisch.
+http://project-valerie.googlecode.com/svn/trunk/images/sort_blue.png<br><br>
+<br><br>
+= TV Shows =
+http://project-valerie.googlecode.com/svn/trunk/images/series_mini.jpg<br>
+Es gelten die gleichen Tasten wie bei "Filme"
+<br>
+= Valerie Log =
+Das Valerie Log ist über den Browser erreichbar. Einfach die Box IP + festgelegten Port in den Browser eingeben. Alle gefundenen Valerie Logs werden aufgelistet und können herunter geladen werden. <br>
+Bsp: <br>
+http://192.168.0.100:8888 <br><br>
+http://project-valerie.googlecode.com/svn/trunk/images/Val_log.png<br>
+Weitere Infos siehe Webinterface Kapitel<br>
+= Trakt.TV =
+Trakt.tv ist eine Internetplattform, die zu bereits gesehenen Filmen empfehlungen zu ähnlichen Filmen abgibt. Projekt Valerie nutzt dies, um Titel als bereits gesehen zu markieren, sofern diese zu mindestens 75% angesehen wurden.<br>
+Um Trakt.tv zu nutzen, ist eine separate Registrierung notwendig. Weiteres im Kaptitel [TraktTV Trakt.TV], sowie auf der Internet-Seite [www.trakt.tv Trakt.TV].
+*HINWEIS*
+Projekt Valerie ist für die Inhalte und Nutzung von Trakt.TV nicht verantwortlich, sondern nutzt dies lediglich um Filme als gesehen zu markieren!<br>
+= Subtitles =
+In Projekt Valerie steht ein Subtitle Downloader zur Verfügung. Weitere Informationen findest du im Kapitel Subtitles. <br>
+= Cover und Backdrops =
+Poster und Backdrops werden in „/…/valerie/media“ abgelegt. Falls man diese selbst erstellen möchte, sind folgende Tools nötig:<br><br>
+
+Cover<br>
+-	convert.exe aus dem [http://www.imagemagick.org/script/binary-releases.php#windows Image-Magic Paket]<br>
+-	[http://www.libpng.org/pub/png/apps/pngquant.html pngquant]<br>
+Die Wunsch JPG´s in einem bestimmten Verzeichnis richtig benannt (IMDB-ID`_`poster.jpg) ablegen.<br>
+Den folgenden Code in einer `*`.bat, oder direkt in der Eingabeaufforderung ausführen, allerdings dann aus den doppelten Prozentzeichen nur eines machen:<br>
+{{{
+FOR /F "delims=." %%a IN ('dir /b <path_to_jpg>\*_poster.jpg') do (<path_to_convert>\convert.exe -resize 156x214! -depth 256 <path_to_jpg>\%%a.jpg <export_path_for_png>\%%a.png & <path_to_pngquant>\pngquant.exe 256 <export_path_for_png>\%%a.png & del <export_path_for_png>\%%a.png & move <export_path_for_png>\%%a-fs8.png <ready_to_use_png>\%%a.png)
+}}}
+
+<br><br>
+Backdrops<br>
+-	ffmpeg von [http://ffmpeg.arrozcru.org/autobuilds/ffmpeg/mingw32/static/ ffmpeg.arrozcru.org]<br>
+Vorhegen ist das Gleiche wie bei den Covers, allerdings als IMDB-ID`_`backdrop.jpg ablegen.<br>
+Den folgenden Code in einer `*`.bat, oder direkt in der Eingabeaufforderung ausführen, allerdings dann aus den doppelten Prozentzeichen nur eines machen:<br>
+<br>
+Die Backdrops in das richtige Format bringen <br><br>
+(1280x720)
+{{{
+FOR /F "delims=." %%a IN ('dir /b <path to image>\*_backdrop.jpg') do (<path to convert>\convert.exe <path to image>\%%a.jpg -colorspace YUV -resize 1280x720! -gravity Center -crop 1280x720+0+0 +repage <output>\%%a.jpg)
+}}}
+<br>
+ODER (1920x1080)
+{{{
+FOR /F "delims=." %%a IN ('dir /b <path to image>\*_backdrop.jpg') do (<path to convert>\convert.exe <path to image>\%%a.jpg -colorspace YUV -resize 1920x1088! -gravity Center -crop 1920x1080+0+0 +repage <output>\%%a.jpg)
+}}}
+<br>
+Umwandeln in eine m1v Datei:
+{{{
+FOR /F "delims=." %%a IN ('dir /b <path_to_jpg>\*_backdrop.jpg') do ("<path_to_ffmpeg>\ffmpeg" -i <path_to_jpg>\%%a.jpg -an -f mpeg2video -r 25.0 -vcodec mpeg2video -intra -sc_threshold 1000000000 -flags +mv0+cgop -dc 8 -g 1 -me_method zero -qscale 5 -bf 0 -aspect 16:9 <path_for_output>\%%a.m1v)
+}}}
+<br><br>
+Die erstellten Dateien können dann in das Verzeichnis in „/…/valerie/media“ auf der Box kopiert werden.<br><br>

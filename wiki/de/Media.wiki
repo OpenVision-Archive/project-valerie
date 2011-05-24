@@ -1,0 +1,68 @@
+#summary Screenshots & Videos von PVMC in Aktion...
+== Videos ==
+Dieses Video von skywatcher zeigt Valerie r550 auf einer Dreambox 8000:
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=7VZAZIndVlA"/>
+
+_Valerie auf einer Dreambox 8000_ von *skywatcher*
+[http://wp10596541.wp260.webpack.hosteurope.de/wp/wp-trackback.php?p=291 Traceback]
+<br />
+
+
+Dieses Video zeigt Valerie r457 auf einem Kathrein UFS-912:
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=dNNFfwUFxwI"/>
+
+_Valerie auf einem UFS912_ von *schischu*
+<br />
+
+
+Dieses Video zeigt Valerie r291 auf einer Dreambox DM8000:
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=tSGGgqOZtF4"/>
+
+_Valerie auf einer DM8000_ von *slugshot*
+<br />
+<br />
+
+*Ältere Videos:*
+
+<wiki:video url="http://www.youtube.com/watch?v=BVAKFeZfhd0"/>
+
+_Project Valerie auf einem ufs910_ von *hellmaster*
+
+<br />
+
+<wiki:video url="http://www.youtube.com/watch?v=5IRqEqv0xHk"/>
+
+_Valerie auf einem ufs910_ von *hellmaster*
+
+
+<br />
+
+<wiki:video url="http://www.youtube.com/watch?v=oGHZsuzC69w"/>
+
+_Valerie auf einem ufs910_ von *hellmaster*
+<br />
+
+== Bildschirmfotos == 
+
+Hauptmenu: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/mainmenu_mini.png
+
+<br />
+
+Filme: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png
+
+<br />
+
+Serien: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/series_mini.jpg
+
+<br />
+
+PC: <br />
+http://project-valerie.googlecode.com/svn/trunk/images/Valerie_movie.jpg
+
+<br />
