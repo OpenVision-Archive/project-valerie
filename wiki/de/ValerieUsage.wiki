@@ -3,7 +3,7 @@
  * [ValerieUsage#Valerie-Log Valerie-Log]
  * [ValerieUsage#Trakt.TV Trakt.TV]
  * [ValerieUsage#Untertitel Untertitel]
- * [ValerieUsage#Cover und Backdrops Cover und Backdrops]
+ * [ValerieUsage#Cover_und_Backdrops Cover und Backdrops]
 <br>
 = Hauptmenue =
 *Das Hauptmenü von Project Valerie: *<br><br>
