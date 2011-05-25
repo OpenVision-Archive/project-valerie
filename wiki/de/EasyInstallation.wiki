@@ -1,16 +1,9 @@
-= Deutsches !HowTo =
-<br>Project Valerie ist ein !MediaCenter Plugin für Enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:<br>
+= Deutsches Installations-!HowTo =
+ * [Installation Installation]
+ * [Deinstallation Deinstallation]
 
- * Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)
- * Azbox (Elite, Premium, Premium+)
- * Kathrein (UFS-910, UFS-912, UFS-922)
- * Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)
- * Topfield HDPVR-7700
- * Fortis HDbox
-...und weitere Enigma2 basierte Boxen mit mipsel oder sh Architektur
-<br><br>
-
-===Du willst Project Valerie installieren und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig!===
+== Installation ==
+Du willst Project Valerie installieren und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig:
 
 1. Lade dir die neueste Project Valerie Version - abhängig von der Architektur deiner Box - von der [http://code.google.com/p/project-valerie/downloads/list Download-Seite] herunter:
 
@@ -33,7 +26,8 @@ Project Valerie installiert sich in folgenden, z.Zt. *nicht* konfigurierbaren, V
 Die Anwendung selbst: `/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie`<br>
 Das Sync Plugin:	`/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync`<br>
 Config und Datenbank: `/media/hdd/valerie`<br>
-Log und Cache: `/tmp/valerie`<br><br>
+Log und Cache: `/tmp/valerie`
+<br><br>
 == Deinstallation ==
 Um Project Valerie zu deinstallieren gibt es zwei Varianten:
  * entweder über das "Erweiterungen" Menu von Enigma2
