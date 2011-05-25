@@ -1,7 +1,7 @@
 = Deutsches Installations-!HowTo =
  * [EasyInstallation#Installation Installation]
  * [EasyInstallation#Deinstallation Deinstallation]
-
+<br><br>
 == Installation ==
 Du willst Project Valerie installieren und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig:
 
