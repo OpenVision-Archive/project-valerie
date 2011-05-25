@@ -2,7 +2,7 @@
  * [Ressources#Datenbankdateien Datenbank-Dateien]
  * [Ressources#Konfigurationsdateien Konfigurationsdateien]
  * [Ressources#Startup-Datei Startup-Datei]
- * [Ressources#Spezielle Dateien Spezielle Dateien]
+ * [Ressources#Spezielle_Dateien Spezielle Dateien]
  * [Ressources#Skins Skins]
  * [Ressources#Logdateien Logdateien]
 <br>
