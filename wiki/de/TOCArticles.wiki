@@ -11,5 +11,5 @@
   * [FAQ Häufig gestellte Fragen (FAQ)]
   * [Media Media]
     * [Media#Videos Videos]
-    * [Media#Screenshots Bildschirmfotos]
+    * [Media#Bildschirmfotos Bildschirmfotos]
   * [MediaProviders Datenquellen]

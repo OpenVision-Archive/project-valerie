@@ -1,12 +1,20 @@
-Herzlich willkommen bei Project Valerie<br>
+= Herzlich willkommen bei Project Valerie =
 http://project-valerie.googlecode.com/svn/trunk/images/Valerie_LOGOv2.png
-
+<br><br>
+== Was ist Project Valerie ==
+Project Valerie ist ein !MediaCenter Plugin für Enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:
+ * Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)
+ * Azbox (Elite, Premium, Premium+)
+ * Kathrein (UFS-910, UFS-912, UFS-922)
+ * Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)
+ * Topfield HDPVR-7700
+ * Fortis HDbox
+...und weitere Enigma2 basierte Boxen mit mipsel oder sh Architektur.
+<br><br>
 == Ein paar ausgewählte Wiki-Seiten ==
-
   * [EasyInstallation Anleitung zur Installation]
   * [Valerie_in_use Anleitung zur grundlegenden Bedienung]
   * [Media Bilder und Videos von Project Valerie in Aktion]
-
   * [TraktTV Was ist Trakt.tv?]
 
-  * [http://code.google.com/p/project-valerie/issues/list bei Fragen oder Problemen bitte die "Issues" benutzen!]
+[http://code.google.com/p/project-valerie/issues/list Bei Fragen oder Problemen bitte die "Issues" benutzen!]
