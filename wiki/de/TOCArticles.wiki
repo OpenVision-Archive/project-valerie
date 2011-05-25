@@ -1,6 +1,6 @@
   * [Welcome ↑ Startseite]
   * [EasyInstallation Installation]
-  * [Valerie_in_use Bedienung]
+  * [ValerieUsage Bedienung]
      * [Options Einstellungen]
      * [Sync Synchronisation]
      * [skin Skin & Co.]
