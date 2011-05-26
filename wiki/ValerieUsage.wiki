@@ -1,9 +1,5 @@
 #summary Grundlegende Bedienung von Project Valerie
- * [ValerieUsage#Hauptmenü Hauptmenü]
- * [ValerieUsage#Valerie-Log Valerie-Log]
- * [ValerieUsage#Trakt.TV Trakt.TV]
- * [ValerieUsage#Untertitel Untertitel]
- * [ValerieUsage#Cover und Backdrops Cover und Backdrops]
+<wiki:toc max_depth="1" />
 <br>
 = Hauptmenü =
 *Das Hauptmenü von Project Valerie: *<br><br>
