@@ -6,7 +6,7 @@
      * [skin Skin & Co.]
      * [subtitles Untertitel]
      * [WebIF Web-Interface]
-     * [Ressources Ressourcen]
+     * [Resources Resourcen]
   * [roadmap Roadmap]
   * [FAQ Häufig gestellte Fragen (FAQ)]
   * [Media Media]

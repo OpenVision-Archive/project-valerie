@@ -1,16 +1,8 @@
-= English !HowTo =
-Project Valerie is a !MediaCenter plugin for enimga2 based settop boxes. Currently it has been reported as running on following systems:<br>
-
- * Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)
- * Azbox (Elite, Premium, Premium+)
- * Kathrein (UFS-910, UFS-912, UFS-922)
- * Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)
- * Topfield HDPVR-7700
- * Fortis HDbox
-
-...and a lot more Enigma2 based settop boxes with mipsel or sh architecture.
-<br><br>
-===You want to install and use Project Valerie, but you don´t know how? Here you will find all necessary information!===
+#summary Installation / remove of Project Valerie
+<wiki:toc max_depth="1" />
+<br>
+= Installation of Project Valerie =
+You want to install and use Project Valerie, but you don´t know how? Here you will find all necessary information!
 
 1. Depending on the architecture of your box download the latest version of Project Valerie from our [http://code.google.com/p/project-valerie/downloads/list download-page]:
 
@@ -35,7 +27,7 @@ The sync plugin:	`/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync
 Config and database: `/media/hdd/valerie`<br>
 Log and cache: `/tmp/valerie`<br>
 <br>
-== Remove ==
+= Remove of Project Valerie =
 You can remove Project Valerie by using one of the following ways:
  * select the de-installation option for Project Valerie through the Enigma2 extension panel
  * execute the following command through an SSH/Telnet-session:<br>

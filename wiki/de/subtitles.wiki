@@ -1,10 +1,11 @@
-#summary Subtitles
+= Untertitel =
+Valerie hat einen Untertitel Downloader, mit dem zum ausgewählten Titel die entsprechenden Untertitel herunter geladen werden können.<br>
 
-= Subtitles =
-Valerie hat einen Subtitle Downloader, mit dem zum ausgewählten Titel der entsprechende Untertitel herunter geladen werden kann.
-Hierzu muss im Movie / TV Show Menü der gewünschte Titel ausgewählt werden. Über die Menü Taste ist nun der Subtitle-Downloader aufrufbar. Entsprechend konfiguriertem Optionen in den Einstellungen für Subtitles, steht jetzt der Sub-Provider zur Auswahl.<br>
+Hierzu muss im "Movie" oder "TV Show" Menü der gewünschte Titel selektiert werden (NICHT mit [Ok] bestätigen!). Über die "Menü"-Taste lässt sich das "Plugins" Pop-Up anziegen, von wo das "Download subtitle" Plugin auszuwählen ist:<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sub_small.png<br><br>
-Derzeit können Untertitel von folgenden Providern geladen werden:<br>
+=> Entsprechend der eingestellten Optionen in den Einstellungen für die Untertitel steht jetzt der enstrpechende Untertitel-Anbieter zur Auswahl.<br>
+
+Derzeit können Untertitel von folgenden Anbietern geladen werden:<br>
  * [http://www.opensubtitles.org Opensubtitles]<br>
  * [http://bierdopje.com Bierdopje]<br>
  * [http://napiprojekt.pl Napiprojekt]<br>

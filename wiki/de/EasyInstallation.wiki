@@ -1,8 +1,7 @@
-= Deutsches Installations-!HowTo =
- * [EasyInstallation#Installation Installation]
- * [EasyInstallation#Deinstallation Deinstallation]
+#summary Installation und Deinstallation
+<wiki:toc max_depth="1" />
 <br>
-== Installation ==
+= Installation =
 Du willst Project Valerie installieren und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig:
 
 1. Lade dir die neueste Project Valerie Version - abhängig von der Architektur deiner Box - von der [http://code.google.com/p/project-valerie/downloads/list Download-Seite] herunter:
@@ -28,7 +27,7 @@ Das Sync Plugin:	`/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync
 Config und Datenbank: `/media/hdd/valerie`<br>
 Log und Cache: `/tmp/valerie`
 <br><br>
-== Deinstallation ==
+= Deinstallation =
 Um Project Valerie zu deinstallieren gibt es zwei Varianten:
  * entweder über das "Erweiterungen" Menu von Enigma2
  * oder über SSH/Telnet folgendes eingeben:<br>

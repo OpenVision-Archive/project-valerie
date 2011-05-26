@@ -1,13 +1,5 @@
 #summary Resourcen und Konfiguration
 <wiki:toc max_depth="1" />
-<wiki:comment>
- * [Ressources#Datenbankdateien Datenbank-Dateien]
- * [Ressources#Konfigurationsdateien Konfigurationsdateien]
- * [Ressources#Startup-Datei Startup-Datei]
- * [Ressources#Spezielle_Dateien Spezielle Dateien]
- * [Ressources#Skins Skins]
- * [Ressources#Logdateien Logdateien]
-</wiki:comment>
 <br>
 = Datenbankdateien =
 Valerie verwaltet die Film und Serieninformationen in einer internen Datenbank (Python Pickle Dateien). Diese befindet sich im fest definierten Verzeichnis "`/hdd/valerie`" und besteht aus den Dateien:<br>

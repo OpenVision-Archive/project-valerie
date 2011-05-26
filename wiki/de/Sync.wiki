@@ -1,4 +1,6 @@
-﻿#summary Sync & more.
+﻿#summary Alles rund um's Synchronisieren
+<wiki:toc max_depth="2" />
+<br>
 = Synchronisieren =
 Es stehen 2 Sync-Typen zur Auswahl. Eine komplette Synchronisation über die grüne Taste, sowie ein „fast Sync“ (gelbe Taste). Eine komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die angegebenen Verzeichnisse und gleicht diese mit der DB ab. Falls die Einstellung „Film löschen wenn Datei nicht gefunden“ aktiv ist, werden die Einträge aus der DB entfernt, zu denen keine Dateien mehr gefunden werden. Die „schnelle Synchronisation“ fügt nur neue Titel hinzu, läuft dadurch auch schneller durch.<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
