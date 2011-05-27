@@ -13,7 +13,7 @@ Project Valerie ist ein !MediaCenter Plugin für Enimga2 basierte Settop Boxen. 
 <br><br>
 == Ein paar ausgewählte Wiki-Seiten ==
   * [EasyInstallation Anleitung zur Installation]
-  * [Valerie_in_use Anleitung zur grundlegenden Bedienung]
+  * [ValerieUsage Anleitung zur grundlegenden Bedienung]
   * [Media Bilder und Videos von Project Valerie in Aktion]
   * [TraktTV Was ist Trakt.tv?]
 
