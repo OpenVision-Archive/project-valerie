@@ -7,6 +7,7 @@
      * [subtitles Subtitle Downloader]
      * [WebIF Webinterface]
      * [Resources Resources]
+  * [Troubleshooting Troubleshooting]
   * [roadmap Roadmap]
   * [FAQ FAQ]
   * [Media Media]
