@@ -1,30 +1,34 @@
-#summary Ressources/config of Valerie
-= Datenbank Dateien =
-Valerie verwaltet die Film und Serieninformationen in einer internen Datenbank (Python Pickle Dateien). Diese befindet sich im fest definierten Verzeichnis "/hdd/valerie" und besteht aus den Dateien:<br>
-  * movies.db	(alle Filme)<br>
-  * tvshows.db	(alle Serien)<br>
-  * episodes.db	(alle Episoden der Serien)<br>
-  * failed.db	(alle fehlgeschlagenen Syncs sowie multipart Filme, wie z.B. `*`_cd2, `*`_part2, etc.)<br>
+#summary Ressources and configuration files of Valerie
+<wiki:toc max_depth="1" />
+----
+= Database files =
+Valerie uses Python Pickle files located in `/hdd/valerie` in order to manage information for both movies and TV shows:<br>
+  * `movies.db` (for movies)<br>
+  * `tvshows.db` (for TV shows)<br>
+  * `episodes.db` (for TV shows episodes)<br>
+  * `failed.db` (all files failed to sync, plus additionally multipart movies, e.g. `*_cd2`, `*_part2`, etc.)
 <br>
-= Config Dateien =
-Die Konfigurationsdateien von Valerie befinden sich im Verzeichnis /hdd/valerie:<br>
-  * valerie.conf		(Suchsprache und Verhalten bei nicht mehr vorhanden Medien-Files im Suchpfad)<br>
-  * paths.conf		(Suchpfad, Filter für Dateierweiterung [z.B. avi,mkv, etc ], und flaggen von Suchordnern)<br>
-  * pre.conf			(Regular Expressions für den Suchstring)<br>
-  * post_movie.conf	(Regular Expressions für den Suchstring - nur Filme)<br>
-  * post_tv.conf		(Regular Expressions für den Suchstring - nur Serien)<br>
-  * blacklist.conf	(aus der DB ausgeblendete/gelöschte Filme)
+= Configuration files =
+The configuration files of Valerie are located in `/hdd/valerie`:<br>
+  * valerie.conf (language used for sync / how to handle media files not found any more)<br>
+  * paths.conf	(conatins search path, filter for file extansions => e.g. avi,mkv, etc. , categorization of folders contained in the search path)<br>
+  * pre.conf (regular expressions for the search string)<br>
+  * post_movie.conf (regular expressions for the search string used for movies)<br>
+  * post_tv.conf (regular expressions for the search string used for TV shows)<br>
+  * blacklist.conf (movies manually removed from the database)
 <br>
-= Startup Datei =
-Das Shellskript /hdd/valerie/start.sh kann verwendet werden um mit Valerie weitere Dienste oder Skripte zu starten.
-= spezielle Dateien =
-  * valerie.info (für Excludes oder Suchhilfen)
-
+= Startup script =
+The script `/hdd/valerie/start.sh` can be used in order to start additional services or scripts together with Valerie.<br>
+<br>
+= Special files =
+  * valerie.info (used to ignore directories from synchronisation - or to add additional hints in order to enhance the results of the synchronisation process)
+<br>
 = Skins =
-Derzeit stehen folgende Skins zur Verfügung:<br>
+Currently the following skins are available:<br>
   * Default<br>
-  * BlackSwan<br>
-  * GreySkies<br>
-Weitere Infos zu Skins im  Kapitel "Skin"
-= Log Files =
-Die Logfiles von Valerie befinden sich in /tmp/valerie/ und können auch über den Browser aufgerufen werden. Weitere Infos siehe Kapitel [WebIf "Webinterface"].
+  * !BlackSwan<br>
+  * !GreySkies<br>
+See also chapter [skin "Skin"] for details.<br>
+<br>
+= Log files =
+The log files of Valerie are located in `/tmp/valerie/`. The files can be retrieved additionally by using the corresponding option within the [WebIf "Webinterface"].
