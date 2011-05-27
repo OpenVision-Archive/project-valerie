@@ -31,4 +31,4 @@ Derzeit stehen folgende Skins zur Verfügung:<br>
 Weitere Infos zu Skins im  Kapitel [skin "Skin"]
 <br><br>
 = Logdateien =
-Die Logfiles von Valerie befinden sich in `/tmp/valerie/` und können auch über den Browser aufgerufen werden. Weitere Infos siehe Kapitel [WebIf "Webinterface"].
+Die Logfiles von Valerie befinden sich in `/tmp/valerie/` und können auch über den Browser aufgerufen werden. Weitere Infos siehe Kapitel [WebIF "Webinterface"].
