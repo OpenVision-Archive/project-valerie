@@ -22,11 +22,12 @@ Finally reboot Enigma2 - the Project Valerie assistant will guide you through th
 <br><br>
 *Note*<br>
 Project Valerie will be installed in the following directories, which can currently *not* be configured:<br>
-The application itself: `/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerie`<br>
-The sync plugin:	`/usr/lib/enigma2/python/Plugins/Extensions/!ProjectValerieSync`<br>
-Config and database: `/media/hdd/valerie`<br>
-Log and cache: `/tmp/valerie`<br>
-<br>
+ * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie` (the application itself)<br>
+ * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerieSync` (the sync plugin)<br>
+Additionally the following default directories for configuration files, database, log-files and cache are used, which can be adapted in the settings:
+ * `/media/hdd/valerie` (config and database)<br>
+ * `/tmp/valerie` (log and cache)
+<br><br>
 = Remove of Project Valerie =
 You can remove Project Valerie by using one of the following ways:
  * select the de-installation option for Project Valerie through the Enigma2 extension panel
