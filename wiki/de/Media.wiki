@@ -1,6 +1,7 @@
 #summary Screenshots & Videos von PVMC in Aktion...
-== Videos ==
-Dieses Video von skywatcher zeigt Valerie r550 auf einer Dreambox 8000:
+
+== Video Reviews ==
+Dieses Video Review von skywatcher zeigt Valerie r550 auf einer Dreambox 8000:
 <br />
 <wiki:video url="http://www.youtube.com/watch?v=7VZAZIndVlA"/>
 
@@ -8,6 +9,13 @@ _Valerie auf einer Dreambox 8000_ von *skywatcher*
 [http://wp10596541.wp260.webpack.hosteurope.de/wp/wp-trackback.php?p=291 Traceback]
 <br />
 
+== Videos ==
+Dieses Video zeigt Valerie r683 auf einem Kathrein UFS-912:
+<br />
+<wiki:video url="http://www.youtube.com/watch?v=MXycBkHLgDE"/>
+
+_Valerie auf einem UFS912_ von *schischu*
+<br />
 
 Dieses Video zeigt Valerie r457 auf einem Kathrein UFS-912:
 <br />

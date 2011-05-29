@@ -25,7 +25,7 @@ Project Valerie installiert sich in folgenden, z.Zt. *nicht* konfigurierbaren, V
  * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie` (die Anwendung selbst)<br>
  * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerieSync` (das Sync-Plugin)<br>
 Ausserdem werden folgende Default-Verzeichnisse für DAB, Log, Cache und Konfigurationsfiles benutzt, die in den Einstellungen änderbar sind: 
- * `/media/hdd/valerie` (Konfigurationsfiles und Datenbank)<br>
+ * `/hdd/valerie` (Konfigurationsfiles und Datenbank)<br>
  * `/tmp/valerie` (Log und Cache)
 <br><br>
 = Deinstallation =
