@@ -22,7 +22,7 @@ Project Valerie (PVMC) is a !MediaCenter plugin for enimga2 based settop boxes. 
 <br>
 == Usage of this wiki ==
 === Language selection ===
-The language used for the wiki depends on the language setting of your browser. Currently the pages are localized in german and english, where englisch serves as the default language (i.e. if a page requested is not available in german automatically the english version is presented). In case the whole wiki is displayed in the wrong language you can manually switch the language by using the links right under the "star":<br>
+The language used for the wiki depends on the language setting of your browser. Currently the pages are localized in german and english, where english serves as the default language (i.e. if a page requested is not available in german automatically the english version is displayed). In case the automatic language selection doesn't work correct you can manually switch the language by using the links right under the "star":<br>
  * de => german
  * en => english
 If the language is switched manually this setting remains valid until you leave and re-visit the wiki again. By doing so there's no need to change the language of each wiki page seperately. 
