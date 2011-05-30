@@ -1,15 +1,37 @@
+<wiki:toc max_depth="2" />
+----
 = Herzlich willkommen bei Project Valerie =
 http://project-valerie.googlecode.com/svn/trunk/images/Valerie_LOGOv2.png
 <br><br>
 == Was ist Project Valerie ==
-Project Valerie ist ein !MediaCenter Plugin für Enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:
+Project Valerie (PVMC) ist ein !MediaCenter Plugin für Enimga2 basierte Settop Boxen. Derzeit läuft es auf folgenden Systemen:
  * Dreambox (DM8000HD, DM800HD, DM800SE, DM500HD)
  * Azbox (Elite, Premium, Premium+)
  * Kathrein (UFS-910, UFS-912, UFS-922)
  * Cuberevo/IP-BOX (Cuberevo, Cuberevo mini, 91HD, 900HD, 910HD, 9000HD)
  * Topfield HDPVR-7700
  * Fortis HDbox
-...und weitere Enigma2 basierte Boxen mit mipsel oder sh Architektur.
+...und weitere Enigma2 basierte Boxen mit mipsel oder sh Architektur. Nachfolgend einige PVMC-Highlights in aller Kürze:
+ * [Media ansprechende Oberfläche mit animiertem Hauptmenu] 
+ * Aussehen komplett anpassbar durch Verwendung von Skins
+ * automatischer Download und Anzeige von Cover, Backdrops und Plots bei Filmen und Serien von [http://www.imdb.com IMDB], [http://themoviedb.org/ themoviedb.org] und [http://thetvdb.com/ TheTVDB.com]
+ * Verwaltung der eigenen Video-Sammlung via [WebIF Web-Interface] (=> manuelle Änderung der wichtigsten Attribute wie Titel, Plot, Genre etc.)
+ * umfangreiche Konfigurationsmöglichkeiten des Sync-Prozesses durch Verwendung von Regular Expressions - getrennt nach Video-Typ (Serien, Filme)
+ * behalte den Überblick über bereits gesehene Filme und Serien mit [http://trakt.tv/ Trak.TV]
+ * ...
+<br>
+== Benutzung des Wikis ==
+=== Sprachauswahl ===
+Die Sprache des Wikis sollte sich entsprechend der Browser-Sprache automatisch einstellen. Aktuell liegen allerdings nur Übersetzungen für Deutsch und Englisch vor. Sollte das Wiki in einer falschen Sprache angezeigt werden, kann man die Sprache auch manuell mit den Links unterhalb des "Sterns" umschalten:<br>
+ * de => Deutsch
+ * en => Englisch
+Stellt man die Sprache manuell um, bleibt diese Auswahl bis zum nächsten Besuch gespeichert, d.h. man muss nicht für jede neu angeklickte Seite die Sprache auf's Neue umstellen.<br>
+Die Default-Sprache ist "Englisch", d.h. wenn für eine Seite keine Übersetzung vorhanden ist, wird die englische Seite benutzt.
+<br><br>  
+=== Benutzerführung ===
+Das Wiki ist in unterschiedliche Kategorien aufgeteilt. Diese kann man direkt über die Seitenleiste auf der linken Seite anspringen. Einige Kapitel enthalten selbst weitere Unterkapitel (z.B. "Bedienung"), die man durch einen Klick auf das "+" aufklappen kann. Falls die Seitenleiste stört, lässt sie sich durch anklicken der beiden spitzen Klammern "<<" ausblenden - analog dazu funktioniert das Einblenden durch nachmaligen Klick auf die im ausgeblendeten Zustand sichtbaren ">>" Klammern.<br>
+Bei länglichen Seiten gibt es im Kopfbereich ein automatisch generiertes Inhaltsverzeichnis (meist nur für die Haupt-Überschriften), mit dem man direkt zu den einzelnen Kapiteln der aktuellen Seite hüpfen kann.<br>
+Wo möglich und sinnvoll sind Links zu anderen Project Valerie Wiki-Seiten eingefügt - da die Entwicklung von PVMC aber rasant voranschreitet, wird das Wiki immer ein wenig der eigentlichen Project Valerie Funktionalität hinterherhinken. 
 <br><br>
 == Ein paar ausgewählte Wiki-Seiten ==
   * [EasyInstallation Anleitung zur Installation]
