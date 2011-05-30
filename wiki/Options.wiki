@@ -1,7 +1,7 @@
 #summary Different possible settings.
 
 = Main-Settings =
-The main settings are accessible from the main menu and allow for the configuration of PVMC start-up behavior, skin-selection, auto-update functionality and many more. The following chapters describe the different settings together with their possible values.<br>
+The main settings are accessible from the main menu and allow for the configuration of PVMC start-up behavior, skin-selection, auto-update functionality and many more. The following chapters describe the different settings together with their possible values. Default values are displayed *bold*.<br>
 <br>
 === Assistent beim nächsten Start anzeigen ===
 {"yes", *"no"*}<br>
@@ -64,19 +64,19 @@ Specify the "Trakt.tv" username to be used when tracking your movies.<br>
 {*"password"*}<br>
 Specify the "Trakt.tv" password to be used when tracking your movies.<br>
 <br>
-=== SubtitleDownloader: Provider ===
+=== !SubtitleDownloader: Provider ===
 {*"Opensubtitles"*, "Bierdopje", "Napiprojekt", "Ondertitel", "Sratim", "Subdivx", "Swesub", "Titlovi", "Undertexter"}<br>
 Specify the subtitle provider to be used by PVMCs subtitle download functionality. Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br> 
-=== SubtitleDownloader: Language 1 ===
+=== !SubtitleDownloader: Language 1 ===
 {}<br>
 Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br>
-=== SubtitleDownloader: Language 2 ===
+=== !SubtitleDownloader: Language 2 ===
 {}<br>
 Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br>
-=== SubtitleDownloader: Language 3 ===
+=== !SubtitleDownloader: Language 3 ===
 {}<br>
 Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br>
@@ -93,4 +93,3 @@ The screenshots below show the synchronization settings screens of PVMC:<br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_options_small.png<br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_options2_small.png<br>
 <br><br>
-
