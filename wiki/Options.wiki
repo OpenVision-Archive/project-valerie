@@ -1,16 +1,96 @@
 #summary Different possible settings.
 
-= Einstellungen =
-Es gibt unterschiedliche Konfigurationsmöglichkeiten. Zum einen kann über die Einstellungen (aus dem Haupmenü erreichbar) das Startverhalten von Valerie, sowie das Aussehen und Einstellungen zu Diensten vorgenommen werden.<br>
+= Main-Settings =
+The main settings are accessible from the main menu and allow for the configuration of PVMC start-up behavior, skin-selection, auto-update functionality and many more. The following chapters describe the different settings together with their possible values.<br>
+<br>
+=== Assistent beim nächsten Start anzeigen ===
+{"yes", *"no"*}<br>
+Configures whether the PVMC installation wizard is displayed after start-up.<br>
+<br>
+=== Project Valerie automatisch starten ===
+{"yes", *"no"*}<br>
+Allow for the automatic start-up if Enigma2 is started. In that case you will see PVMC main menu instead of the TV picture after reboot of your box.<br>
+<br>
+=== Beim Start auf Updates überprüfen ===
+{*"yes"*, "no"}<br>
+Determines whether PVMC shall check for updates right after start-up. If so a message box is displayed for 120 sec. asking whether the new version shall be downloaded and installed or not.<br>
+Please note: since an Enigma2 restart is required after a new version has been installed the default for the message box is "no" in order to not disturb use-cases where an automatic start-up of your box is needed.<br>
+<br>
+=== Qualität Hintergrundbild ===
+{"High", }<br>
+TODO<br>
+<br>
+=== Skin ===
+{*"default"*, "blackSwan", "greySkies"}<br>
+Select the skin used by PVMC.<br>
+<br>
+=== On Power press ===
+{"Deep Standby", TODO}<br>
+Configures how your box shall behave if you click the Power button.<br>
+<br>
+=== Show Movie and TVShow in main menu ===
+{*"yes"*, "no"}<br>
+Determines whether the entries for "Movies" and "Tv Shows" shall be displayed in PVMCs main menu.<br>
+<br>
+=== Synchronize: Fast Sync on autostart ===
+{*"yes"*, "no"}<br>
+This option configures, whether an automatic "fast sync" run shall be performed after PVMC starts-up.<br>
+<br>
+=== myEpisodes: Eingeschaltet ===
+{"yes", *"no"*]<br>
+Switch on / off usage of "myEpisodes" TV shows tracking functionality.<br>
+<br>
+=== myEpisodes: Benutzername ===
+{*"username"*}<br>
+Specify the myEpisodes username to be used when tracking your TV shows.<br>
+<br>
+=== myEpisodes: Passwort ===
+{*"password"*}<br>
+Specify the myEpisodes password to be used when tracking your TV shows.<br>
+<br>
+=== Webinterface: Port ===
+{08888}<br>
+The port to be used by the [WebIF Web-Interface].<br>
+<br>
+=== trakt.tv: Eingeschaltet ===
+{"yes", *"no"*]<br>
+Switch on / off usage of "Trakt.tv" movies tracking functionality.<br>
+<br>
+=== trakt.tv: Benutzername ===
+{*"username"*}<br>
+Specify the "Trakt.tv" username to be used when tracking your movies.<br>
+<br>
+=== trakt.tv: Passwort ===
+{*"password"*}<br>
+Specify the "Trakt.tv" password to be used when tracking your movies.<br>
+<br>
+=== SubtitleDownloader: Provider ===
+{*"Opensubtitles"*, "Bierdopje", "Napiprojekt", "Ondertitel", "Sratim", "Subdivx", "Swesub", "Titlovi", "Undertexter"}<br>
+Specify the subtitle provider to be used by PVMCs subtitle download functionality. Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
+<br> 
+=== SubtitleDownloader: Language 1 ===
+{}<br>
+Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
+<br>
+=== SubtitleDownloader: Language 2 ===
+{}<br>
+Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
+<br>
+=== SubtitleDownloader: Language 3 ===
+{}<br>
+Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
+<br>
+= Synchronization-Settings =
+TODO
+
+= Screenshots =
+== Main settings ==
+The screenshots below show the main settings screens of PVMC:<br>
 http://project-valerie.googlecode.com/svn/trunk/images/settings_small.png<br>
 http://project-valerie.googlecode.com/svn/trunk/images/settings2_small.png<br><br>
-Zum anderen kann über die Einstellungen aus dem Sync-Bereich der/die Ordnerpfade, die Suchsprache und die Datenbank bearbeitet werden.<br>
+== Synchronization Settings ==
+The screenshots below show the synchronization settings screens of PVMC:<br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_options_small.png<br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_options2_small.png<br>
 <br><br>
-= Datenbank Dateien =
-Valerie verwaltet die Film und Serieninformationen in einer internen Datenbank. Diese befindet sich im fest definierten Verzeichnis "/hdd/valerie" und besteht aus den Dateien:<br>
-  * movies.db		(alle Filme)<br>
-  * tvshows.db	(alle Serien)<br>
-  * episodes.db	(alle Episoden der Serien)<br>
-  * failed.db		(alle fehlgeschlagenen Syncs sowie multipart Filme, wie z.B. `*`_cd, `*`_part2, etc.)<br>
+
