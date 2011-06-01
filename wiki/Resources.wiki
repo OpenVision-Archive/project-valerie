@@ -31,4 +31,4 @@ Currently the following skins are available:
 See also chapter [skin "Skin"] for details.<br>
 <br>
 = Log files =
-The log files of Valerie are located in `/tmp/valerie/` (editable in the [Options main-settings]). The files can be retrieved additionally by using the corresponding option within the [WebIf "Webinterface"].
+The log files of Valerie are located in `/tmp/valerie/` (editable in the [Options main-settings]). The files can be retrieved additionally by using the corresponding option within the [WebIF "Webinterface"].
