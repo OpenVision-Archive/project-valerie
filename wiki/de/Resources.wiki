@@ -17,11 +17,12 @@ Die Konfigurationsdateien von Valerie befinden sich defaultmässig im Verzeichni
   * `post_tv.conf` (Reguläre Ausdrücke für den Suchstring - nur Serien)
   * `blacklist.conf` (aus der Datenbank ausgeblendete / gelöschte Filme)
 <br>
-= Startup-Datei =
-Das Shellskript `/hdd/valerie/start.sh` kann verwendet werden, um mit Valerie weitere Dienste oder Skripte zu starten.
-<br><br>
 = Spezielle Dateien =
-  * `valerie.info` (für Excludes oder Suchhilfen)
+== Startup-Datei ==
+Das Shellskript `/hdd/valerie/start.sh` kann verwendet werden, um mit Valerie weitere Dienste oder Skripte zu starten.
+<br>
+== valerie.info ==
+Diese Datei kann benutzt werden, um einzelne Verzeichnisse vom Synchronisations-Prozess auszuschließen - oder um einen IMDB-Link als Suchhilfe anzugeben. Mehr dazu findet sich im Kapitel [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"].<br>
 <br>
 = Skins =
 Derzeit stehen folgende Skins zur Verfügung:
