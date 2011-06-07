@@ -1,0 +1,11 @@
+http://wiki.python.org/moin/PythonSpeed/PerformanceTips
+
+A good way to do lazy imports is:
+{{{
+email = None
+
+def parse_email():
+    global email
+    if email is None:
+        import email
+}}}
