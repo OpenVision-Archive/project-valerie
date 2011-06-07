@@ -1,34 +1,58 @@
-﻿#summary Alles rund um's Synchronisieren
+#summary Alles rund um's Synchronisieren
 <wiki:toc max_depth="2" />
-<br>
+----
 = Synchronisieren =
-Es stehen 2 Sync-Typen zur Auswahl. Eine komplette Synchronisation über die grüne Taste, sowie ein „fast Sync“ (gelbe Taste). Eine komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die angegebenen Verzeichnisse und gleicht diese mit der DB ab. Falls die Einstellung „Film löschen wenn Datei nicht gefunden“ aktiv ist, werden die Einträge aus der DB entfernt, zu denen keine Dateien mehr gefunden werden. Die „schnelle Synchronisation“ fügt nur neue Titel hinzu, läuft dadurch auch schneller durch.<br><br>
+In den Synchronisierungsmanager gelangt man über "Hauptmenu" => "System" "Sync". Es stehen zwei Sychronisationsarten zur Auswahl:
+ * eine komplette Synchronisation (auswählbar über die grüne Taste)
+ * eine "schnelle" Synchronisation (auswählbar über die gelbe Taste
+
+Die komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die im Suchpfad angegebenen Verzeichnisse und gleicht die dort gefundenen Medien-Dateien mit der Datenbank ab. Falls die Option "Film löschen wenn Datei nicht gefunden" aus den Haupteinstellungen aktiv ist, werden diejenigen Einträge aus der Datenbank entfernt, zu denen keine Dateien mehr gefunden wurden.
+
+Die "schnelle Synchronisation" hingegen fügt nur neue Titel hinzu und läuft dadurch bedeutend schneller ab.<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
 <br><br>
+== Einstellungen ==
+Die Einstellungen für den Synchronisationsmanager sind über die blaue Taste erreichbar. Dort werden die für die Suche zu berücksichtigenden Verzeichnisse angegeben, sowie die für Plots und Titel zu verwendete Sprache festgelegt. Außerdem können dort Datenbank, Cache und Filter zurückgesetzt, bzw. gelöscht werden.
+<br><br>
 == Medienprovider ==
-Als Datenquelle dienen [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org] und [http://www.thetvdb.org TheTVDB.org]. IMDB liefert primär die ID. Über die anderen Quellen werden Plot, Poster, Hintergrund usw. bezogen. Liegen diese nicht in der ausgewählten Sprache vor, wird IMDB befragt. Liegen diese dort auch nicht vor, wird der englische Text von TheMovieDB, resp. TheTVDB genommen. Ist dieser dort auch nicht vorhanden, wieder Failback zu IMDB.
+Als Datenquelle für die Synchronisation dienen [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] und [http://www.thetvdb.org TheTVDB.org (TVDB)]. IMDB liefert primär die ID, während über die anderen Quellen Plot, Poster und Hintergrund usw. bezogen werden.
+Zu beachten ist dabei folgendes:
+ * zuerst werden TMDB, bzw TVDB nach dem Plot in der ausgewählten Sprache befragt.
+ * liegt der Plot nicht in der ausgewählten Sprache vor, wird bei IMDB für die ausgewählte Sprache nachgeschaut 
+ * liegt dieser dort auch nicht vor, wird der englische Text von TMDB, resp. TVDB genommen
+ * ist dieser dort auch nicht vorhanden, wird nochmals nach einem englischen Plot bei IMDB geschaut
+Poster und Hintergrund werden aktuell ausschließlich von TMDB, bzw. TVDB in der eingestellten Sprache geholt. Sind diese dort *nicht* verfügbar, werden später in den Listen keine Grafiken angezeigt. In diesem Fall einfach selbst bei den entsprechenden Providern die Grafiken hochladen - dann haben alle etwas davon! :-) 
 <br><br>
 == Suchstrukturen ==
-In der Datei paths.conf ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird, bzw. wie die Ordner kategorisiert sind:<br>
-mkv|ts|avi|m2ts<br>
-`/hdd/movie`|MOVIE<br>
-`/hdd/series`|TV<br>
-`/hdd/gemischt`|MOVIE_AND_TV<br><br>
-Demzufolge werden in den als MOVIE gekennzeichneten Ordnern zur Filme zugeordnet, den als TV gekennzeichneten nur Serien. Ist ein Ornder mit MOVIE_AND_TV gekennzeichnet kann darin beides vorkommen.<br>
-Als Suchstring wird der Dateiname des Titels aus der Dateisystemstruktur (ohne die Dateityperweiterung) genommen.<br>
-Ist ein Titel eine TV-Aufnahme und es liegen die zugehörigen Metafiles (`*`.meta) vor, werden hieraus Titelname und ggf. Staffel / Episode für die Suche genommen, anstelle des Dateinamens.<br>
-Gibt es zu einem Titel eine gleichnamige `*`.nfo Datei, wird diese nach der IMDB-ID ausgelesen.<br>
-Valerie erkennt Filme die in mehreren Dateien vorliegen anhand des Namens.
-Eine Ausnahme sind Ordner mit einer DVD Struktur (`*`.vob, `*`.ifo) als Inhalt. Da hier anhand des Dateinamens keine Suche gestartet werden kann, wird der Ordnername als Suchbegriff verwendet.<br>
-Mit Hilfe in den Config-Files "pre.conf", "post_movie.conf", sowie "post_tv.conf" festgelegten Regular Expressions können die Suchstrings, die an die Medienprovider übergeben werden, beeinflusst werden.<br>
-Die pre.conf gilt für beide Kategorien, post_movie.conf nur für Filme, post_tv.conf nur für Serien.<br><br>
-Beispiel:<br>
-Angenommen der Titel hat folgenden Dateinamen:<br> „The.Beach.2000.720p.HDTV.x264-ESiR.mkv“<br>
-Valerie würde mit Standardeinstellungen folgendes als Suchstring verwenden: „The Beach 2000 ESiR“<br>
-Da das Ergebnis nicht eindeutig ist, wird der „best match“ verwendet. In diesem Fall „Beach Tennis USA: The Road to Long Beach 2009“. Um dem vorzubeugen, können über die Regular Expressions bestimmte Wörter oder Zeichenketten herausgefiltert werden, damit ein möglichst eindeutiger Suchbegriff übergeben wird.<br>
-Mehr zu Regular Expressions kann auf [http://www.zdnet.de/anwendungsentwicklung_regular_expressions_syntax_entraetselt_story-20000201-20000839-1.htm ZDNET] nachgelesen werden. Um eigene Regural Expressions zu überprüfen eignet sich folgedes online [http://gskinner.com/RegExr RegEx Tool]<br>
+In der Datei `paths.conf` ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird (z.B. Dateiendungen "`mkv|ts|avi|m2ts`"), bzw. wie die Ordner kategorisiert sind (Filme => Kategorie "MOVIE", Serien => Kategorie "TV" oder beides => Kategorie "MOVIE_AND_TV"). Diese Datei kann entweder manuell editiert werden (eine entsprechende Datei mit Default-Werten wird bei der ersten Installation unter `/hdd/valerie` angelegt - siehe => [Resources#Konfigurationsdateien Konfigurationsdateien]) - oder aber über die Einstellungen des Syncmanagers. Zusätzlich kann für jeden Ordner separat konfiguriert werden, ob der Ordnername zum Abgleich benutzt werden soll oder die Dateinamen der einzelnen Files.
+
+Beispielsweise könnte die eigene Sammlung wie folgt aufgeteilt werden:
+ * `/hdd/movie` => Kategorie "MOVIE"
+ * `/hdd/series` => Kategorie "TV"
+ * `/hdd/gemischt` => Kategorie "MOVIE_AND_TV"
+Nach einem Synchronisationslauf würden die im "`/hdd/movie`"-Ordner enthaltenen Files zur "Film"-Liste zugeordnet. Die im "`/hdd/series`"-Verzeichnis enthaltenen Dateien werden als Serien interpretiert und die im "`gemischt`"-Ordner enthaltenen Dateien werden entweder als Film gesucht - und wenn dort nichts gefunden wird, als Serie interpretiert.
+
+Zur Erkennung der Videos werden folgende Kriterien herangezogen:
+ * der Name der Datei ohne Dateityperweiterung (default). Der für die Suchanfrage benutzte String kann aber vor Ausführen der eigentlichen Suche noch durch Reguläre Ausdrücke verändert werden (s.u.)
+ * der Name des Ordners, in dem die Datei enthalten ist (einstellbar in den Synchronisationsmanager-Optionen ([Einstellungen s.o.])
+ * eine IMDB-Id, die über eine selbst anzulegende `nfo`-Datei vorgegeben wird
+ * bei selbst erstellten Aufnahmen wird der Titel (bzw. Staffel und Episode bei Serien) aus der zugehörigen Enigma2 `meta`-Datei gelesen
+Falsch erkannte Einträge können anschließend manuell korrigiert werden ([Suchergebnis_manuell_korrigieren s.u.]).
 <br>
-Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Sync Menü korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der DB löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
+=== DVDs ===
+Valerie erkennt Filme die in mehreren Dateien vorliegen anhand des Namens. Eine Ausnahme sind Ordner mit einer DVD Struktur (`*`.vob, `*`.ifo) als Inhalt. Da hier anhand des Dateinamens keine Suche gestartet werden kann, wird in solchen Fällen immer der Ordnername als Suchbegriff verwendet.
+<br>
+=== Reguläre Ausdrücke ===
+Mit Hilfe in den Config-Files "`pre.conf`", "`post_movie.conf`", sowie "`post_tv.conf`" festgelegten Regular Expressions können die Suchstrings, die an die Medienprovider übergeben werden, beeinflusst werden.<br>
+Die `pre.conf` gilt für beide Kategorien, `post_movie.conf` nur für Filme, `post_tv.conf` nur für Serien.<br><br>
+Beispiel:<br>
+Angenommen der Titel hat folgenden Dateinamen:<br> "`The.Beach.2000.720p.HDTV.x264-ESiR.mkv`"<br>
+Valerie würde mit Standardeinstellungen folgendes als Suchstring verwenden: "`The Beach 2000 ESiR`"<br>
+Da das Ergebnis nicht eindeutig ist, wird der "best match" verwendet. In diesem Fall "`Beach Tennis USA: The Road to Long Beach 2009`". Um dem vorzubeugen, können über sogenannte "Reguläre Ausdrücke" bestimmte Wörter oder Zeichenketten herausgefiltert werden, damit ein möglichst eindeutiger Suchbegriff übergeben wird.<br>
+Mehr zu regulären Ausdrücken kann auf [http://www.zdnet.de/anwendungsentwicklung_regular_expressions_syntax_entraetselt_story-20000201-20000839-1.htm ZDNET] nachgelesen werden. Um eigene reguläre Ausdrücke zu überprüfen eignet sich folgedes online [http://gskinner.com/RegExr RegEx Tool]<br>
+<br>
+=== Suchergebnis manuell korrigieren ===
+Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Menu des Synchronisations-Manager korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der Datenbank löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
 Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die IMDB-ID (über "MORE") eingeben und speichern.
 <br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/manage_small.png<br>
@@ -50,5 +74,4 @@ Neben der Möglichkeit in einer NFO den IMDB Link zu einem Bestimmten Film/Titel
 Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.<br><br>
 *HINWEIS:*<br>
 Der bereitgestellte Suchbegriff gilt nur für den Inhalt des Ordners, aber nicht für etwaige vorhandene Unterordner.
-
 <br>
