@@ -1,5 +1,18 @@
 http://wiki.python.org/moin/PythonSpeed/PerformanceTips
 
+Avoid:
+{{{
+out = "<html>" + head + prologue + query + tail + "</html>"
+}}}
+Instead, use
+{{{
+out = "<html>%s%s%s%s</html>" % (head, prologue, query, tail)
+}}}
+Even better, for readability (this has nothing to do with efficiency other than yours as a programmer), use dictionary substitution:
+{{{
+out = "<html>%(head)s%(prologue)s%(query)s%(tail)s</html>" % locals()
+}}}
+
 A good way to do lazy imports is:
 {{{
 email = None
