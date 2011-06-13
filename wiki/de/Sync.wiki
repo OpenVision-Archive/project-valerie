@@ -2,7 +2,7 @@
 <wiki:toc max_depth="2" />
 ----
 = Synchronisieren =
-In den Synchronisierungsmanager gelangt man über "Hauptmenu" => "System" "Sync". Es stehen zwei Sychronisationsarten zur Auswahl:
+In den Synchronisierungsmanager gelangt man über "Hauptmenu" => "System" => "Synchronize". Es stehen zwei Sychronisationsarten zur Auswahl:
  * eine komplette Synchronisation (auswählbar über die grüne Taste)
  * eine "schnelle" Synchronisation (auswählbar über die gelbe Taste
 
@@ -17,7 +17,7 @@ Die Einstellungen für den Synchronisationsmanager sind über die blaue Taste er
 == Medienprovider ==
 Als Datenquelle für die Synchronisation dienen [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] und [http://www.thetvdb.org TheTVDB.org (TVDB)]. IMDB liefert primär die ID, während über die anderen Quellen Plot, Poster und Hintergrund usw. bezogen werden.
 Zu beachten ist dabei folgendes:
- * zuerst werden TMDB, bzw TVDB nach dem Plot in der ausgewählten Sprache befragt.
+ * zuerst werden TMDB, bzw. TVDB nach dem Plot in der ausgewählten Sprache befragt.
  * liegt der Plot nicht in der ausgewählten Sprache vor, wird bei IMDB für die ausgewählte Sprache nachgeschaut 
  * liegt dieser dort auch nicht vor, wird der englische Text von TMDB, resp. TVDB genommen
  * ist dieser dort auch nicht vorhanden, wird nochmals nach einem englischen Plot bei IMDB geschaut
