@@ -43,7 +43,7 @@ z.B: Film XY - disk1.avi, Film XY - disk2.avi<br>
 
 == Excludes und Suchhilfen ==
 Valerie bietet auch die Möglichkeit über eine valerie.info Datei die Suche zu beeinflussen, oder auch ganze Verzeichnisse von der Suche auszuklammern. Hierzu muss im jeweiligen Ordner eine Datei names valerie.info erstellt werden.<br>
-Um einen Ordner von der Suche auszuschließen muss die Datei valerie.info das Wort INGNORE als Inhalt haben.<br>
+Um einen Ordner von der Suche auszuschließen muss die Datei valerie.info das Wort ignore als Inhalt haben.<br>
 Neben der Möglichkeit in einer NFO den IMDB Link zu einem Bestimmten Film/Titel bereit zu stellen, kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
 Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.<br><br>
 *HINWEIS:*<br>
