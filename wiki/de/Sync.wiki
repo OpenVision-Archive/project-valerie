@@ -68,10 +68,58 @@ Besteht ein Titel aus mehreren Dateien, so wird nur der erste Teil in die Datenb
 z.B: Film XY - disk1.avi, Film XY - disk2.avi
 <br><br>
 == Excludes und Suchhilfen ==
-Valerie bietet auch die Möglichkeit über eine valerie.info Datei die Suche zu beeinflussen, oder auch ganze Verzeichnisse von der Suche auszuklammern. Hierzu muss im jeweiligen Ordner eine Datei names valerie.info erstellt werden.<br>
-Um einen Ordner von der Suche auszuschließen muss die Datei valerie.info das Wort ignore als Inhalt haben.<br>
-Neben der Möglichkeit in einer NFO den IMDB Link zu einem Bestimmten Film/Titel bereit zu stellen, kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
-Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.<br><br>
-*HINWEIS:*<br>
+Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
+
+ * komplette Ordner von der Suche ausklammern
+ * die IMDb-Id im Namen der Videodatei angeben
+ * die IMDb-Id in einer nfo-Datei angeben
+ * Suchwörter für einen kompletten Ordner definieren
+ * zusätzliche Meta-Daten in einer nfo-Datei angeben
+
+Wie das im Detail geht, wird in den nachfolgenden Kapiteln ausführlicher beschrieben. Zu beachten ist dabei aber, dass in allen Fällen nach einer Änderung eine bereits vorhandene Datenbank durch eine *komplette* Synchronisation neu aufgebaut wird (also keine "schnelle" Synchronisation).
+=== Ordner von der Suche ausklammern ===
+Um einen kompletten Ordner von der Suche auszuklammern, muss man lediglich eine Datei `valerie.info` mit folgendem Inhalt im auszuschließenden Ordner erstellen:
+
+<code>ignore</code>
+=== IMDb ID aus Dateinamen auslesen ===
+Wird ein Videofile nicht richtig erkannt, obwohl bei IMDb ein Eintrag dafür vorhanden ist, so ist es möglich, Valerie durch die Angabe der "richtigen" IMDb-ID auf die richtige Spur zu bringen. Dazu muss lediglich die IMDb-ID Zeichenkette (incl. den obligatorischen "tt") in den Dateinamen mit aufgenommen werden:
+
+*Dateiname des Videofiles (alt):* {{{NichtErkannterFilm.avi}}}
+
+*Dateiname des Videofiles (neu):* {{{NichtErkannterFilm_tt1234567.avi}}}
+
+Der Unterstrich "`_`" ist dabei nicht zwingend notwendig - auch ist es egal, an welcher Stelle im Dateinamen die Zeichenkette steht - wichtig ist nur, dass sie mit "tt" beginnt und anschließend sieben Ziffern folgen. Außerdem ist zu beachten, dass eine IMDb-ID, die über den dateinamen mitgegeben wurde, von einer IMDb-ID, die aus einer nfo-Datei stammt, überschrieben wird (s. nächstes Kapitel).
+
+=== IMDb ID über nfo-Datei angeben ===
+Eine weitere Möglichkeit, die richtige IMDb-ID für einen nicht korrekt erkannten Film anzugeben, ist eine nfo-Datei. Diese muss im gleichen Verzeichnis wie die Film-Datei liegen und den gleichen Namen haben - allerdings mit der Dateierweiterung "`nfo`". Als Inhalt genügt die Zeichenkette für die IMDb-ID - momentan müssen allerdings _zwingend zwei Zeilen_ in der Datei enthalten sein! Beispiel:
+
+*Dateiname des Videofiles:* {{{NichtErkannterFilm.avi}}}
+
+*Dateiname des nfo-Files:* {{{NichtErkannterFilm.nfo}}}
+
+*Inhalt des nfo-Files:*
+
+<code>tt1234567
+</code>
+
+Vor der IMDb-ID kann durchaus noch weiterer Text stehen, z.B. könnte man einfach direkt den IMDb-Link zu dem Film in die Datei kopieren, was ebenfalls funktionieren sollte:
+
+*Alternativer Inhalt des nfo-Files:*
+
+<code>http://www.imdb.com/title/tt1234567/
+</code>
+
+=== Suchwörter für einen kompletten Ordner ===
+Neben den o.g. Möglichkeiten kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
+Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.
+
+*HINWEIS:*
 Der bereitgestellte Suchbegriff gilt nur für den Inhalt des Ordners, aber nicht für etwaige vorhandene Unterordner.
-<br>
+
+=== Metadaten des Films aus xbmc-style nfo-File lesen ===
+Zusätzlich zu der Möglichkeit, eine IMDb-ID für einen Film in einem nfo-File anzugeben, können noch weitere Attribute aus solchen Filmen gelesen werden. Zur Zeit sind das
+ * `<episodedetails>` => IMDb-ID für Episoden
+ * `<season>` => Staffel-Nummer bei Serien
+ * `<episode>` => Episoden-Nummer bei Serien
+ * `<year>` => Jahr
+Diese Funktionalität ist aber noch nicht komplett implementiert, zumal mit dem "Plot"-Attribut eine wichtige Eigenschaft fehlt, um "unbekannte" Filme oder Dokumentationen unabhängig von IMDb, TheMovieDb oder TheTvDb in die PVMC-Datenbank zu bekommen.
