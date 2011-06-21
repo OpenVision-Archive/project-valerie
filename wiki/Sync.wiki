@@ -6,7 +6,8 @@ In den Synchronisierungsmanager gelangt man über "Hauptmenu" => "System" => "Sy
  * eine komplette Synchronisation (auswählbar über die grüne Taste)
  * eine "schnelle" Synchronisation (auswählbar über die gelbe Taste
 
-Die komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die im Suchpfad angegebenen Verzeichnisse und gleicht die dort gefundenen Medien-Dateien mit der Datenbank ab. Falls die Option "Film löschen wenn Datei nicht gefunden" aus den Haupteinstellungen aktiv ist, werden diejenigen Einträge aus der Datenbank entfernt, zu denen keine Dateien mehr gefunden wurden.
+Die komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die im Suchpfad angegebenen Verzeichnisse und gleicht die dort gefundenen Medien-Dateien mit der Datenbank ab. Falls die Option "Film löschen wenn Datei nicht gefunden" aus den Haupteinstellungen aktiv ist, werden diejenigen Einträge aus der Datenbank entfernt, zu denen keine Dateien mehr gefunden wurden.<br>
+Während der Synchronisation muss nicht zwingend im Synchronisierungsmanager gewartet werden, bis der Prozess fertig ist. Man kann mit Exit den Synchronisierungsbereich verlassen, dieser läuft dann als Hintergrundprozess weiter und blendet ein Popup Fenster ein, sobald alles abgeglichen ist.
 
 Die "schnelle Synchronisation" hingegen fügt nur neue Titel hinzu und läuft dadurch bedeutend schneller ab.<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
