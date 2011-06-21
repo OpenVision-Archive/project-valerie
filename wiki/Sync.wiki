@@ -1,49 +1,57 @@
-﻿#summary Alles rund um's Synchronisieren
+﻿#summary Everything about synchronisation
 <wiki:toc max_depth="2" />
 ----
-= Synchronisieren =
-In den Synchronisierungsmanager gelangt man über "Hauptmenu" => "System" => "Synchronize". Es stehen zwei Sychronisationsarten zur Auswahl:
- * eine komplette Synchronisation (auswählbar über die grüne Taste)
- * eine "schnelle" Synchronisation (auswählbar über die gelbe Taste
 
-Die komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die im Suchpfad angegebenen Verzeichnisse und gleicht die dort gefundenen Medien-Dateien mit der Datenbank ab. Falls die Option "Film löschen wenn Datei nicht gefunden" aus den Haupteinstellungen aktiv ist, werden diejenigen Einträge aus der Datenbank entfernt, zu denen keine Dateien mehr gefunden wurden.<br>
-Während der Synchronisation muss nicht zwingend im Synchronisierungsmanager gewartet werden, bis der Prozess fertig ist. Man kann mit Exit den Synchronisierungsbereich verlassen, dieser läuft dann als Hintergrundprozess weiter und blendet ein Popup Fenster ein, sobald alles abgeglichen ist.
+ENGLISH TRANSLATION IN PROGRESS
 
-Die "schnelle Synchronisation" hingegen fügt nur neue Titel hinzu und läuft dadurch bedeutend schneller ab.<br><br>
+= Synchronisation =
+The synchronisation is done using the synchronisation manager, which can be entered by performing the following steps from the main menu: "System" => "Synchronize". There are two different synchronisation types available:
+ * a full synchronisation (available through the green option key)
+ * a fast synchronisation (available throught the yellow option key)
+
+The full synchronisation option is suggested if you're running PVMC for the first time. By doing so the directories defined in the search path are scanned and the contained movie files will be added to the database. If the option "Delete movie if file not found" from the main settings is selected, the related entries from the database will be removed if the related media files are not found any more.
+
+Please note, that you can leave the synchronisation manager while the synchronisation process is still in progress: just press the "Exit" key after you initiated a synchronisation run and the synchronisation process will be performed in the background. A pop-up message is displayed in order to notify you right after the synchronisation process has been finished!
+
+The "fast synchronisation" will only add new titles to the database. hence this option is much faster compared to the full synchronisation option.<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
 <br><br>
-== Einstellungen ==
-Die Einstellungen für den Synchronisationsmanager sind über die blaue Taste erreichbar. Dort werden die für die Suche zu berücksichtigenden Verzeichnisse angegeben, sowie die für Plots und Titel zu verwendete Sprache festgelegt. Außerdem können dort Datenbank, Cache und Filter zurückgesetzt, bzw. gelöscht werden.
+== Settings ==
+The synchronisation manager settings can be entered using the [blue] key. There you can specify the search path and the language to be used for both the plots and titles. Additionally you can reset / delete the database, cache and filters.
 <br><br>
-== Medienprovider ==
-Als Datenquelle für die Synchronisation dienen [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] und [http://www.thetvdb.org TheTVDB.org (TVDB)]. IMDB liefert primär die ID, während über die anderen Quellen Plot, Poster und Hintergrund usw. bezogen werden.
-Zu beachten ist dabei folgendes:
- * zuerst werden TMDB, bzw. TVDB nach dem Plot in der ausgewählten Sprache befragt.
- * liegt der Plot nicht in der ausgewählten Sprache vor, wird bei IMDB für die ausgewählte Sprache nachgeschaut 
- * liegt dieser dort auch nicht vor, wird der englische Text von TMDB, resp. TVDB genommen
- * ist dieser dort auch nicht vorhanden, wird nochmals nach einem englischen Plot bei IMDB geschaut
-Poster und Hintergrund werden aktuell ausschließlich von TMDB, bzw. TVDB in der eingestellten Sprache geholt. Sind diese dort *nicht* verfügbar, werden später in den Listen keine Grafiken angezeigt. In diesem Fall einfach selbst bei den entsprechenden Providern die Grafiken hochladen - dann haben alle etwas davon! :-) 
+== Media provider ==
+The data for plot, title, genre etc. is retrieved from [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] and [http://www.thetvdb.org TheTVDB.org (TVDB)]. While IMDB is used to uniquely identify the movie (and hence for retrieving the unqiue IMDb-ID) the two remaining sources are used to retrieve Plots, Poster, Backdrops etc.
+The serach order used by PVMC is as follows:
+ * first of all TMDB, resp. TVDB are asked for the plot in the language defined in the synchronisation manager options (= local language)
+ * if no plot for the locakl language is found, PVMC will check IMDB for a plot in the local language 
+ * if the IMDB search fails, too PVMC will check TMDB / TCVDB for the english plot
+ * finally PVMC will check IMDB for an english plot
+Please note, that poster and backdrops will only be retrieved from TMDB and TVDB. If there are no poster and backdrops available for your movie, then no arts will be displayed later on in the movie lists! If this happens for one some of your movies then it is suggested to just open an account at TMDB and 7 TVDB in order to upload some arts for the desired movies. By doing so everyone has a benefit! :-) 
 <br><br>
-== Suchstrukturen ==
-In der Datei `paths.conf` ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird (z.B. Dateiendungen "`mkv|ts|avi|m2ts`"), bzw. wie die Ordner kategorisiert sind (Filme => Kategorie "MOVIE", Serien => Kategorie "TV" oder beides => Kategorie "MOVIE_AND_TV"). Diese Datei kann entweder manuell editiert werden (eine entsprechende Datei mit Default-Werten wird bei der ersten Installation unter `/hdd/valerie` angelegt - siehe => [Resources#Konfigurationsdateien Konfigurationsdateien]) - oder aber über die Einstellungen des Syncmanagers. Zusätzlich kann für jeden Ordner separat konfiguriert werden, ob der Ordnername zum Abgleich benutzt werden soll oder die Dateinamen der einzelnen Files.
+== Search-Structures ==
+The file `paths.conf` is used to define both the file extensions to be used in order to detect media files (for example "`mkv|ts|avi|m2ts`") and the directories that should be searched together with their categories (movies => category "MOVIE", TV-shows => category "TV" or both => category "MOVIE_AND_TV"). This file can either get edited manually (a file containing some default values will be copied during imnstallation to `/hdd/valerie` - see also => [Resources#Konfigurationsdateien Konfigurationsdateien]) - by using the corresponding setting in the synchronisation manager options. Additionally one can specify for every directory, whether the filenames shall be used for synchronisation - or the name of the corresponding directory 
 
-Beispielsweise könnte die eigene Sammlung wie folgt aufgeteilt werden:
- * `/hdd/movie` => Kategorie "MOVIE"
- * `/hdd/series` => Kategorie "TV"
- * `/hdd/gemischt` => Kategorie "MOVIE_AND_TV"
-Nach einem Synchronisationslauf würden die im "`/hdd/movie`"-Ordner enthaltenen Files zur "Film"-Liste zugeordnet. Die im "`/hdd/series`"-Verzeichnis enthaltenen Dateien werden als Serien interpretiert und die im "`gemischt`"-Ordner enthaltenen Dateien werden entweder als Film gesucht - und wenn dort nichts gefunden wird, als Serie interpretiert.
+The video collection could look for example like the following:
+ * `/hdd/movie` => category "MOVIE"
+ * `/hdd/series` => category "TV"
+ * `/hdd/mixed` => category "MOVIE_AND_TV"
+After a full synchronisation the files conatined in directory "`/hdd/movie`" will be added to the "Movie"-list. The files conatined in directory "`/hdd/series`" will be recognized as episodes for series / TV shows and the files contained in the "`mixed`" directory will be parsed as movie - and if that doesn't succeed anotehr try will be started as TV-show.
 
-Zur Erkennung der Videos werden folgende Kriterien herangezogen:
- * der Name der Datei ohne Dateityperweiterung (default). Der für die Suchanfrage benutzte String kann aber vor Ausführen der eigentlichen Suche noch durch Reguläre Ausdrücke verändert werden (s.u.)
- * der Name des Ordners, in dem die Datei enthalten ist (einstellbar in den Synchronisationsmanager-Optionen ([Einstellungen s.o.])
- * eine IMDB-Id, die über eine selbst anzulegende `nfo`-Datei vorgegeben wird
- * bei selbst erstellten Aufnahmen wird der Titel (bzw. Staffel und Episode bei Serien) aus der zugehörigen Enigma2 `meta`-Datei gelesen
-Falsch erkannte Einträge können anschließend manuell korrigiert werden ([Suchergebnis_manuell_korrigieren s.u.]).
+The following criteria will be used in order to parse a file:
+ * the name of the file without extension (default). The string used for the serach query (= search string) can be modified using regular expressions prior executing the search itself (see below)
+ * the name of the directory containing the media file (this can be configured in the synchronisation manager options ([Einstellungen s.o.])
+ * an IMDb-ID either provided in the file name itself - or by using an `nfo`-file (see below)
+ * if the media is an Enigma2 recording then the related Enigma2 `meta`-file is used in order to retrieve movie name and / or series name and episode name 
+Wrong parsed entries can be corrected manually later on by either using the PVMC GUI or WebIf ([Suchergebnis_manuell_korrigieren see below]).
 <br>
 === DVDs ===
+English translation in progress - please be patient... :-)
+
 Valerie erkennt Filme die in mehreren Dateien vorliegen anhand des Namens. Eine Ausnahme sind Ordner mit einer DVD Struktur (`*`.vob, `*`.ifo) als Inhalt. Da hier anhand des Dateinamens keine Suche gestartet werden kann, wird in solchen Fällen immer der Ordnername als Suchbegriff verwendet.
 <br>
 === Reguläre Ausdrücke ===
+English translation in progress - please be patient... :-)
+
 Mit Hilfe in den Config-Files "`pre.conf`", "`post_movie.conf`", sowie "`post_tv.conf`" festgelegten Regular Expressions können die Suchstrings, die an die Medienprovider übergeben werden, beeinflusst werden.<br>
 Die `pre.conf` gilt für beide Kategorien, `post_movie.conf` nur für Filme, `post_tv.conf` nur für Serien.<br><br>
 Beispiel:<br>
@@ -53,6 +61,8 @@ Da das Ergebnis nicht eindeutig ist, wird der "best match" verwendet. In diesem 
 Mehr zu regulären Ausdrücken kann auf [http://www.zdnet.de/anwendungsentwicklung_regular_expressions_syntax_entraetselt_story-20000201-20000839-1.htm ZDNET] nachgelesen werden. Um eigene reguläre Ausdrücke zu überprüfen eignet sich folgedes online [http://gskinner.com/RegExr RegEx Tool]<br>
 <br>
 === Suchergebnis manuell korrigieren ===
+English translation in progress - please be patient... :-)
+
 Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Menu des Synchronisations-Manager korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der Datenbank löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
 Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die IMDB-ID (über "MORE") eingeben und speichern.
 <br><br>
@@ -69,6 +79,8 @@ Besteht ein Titel aus mehreren Dateien, so wird nur der erste Teil in die Datenb
 z.B: Film XY - disk1.avi, Film XY - disk2.avi
 <br><br>
 == Excludes und Suchhilfen ==
+English translation in progress - please be patient... :-)
+
 Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
 
  * komplette Ordner von der Suche ausklammern
@@ -79,10 +91,14 @@ Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
 
 Wie das im Detail geht, wird in den nachfolgenden Kapiteln ausführlicher beschrieben. Zu beachten ist dabei aber, dass in allen Fällen nach einer Änderung eine bereits vorhandene Datenbank durch eine *komplette* Synchronisation neu aufgebaut wird (also keine "schnelle" Synchronisation).
 === Ordner von der Suche ausklammern ===
+English translation in progress - please be patient... :-)
+
 Um einen kompletten Ordner von der Suche auszuklammern, muss man lediglich eine Datei `valerie.info` mit folgendem Inhalt im auszuschließenden Ordner erstellen:
 
 <code>ignore</code>
 === IMDb ID aus Dateinamen auslesen ===
+English translation in progress - please be patient... :-)
+
 Wird ein Videofile nicht richtig erkannt, obwohl bei IMDb ein Eintrag dafür vorhanden ist, so ist es möglich, Valerie durch die Angabe der "richtigen" IMDb-ID auf die richtige Spur zu bringen. Dazu muss lediglich die IMDb-ID Zeichenkette (incl. den obligatorischen "tt") in den Dateinamen mit aufgenommen werden:
 
 *Dateiname des Videofiles (alt):* {{{NichtErkannterFilm.avi}}}
@@ -92,6 +108,8 @@ Wird ein Videofile nicht richtig erkannt, obwohl bei IMDb ein Eintrag dafür vor
 Der Unterstrich "`_`" ist dabei nicht zwingend notwendig - auch ist es egal, an welcher Stelle im Dateinamen die Zeichenkette steht - wichtig ist nur, dass sie mit "tt" beginnt und anschließend sieben Ziffern folgen. Außerdem ist zu beachten, dass eine IMDb-ID, die über den dateinamen mitgegeben wurde, von einer IMDb-ID, die aus einer nfo-Datei stammt, überschrieben wird (s. nächstes Kapitel).
 
 === IMDb ID über nfo-Datei angeben ===
+English translation in progress - please be patient... :-)
+
 Eine weitere Möglichkeit, die richtige IMDb-ID für einen nicht korrekt erkannten Film anzugeben, ist eine nfo-Datei. Diese muss im gleichen Verzeichnis wie die Film-Datei liegen und den gleichen Namen haben - allerdings mit der Dateierweiterung "`nfo`". Als Inhalt genügt die Zeichenkette für die IMDb-ID - momentan müssen allerdings _zwingend zwei Zeilen_ in der Datei enthalten sein! Beispiel:
 
 *Dateiname des Videofiles:* {{{NichtErkannterFilm.avi}}}
@@ -111,6 +129,8 @@ Vor der IMDb-ID kann durchaus noch weiterer Text stehen, z.B. könnte man einfac
 </code>
 
 === Suchwörter für einen kompletten Ordner ===
+English translation in progress - please be patient... :-)
+
 Neben den o.g. Möglichkeiten kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
 Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.
 
@@ -118,6 +138,8 @@ Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechend
 Der bereitgestellte Suchbegriff gilt nur für den Inhalt des Ordners, aber nicht für etwaige vorhandene Unterordner.
 
 === Metadaten des Films aus xbmc-style nfo-File lesen ===
+English translation in progress - please be patient... :-)
+
 Zusätzlich zu der Möglichkeit, eine IMDb-ID für einen Film in einem nfo-File anzugeben, können noch weitere Attribute aus solchen Filmen gelesen werden. Zur Zeit sind das
  * `<episodedetails>` => IMDb-ID für Episoden
  * `<season>` => Staffel-Nummer bei Serien
