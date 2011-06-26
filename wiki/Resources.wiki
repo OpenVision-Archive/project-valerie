@@ -23,7 +23,7 @@ The script `/hdd/valerie/start.sh` can be used in order to start additional serv
 <br>
 == valerie.info ==
 This file can be used to ignore directories from synchronisation - or to enhance the search results by providing the IMDB-Link for a special movie or TV-Show.<br>
-For more details on this file check section [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"].<br> 
+For more details on this file check section [Sync#Excludes_and_search_hints "excludes and search hints"].<br> 
 <br>
 = Skins =
 Currently the following skins are available:
