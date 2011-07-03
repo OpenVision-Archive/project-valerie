@@ -1,13 +1,21 @@
 = Webinterface =
 
-Das Webinterface ist über die Adresse standardmäßig über den Port 8888 ereichbar.
+Das Webinterface ist auf der IP-Adresse der Box standardmäßig über den Port 8888 ereichbar.
 
 z.B. http://IP_DER_BOX:8888/
 
-Bereich - HOME
+Falls dieser Port nicht benutzt werden kann, ist es möglich einen anderen Port über die Settings von PVMC anzugeben.
+
+Nachfolgend ein paar Screenshots des Webinterface...
+
+Bereich - "Home":
 
 http://project-valerie.googlecode.com/svn/trunk/images/webif_main.PNG
 
-Bereich - MOVIE
+Bereich - "Movies":
 
 http://project-valerie.googlecode.com/svn/trunk/images/webif_movie.png
+
+Bereich - "Edit Movie":
+
+http://project-valerie.googlecode.com/svn/trunk/images/webif_EditMovie.png
