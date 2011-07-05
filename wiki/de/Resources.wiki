@@ -7,15 +7,32 @@ Valerie verwaltet die Film und Serieninformationen in einer internen Datenbank (
   * `tvshows.db` (alle Serien)
   * `episodes.db` (alle Episoden der Serien)
   * `failed.db` (alle fehlgeschlagenen Syncs sowie multipart Filme, wie z.B. `*`_cd, `*`_part2, etc.)
-<br>
+*Bitte beachten* (da diese Frage immer mal wieder aufkommt):<br>Die oben genannten Dateien enthalten keine Datenbank-Tabellen im eigentlichen Sinne, sondern serialisierte Python-Objekte, die von PVMC benutzt werden. Die Files können daher weder mit einem Texteditor - noch mit einer der üblichen verdächtigen Datenbank-Applikationen oder einem SQL-Editor geöffnet werden!<br>
 = Konfigurationsdateien =
-Die Konfigurationsdateien von Valerie befinden sich defaultmässig im Verzeichnis `/hdd/valerie`, welches aber in den [Options "Einstellungen"] angepasst werden kann:
-  * `valerie.conf` (Suchsprache und Verhalten bei nicht mehr vorhanden Medien-Files im Suchpfad)
-  * `paths.conf` (Suchpfad, Filter für Dateierweiterung z.B. avi,mkv, etc., und flaggen von Suchordnern)
-  * `pre.conf` (Reguläre Ausdrücke für den Suchstring)
-  * `post_movie.conf` (Reguläre Ausdrücke für den Suchstring - nur Filme)
+Die Konfigurationsdateien von Valerie befinden sich defaultmässig im Verzeichnis `/hdd/valerie`, welches entweder in den [Options "Einstellungen"] angepasst werden kann, oder aber - weitaus komfortabler - über das [WebIF "Webinterface"]:
+  * `valerie.conf`
+    * Suchsprache, die beim Synchronisieren von Plots benutzt werden soll
+    * Verhalten bei nicht mehr vorhanden Medien-Files im Suchpfad
+  * `paths.conf`
+    * _alte, aber nach wie vor unterstützte Konfigurationsdatei zum definieren der Suchpfade und der zugehörigen Eigenschaften_
+    * enthält alle Suchpfade, die zum Synchronisieren benutzt werden sollen
+    * Liste aller zu berücksichtigenden Dateierweiterungenlist (=> `avi`, `mkv`, ...)
+    * Kategorieren der einzelnen Suchverzeichnisse "Movie", "TV-show" oder beides
+    * für jedes Verzeichnis kann getrennt eingestellt werden, ob zur Synchronisation der Verzeichnisname oder die Namen der enthaltenen Dateien benutzt werden soll
+  * `paths.xml` (=> siehe `paths.conf`):
+    * _neue Konfigurationsdatei zum definieren der Suchpfade und der zugehörigen Eigenschaften_
+    * zusätzlich können mit Hilfe dieser Datei einzelne Suchpfade aktiviert / deaktiviert werden! 
+  * `pre.conf`:
+    * enthält reguläre Ausdrücke um die während der Synchronisation verwendeten Suchausdrücke zu verändern
+    * die in diesem File enthaltenen regulären Ausdrücke werden sowohl für Filme als auch für Serien benutzt
+    * *Tipp:* falls beim Experimentieren mit regulären Ausdrücken diese Datei nicht mehr benutzbar ist, kann man sie einfach löschen => PVMC erstellt beim Fehlen eine neue Datei mit dem Inhalt zum Installationszeitpunkt
+    * mehr zum Thema "Reguläre Ausdrücke" und wie man die Synchronisationsergebnisse verbessern kann, findet sich auf der zugehörigen [Sync#Reguläre_Ausdrücke "Synchronisation" Wiki-Seite]
+  * `post_movie.conf`
+    * enthält Reguläre Ausdrücke, die ausschließlich zum Verändern von Suchstrings für Filme dienen
   * `post_tv.conf` (Reguläre Ausdrücke für den Suchstring - nur Serien)
-  * `blacklist.conf` (aus der Datenbank ausgeblendete / gelöschte Filme)
+    * enthält Reguläre Ausdrücke, die ausschließlich zum Verändern von Suchstrings für Serien dienen
+  * `blacklist.conf`
+    * enthält manuell aus der Datenbank ausgeblendete Einträge
 <br>
 = Spezielle Dateien =
 == Startup-Datei ==
