@@ -7,15 +7,32 @@ Valerie uses Python Pickle files located in `/hdd/valerie` (editable in the [Opt
   * `tvshows.db` (for TV shows)
   * `episodes.db` (for TV shows episodes)
   * `failed.db` (all files failed to sync, plus additionally multipart movies, e.g. `*_cd2`, `*_part2`, etc.)
-<br>
+*Please note* (since it has been asked every now and then):<br>These files don't contain "database tables", but serialized Python objects used by PVMC - and thus can neither get edited by using a text-editor nor by any other database application / SQL editor / whatever.<br>
 = Configuration files =
-The configuration files of Valerie are located in `/hdd/valerie` (editable in the [Options main-settings]):
-  * valerie.conf (language used for sync / how to handle media files not found any more)
-  * paths.conf	(conatins search path, filter for file extansions => e.g. avi,mkv, etc. , categorization of folders contained in the search path)
-  * pre.conf (regular expressions for the search string)
-  * post_movie.conf (regular expressions for the search string used for movies)
-  * post_tv.conf (regular expressions for the search string used for TV shows)
-  * blacklist.conf (movies manually removed from the database)
+The configuration files of Valerie are located in `/hdd/valerie` and can be edited by using the PVMC [Options main-settings]) or - more comfortable - through the [WebIF "Webinterface"].
+  * `valerie.conf`:
+    * language used for synchronisation of plots
+    * flag how to handle media files not found any more
+  * `paths.conf`:
+    * _old, but still supported way of defining search paths and related attributes_
+    * contains all search paths to be considered for synchronisation
+    * list of file extansions to be considered during synchronisation (=> `avi`, `mkv`, ...)
+    * categorization of folders contained in the search path => "Movie", TV-show" or both
+    * dedicated setting for each folder whether to use foldername or filename for synchronisation
+  * `paths.xml` (=> see `paths.conf`):
+    * _new way of defining search paths and related attributes_
+    * additionally using this file it's possible to enable / disable a search path! 
+  * `pre.conf`:
+    * contains regular expressions allowing for the manipulation of the search string used for synchronisation
+    * regular expressions taken from this file will be applied for both movies and TV-shows
+    * *Hint:* if you messed-up this file while experimenting with your own regular expressions, just delete it and restart PVMC in order to re-create it with its default content
+    * for more information on using regular expressions in order to enhance synchronisation results please see also the related chapter in the [Sync#Regular_expressions "Synchronisation" wiki page]
+  * `post_movie.conf`:
+    * regular expressions applicable for the search string used for movies
+  * `post_tv.conf`:
+    * regular expressions applicable for the search string used for TV shows
+  * `blacklist.conf`:
+    * movies manually removed from the database
 <br>
 = Special files =
 == Startup script ==
