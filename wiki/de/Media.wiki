@@ -69,8 +69,3 @@ Serien: <br />
 http://project-valerie.googlecode.com/svn/trunk/images/series_mini.jpg
 
 <br />
-
-PC: <br />
-http://project-valerie.googlecode.com/svn/trunk/images/Valerie_movie.jpg
-
-<br />
