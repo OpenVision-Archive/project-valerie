@@ -51,8 +51,17 @@ The complete "<!-- PVMC Main Menu -->" section should now look similar to the fo
 }}}
 <br><br>
 3. Finally the file containing the animation has to be renamed according to the used skin. A choice of different animated main menu files can be found here:<br>
-http://duckbox.info/files/public/val/dreamscene/   <br><br>
-
-http://project-valerie.googlecode.com/svn/trunk/images/dreamscene-banner.jpg <br>
-With special thanks to Rocketcheeta! -- http://rocketcheetah.com<br>
-Valve´s Portal 2 dreamscenes will come soon.....
+[http://duckbox.info/files/public/val/dreamscene/]
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/dreamscene-banner.jpg
+<br>
+<br>
+Here some `Valve´s - Portal 2` styled dreamscenes:
+<br>
+http://www.megaupload.com/?d=PQ977SQD
+<br>
+http://project-valerie.googlecode.com/svn/trunk/images/portal2_dreamscene.png
+<br>
+<br>
+With special thanks to Rocketcheeta! -- [http://rocketcheetah.com]
+<br>
