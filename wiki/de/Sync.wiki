@@ -14,6 +14,8 @@ http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
 <br><br>
 == Einstellungen ==
 Die Einstellungen für den Synchronisationsmanager sind über die blaue Taste erreichbar. Dort werden die für die Suche zu berücksichtigenden Verzeichnisse angegeben, sowie die für Plots und Titel zu verwendete Sprache festgelegt. Außerdem können dort Datenbank, Cache und Filter zurückgesetzt, bzw. gelöscht werden.
+
+*Hinweis: nach Änderungen an den Einstellungen für den Synchronisationsmanager (insbesondere nach dem Wechsel der Synchronisations-Sprache), muss ein neuer Synchronisationslauf gestartet werden!*
 <br><br>
 == Medienprovider ==
 Als Datenquelle für die Synchronisation dienen [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] und [http://www.thetvdb.org TheTVDB.org (TVDB)]. IMDB liefert primär die ID, während über die anderen Quellen Plot, Poster und Hintergrund usw. bezogen werden.

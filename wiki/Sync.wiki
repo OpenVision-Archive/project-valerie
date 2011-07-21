@@ -15,6 +15,8 @@ http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
 <br><br>
 == Settings ==
 The synchronisation manager settings can be entered using the [blue] key. There you can specify the search path and the language to be used for both the plots and titles. Additionally you can reset / delete the database, cache and filters.
+
+*Note: after modification of any synchronisation setting (especially after change of synchronisation language) a new sync-run has to be performed!*
 <br><br>
 == Media provider ==
 The data for plot, title, genre etc. is retrieved from [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] and [http://www.thetvdb.org TheTVDB.org (TVDB)]. While IMDB is used to uniquely identify the movie (and hence for retrieving the unqiue IMDb-ID) the two remaining sources are used to retrieve Plots, Poster, Backdrops etc.
