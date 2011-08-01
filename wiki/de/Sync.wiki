@@ -45,7 +45,7 @@ Falsch erkannte Einträge können anschließend manuell korrigiert werden ([Such
 === DVDs ===
 Valerie erkennt Filme die in mehreren Dateien vorliegen anhand des Namens. Eine Ausnahme sind Ordner mit einer DVD Struktur (`*`.vob, `*`.ifo) als Inhalt. Da hier anhand des Dateinamens keine Suche gestartet werden kann, wird in solchen Fällen immer der Ordnername als Suchbegriff verwendet.
 <br>
-=== Reguläre Ausdrücke ===
+=== Regulaere Ausdruecke ===
 Mit Hilfe in den Config-Files "`pre.conf`", "`post_movie.conf`", sowie "`post_tv.conf`" festgelegten Regular Expressions können die Suchstrings, die an die Medienprovider übergeben werden, beeinflusst werden.<br>
 Die `pre.conf` gilt für beide Kategorien, `post_movie.conf` nur für Filme, `post_tv.conf` nur für Serien.<br><br>
 Beispiel:<br>
@@ -118,7 +118,7 @@ Vor der IMDb-ID kann durchaus noch weiterer Text stehen, z.B. könnte man einfac
 <code>http://www.imdb.com/title/tt1234567/
 </code>
 
-=== Suchwörter für einen kompletten Ordner ===
+=== Suchwoerter für einen kompletten Ordner ===
 Neben den o.g. Möglichkeiten kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
 Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.
 

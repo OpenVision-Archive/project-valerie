@@ -26,7 +26,7 @@ Die Konfigurationsdateien von Valerie befinden sich defaultmässig im Verzeichni
     * enthält reguläre Ausdrücke um die während der Synchronisation verwendeten Suchausdrücke zu verändern
     * die in diesem File enthaltenen regulären Ausdrücke werden sowohl für Filme als auch für Serien benutzt
     * *Tipp:* falls beim Experimentieren mit regulären Ausdrücken diese Datei nicht mehr benutzbar ist, kann man sie einfach löschen => PVMC erstellt beim Fehlen eine neue Datei mit dem Inhalt zum Installationszeitpunkt
-    * mehr zum Thema "Reguläre Ausdrücke" und wie man die Synchronisationsergebnisse verbessern kann, findet sich auf der zugehörigen [Sync#Reguläre_Ausdrücke "Synchronisation" Wiki-Seite]
+    * mehr zum Thema "Reguläre Ausdrücke" und wie man die Synchronisationsergebnisse verbessern kann, findet sich auf der zugehörigen [Sync#Regulaere_Ausdruecke "Synchronisation" Wiki-Seite]
   * `post_movie.conf`
     * enthält Reguläre Ausdrücke, die ausschließlich zum Verändern von Suchstrings für Filme dienen
   * `post_tv.conf` (Reguläre Ausdrücke für den Suchstring - nur Serien)

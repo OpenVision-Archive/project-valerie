@@ -1,6 +1,6 @@
 #summary Trakt.tv
 
-= Einführung =
+= Einfuehrung =
 trakt.tv hilft dabei, den Überblick über die bereits gesehenen Serien und Filme zu behalten. Als zusätzliches Feature kann trakt.tv auf Basis von gewählten Favoriten auch zusätzliche Empfehlungen für Serien und Filme geben, die einem evtl. gefallen könnten.
 <br><br>
 = Details =

@@ -17,7 +17,7 @@ http://project-valerie.googlecode.com/svn/trunk/images/blackswan_small.png<br>
 == greySkies ==
 http://project-valerie.googlecode.com/svn/trunk/images/greyskies_small.png
 <br><br>
-= Animiertes Hauptmenü =
+= Animiertes Hauptmenue =
 Dieses Feature wird bis jetzt nur vom blackSwan Skin unterstützt. Hierzu einfach unter 
   `/hdd/valerie/dreamscene/` 
 einen animierten Hintergrund (siehe Downloadlink weiter unten) als `blackSwan.mp4` abspeichern.<br>
