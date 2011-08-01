@@ -1,4 +1,123 @@
-= FAQ =
+#summary FAQ - Häufig gestellte Fragen...
+<wiki:toc max_depth="1" />
+<br>
+==Installation==
+===Wie kann ich PVMC installieren?===
+Die Installation funktioniert einfach über ein lokal zu installierendes IPK-Paket. Eine Schritt-für-Schritt Anleitung findet sich [EasyInstallation#Installation hier].
 
-TODO, efo => mögliche Inhalte definieren...
-  
+===Wie kann ich PVMC deinstallieren?===
+Die De-Installation ist [EasyInstallation#Deinstallation hier] beschrieben.
+
+===Was ist das PVMC Web-Interface und wo finde ich das?===
+Über das Web-Interface (auch !WebIf genannt) kann man u.a. PVMC konfigurieren und Film-Details editieren (z.B. Plot anpassen, Titel ändern, Poster & Hintergrund-Bilder austauschen etc.pp.). Die Benutzung ist [WebIF hier] beschrieben.
+
+===Wie stelle ich den Suchpfad für meine Videos ein?===
+Das geht entweder über die E2-GUI von PVMC oder aber - komfortabler - über das [WebIF Web-Interface]. Dort dann "Startseite !WebIf" => "Options" => "Sync Settings" und unter "Path Settings" den Suchpfad konfigurieren.
+
+===Kann ich den Ordner mit den Poster / Backdrops auf mein NAS auslagern?===
+Ja - und zwar entweder über die E2-GUI von PVMC oder aber - komfortabler - über das [WebIF Web-Interface]. Dort dann "Startseite !WebIf" => "Options" => "Global Settings" und für "EXPERT Valerie Medienverzeichnis (Poster, Hintergründe):" das gewünschte Verzeichnis eintragen.
+
+===Wie bekomme ich den animierten Hintergrund im Hauptmenu?===
+Die Einrichtung für das animierte Hauptmenu ist [skin#Animiertes_Hauptmenue hier] beschrieben.
+
+===Wie läuft das mit den Untertiteln?===
+PVMC kann für einzelne Filme Untertitel einblenden. Dazu muss in den Einstellungen die Zielsprache konfiguriert und ein Anbieter für Untertitel ausgewählt werden. Mehr dazu [subtitles hier].
+
+===Die Installation lief durch - aber die GUI sieht grottig / verpixelt / unscharf aus!===
+PVMC nutzt die Auflösung von Enigma2 - evtl. ist die dort eingestellte Auflösung nicht die richtige?
+<br>
+<br>
+==Synchronisation==
+===Was bedeutet "Synchronisation" und für was brauch ich das?===
+PVMC unterscheidet sich von einem "normalen" Videoplayer vor allem dadurch, dass zu den einzelnen Videos Zusatzinfos angezeigt werden, z.B. Filmposter, kurze Inhaltsangabe, Erscheinungsjahr oder Genre. Diese Infos stehen ja nicht im Dateinamen des Videofiles und PVMC kann natürlich auch nicht den Inhalt des Videos "analysieren" - folglich muss PVMC den Film "irgendwie" erkennen und die passenden Zusatzdaten aus dem Internet laden. Dieser (einmalige) Vorgang nennt sich Synchronisation. Wurde ein Film erfolgreich erkannt, werden die Daten lokal in einer Datenbank gespeichert und sind später direkt abrufbar.
+
+===Wie funktioniert die Synchronisation im Detail?===
+Dazu wird es demnächst noch einen extra Abschnitt im Wiki geben. Um aber eine möglichst gute Trefferquote zu bekommen, könnten folgende Punkte helfen:
+ * PVMC nutzt mehrere Online-Datenbanken, um die o.g. Zusatzinfos herunterzuladen (=> mehr dazu [Sync#Medienprovider hier]).
+ * dazu muss eine Videodatei eindeutig identifziert werden
+ * als Suchstring wird entweder der Dateiname des Videofiles genutzt - oder aber bei Eingma2-Eigenaufnahmen der Inhalt das sogenannten Metafiles, in dem Enigma2 Daten aus dem EPG abspeichert
+ * um unerwünschte Zeichen (z.B. "`_`") oder Zeichenketten aus dem Dateinamen erst gar nicht im Suchstring auftauchen zu lassen, können [Sync#Regulaere_Ausdruecke Reguläre Ausdrücke] benutzt werden 
+Probleme können insbesondere dann auftreten, wenn es sich bei dem Film z.B. um einen Remake handelt (gleicher Name für unterschiedliche Filme) oder eine Suche mit diesem Suchstring als ersten Treffer einen anderen Film ergibt. Eine zusätzliche Fehlerquelle sind die bereits angesprochenen Informationen aus den Enigma2 Metafiles. Da es für deren Inhalt keinen "Standard" gibt, können die unterschiedlichsten Daten aus dem EPG dort reingeschrieben werden, was die Interpretation für PVMC schwierig macht.
+
+Um solche falsch erkannten Videos zu korrigieren, bietet PVMC unterschiedliche Möglichkeiten, die im Detail [Sync#Suchergebnis_manuell_korrigieren hier] beschrieben sind. Oftmals hilft es aber auch schon, einfach den Dateinamen etwas anders zu benennen oder das Metafile zu editieren, um die dort enthaltenen Strings zu korrigieren. 
+
+Zusätzlich gibt es auch noch die Möglichkeit, PVMC via sogenannter "Suchhilfen" auf die Sprünge, bzw. zum "richtigen" Film zu verhelfen. Diese sind [Sync#Excludes_und_Suchhilfen hier] im Wiki beschrieben.
+
+===Wie starte ich die Synchronisation?===
+Die Synchronisation kann zur Zeit nur über die [Sync#Synchronisieren PVMC Enigma2 GUI] gestartet werden.
+
+===Wo werden die Film-Infos abgespeichert?===
+Die Zusatzinfos zu den einzelnen Videos werden in einer lokalen Datenbank abgespeichert. Mehr dazu [Resources#Datenbankdateien hier].
+
+===Ich habe Micro$oft Access / TOAD / SQLTalk / ... installiert - kann ich damit die Datenbank editieren?===
+Nein - die Datenbankdateien können nicht manuell editiert werden. Falls ein Video nicht korrekt erkannt wurde, sollte eher die Ursache behoben werden (Dateiname des betroffenen Videofiles ändern oder eine der diversen Suchhilfen benutzen => siehe [Sync#Excludes_und_Suchhilfen hier]).
+
+===In meiner Film-Liste werden einige Filme falsch / gar nicht erkannt!===
+Das kann mehrere Ursachen haben:
+ * entweder für diese Filme gibt es noch keinen Eintrag bei [http://www.imdb.de/ IMDb] und [http://www.themoviedb.org TheMovieDb] / [http://www.thetvdb.com TheTvDb] => in diesem Fall sollte man sich dort einfach kostenlos registrieren und die Informationen nachtragen
+ * oder aber mit dem verwendeten Suchstring aus Dateiname / Infos aus dem E2 Metafile gibt es mehrere Treffer (was die Regel ist) und der erste Treffer ist unglücklicherweise nicht der richtige Film. In diesem Fall einfach mal das [Sync#Excludes_und_Suchhilfen Kapitel mit den Suchhilfen] durchlesen oder den Film manuell über das !WebIf korrigieren.
+
+===Die meisten Videos werden zwar richtig erkannt, aber der Plot ist in Englisch!===
+Wenn das immer der Fall ist, dann könnte die Synchronisationssprache falsch eingestellt sein (=> siehe [Sync#Einstellungen Synchronisations-Einstellungen]). Oder aber bei [http://www.themoviedb.org TheMovieDb] / [http://www.thetvdb.com TheTvDb] sind für diese Videos (noch) keine deutschen Plots hinterlegt. In diesem Fall sollte man sich dort einfach kostenlos registrieren und die fehlenden deutschen Plots nachtragen.
+
+===Die meisten Videos werden zwar richtig erkannt, aber das Cover ist in einer anderen Sprache!===
+Das kann durchaus passieren und liegt daran, dass bei den Online-Datenbanken ([http://www.themoviedb.org TheMovieDb] / [http://www.thetvdb.com TheTvDb]) die Poster ursprünglich nicht nach Sprachen kategorisiert waren, was zur Folge hat, dass gefühlte 99% der dort vorhandenen Grafiken (Poster & Hintergründe / Backdrops) als Sprache "none" haben, also nicht korrekt eingepflegt sind. In diesem Fall kann man über das Web-Interface das falsche Poster entweder durch ein eigenes, lokal gespeichertes Poster ersetzen - oder die URL zu einem anderen Poster angeben.
+
+===Für einige Filme würde ich gerne einen eigenen Plot anzeigen lassen - geht das?===
+Über das Web-Interface kann man recht einfach alle möglichen Attribute eines gespeicherten Films ändern - u.a. auch den Plot.
+
+===Ich habe viele Dokumentationen / Videomitschnitte von Vorträgen, die nicht in der IMDb enthalten sind. Kann ich die trotzdem mit PVMC verwalten?===
+Es besteht die Möglichkeit, zumindest Titel, Plot, Genre etc. über ein nfo-File, wie es z.B. auch für XBMC genutzt werden kann, anzugeben und darüber dann den Video in die Datenbank von PVMC zu bringen. Zur Zeit ist es aber noch nicht möglich, darüber auch die Grafiken (Poster & Hintergrund) zu spezifizieren. Mehr dazu hier: [Sync#Metadaten_des_Films_aus_xbmc-style_nfo-File_lesen Metadaten des Films aus xbmc-style nfo-File lesen].
+
+===Die Synchronisation dauert sehr lange - muss ich bis zum Ende im Synchronisationsmanager bleiben?===
+Nein! Sobald die Synchronisation gestartet ist, kann man den Synchronisationsmanager einfach mit der Exit-Taste verlassen und das normale Fernsehprogramm schauen. Sobald die Snychronisation beendet ist, wird ein entsprechendes Hinweis-Fenster eingeblendet.
+<br>
+<br>
+==Abspielen==
+===Wenn ich in der Film-Liste zwischen verschiedenen Videos wechsle, höre ich ein Knacksen und es dauert einige Zeit, bis der neue Hintergrund angezeigt wird!===
+Eventuell hilft es schon, wenn man im Sync-Manager alle Poster und Hintergründe (Backdrops) löscht und einen kompletten Synchronsiationslauf macht.
+
+===Meine Filmsammlung ist sehr groß - kann ich z.B. nur Horror-Filme anzeigen lassen?===
+Ja - wenn man in der Filmliste ist, kann man durch drücken der "grünen" Taste die Genres umschalten. Hält man zudem die grüne Taste länger gedrückt, erscheint eine Auswahlbox, mit der man gezielt z.B. "Horror" auswählen kann. Nach bestätigen mit "Ok" werden in der Filmliste nur noch solche Filme angezeigt, die dem ausgewählten Genre entsprechen.
+
+===Der Film xyz wird von PVMC nicht abgespielt!===
+PVMC nutzt den Enigma2-eigenen Movie-Player, um Filme abzuspielen. Wenn also ein Video von PVMC nicht abgespielt werden kann, sollte man als erstes mal probieren, ob das betroffene File überhaupt vom Enigma2 Movie-Player direkt abgespielt werden kann (Probleme mit einem ext. Speichermedium mal ausgeschlossen). Wenn das auch nicht funktioniert, dann ist das Wahrscheinlichkeit groß, dass irgendwas mit dem File nicht in Ordnung ist. In diesem Fall könnte man nochmal probieren, ob sich das Video direkt auf dem PC abspielen lässt - man sollte aber im Hinterkopf behalten, dass die verwendete Box andere Codecs nutzt, als der eigene PC. Falls aber der E2-Player mit dem File zurechtkommt, müsste genauer untersucht werden, was bei PVMC schiefläuft.
+
+===Der Film xyz ruckelt!===
+Grundsätzlich gilt das gleiche wie im vorangegangenen Abschnitt: da PVMC lediglich den E2-Player nutzt, ist das vermutlich kein PVMC-Problem. Abzuklären wäre also auch hier, ob der E2 Movie-Player das File problemlos abspielen kann und ob es z.B. bei Filmen, die auf einem NAS gespeichert sind, Netzwerkprobleme gibt. 
+
+===Wie kann ich vor- / zurückspulen?===
+Wie bei Enigma2 üblich funktioniert das Spulen über die "1", "4" und "7" Tasten (zurückspulen), sowie zum Vorspulen über die "3", "6" und "9" Tasten.
+<br>
+<br>
+==Hilfe / Support==
+===Was mache ich, wenn PVMC zickt?===
+Bein Synchronisationsproblemen empfiehlt sich das (nochmalige) Studium der entsprechenden Wiki-Seiten - insbesondere der Abschnitt über die Suchhilfen. Wenn es sich hingegen um Crashes oder "echte" Fehlfunktionen von z.B. !WebIf handelt, kann man sich z.B. im [http://www.i-have-a-dreambox.com/wbb2 I-have-a-DreamBox Forum] in [http://www.i-have-a-dreambox.com/wbb2/thread.php?threadid=144265 diesem Thread] melden und sein Problem schildern. Dabei aber folgende Punkte beachten:
+ * allgemeine Fragen im Stile von "bei mir geht Funktion xyz nicht" sind reine Zeitverschwendung - sowohl für den Fragenden als auch für die Leute, die potentiell helfen könnten
+ * nach Möglichkeit immer mit angeben, welche Version von PVMC eingesetzt wird, sowie die durchzuführenden Schritte, die zum Problem führen. Auch im Hinterkopf behalten, dass man gerade die Konfiguration heute über mehrere Wege erledigen kann (Enigma2-GUI und !WebIf), deshalb möglichst genau beschreiben, was gemacht wird
+ * hilfreich ist auch ein valerie Log, sowie im Falle von Crashes ein Enigma2 Crashlog
+Da im o.g. Thread aber phasenweise recht viel "Betrieb" herrscht, kann es durchaus passieren, dass eine Anfrage "untergeht" - in diesem Fall empfiehlt sich das öffnen eines Bug-Reports, nachdem man sich vergewissert hat, dass das Problem nicht bereits gemeldet wurde.
+
+===Im Forum lese ich immer von "Logs" - wo bekomme ich die her?===
+Es gibt zwei Arten von Logs: das sogenannte "Valerie"-Log, in dem sich hauptsächlich Informationen zum Betrieb von Valerie selbst befinden, sowie das Enigma2 Crashlog, in dem nützliche Informationen im Falle eines Crashs enthalten sind.
+ 
+Beide Logs lassen sich am einfachsten über das Web-Interface einsehen: "!WebIf Home" => "Logs" => "Valerie" oder "Enigma2". Die Logfiles sind aufsteigend nach Datum sortiert, d.h. das neueste File befindet sich immer am Ende der Liste!
+
+Zu beachten ist dabei zusätzlich, dass mit jedem Enigma2 Neustart auch ein neues Valerie-Log angelegt wird. Das heisst, wenn man z.B. Synchronisationsprobleme hat und sich nach dem Sync-Lauf das neueste Logfile anschaut, sind dort KEINE Informationen über den letzten Synclauf mehr enthalten. Man muss in so einem Fall also das vorletzte Logfile anschauen.
+
+===Was ist der Unterschied zwischen "Valerie-Log" und "E2-Crashlog"?===
+Das Valerie-Log enthält in erster Linie Informationen zum Betrieb von Valerie, sowie eine Art "Suchprotokoll" beim Versuch, die Videos zu Synchronisieren. Hiermit kann man recht einfach herausfinden, warum z.B. ein bestimmter Film nicht richtig erkannt wurde.
+
+Das Enigma2-Crashlog hingegen enthält Informationen, warum eine bestimmte Anwendung abgestürzt ist. Es hat nichts speziell mit PVMC zu tun.
+
+===Ich habe im Forum schon x-Mal auf mein Problem hingewiesen - bekomme aber keine Antwort!===
+Das ist sicher keine böse Absicht und könnte z.B. damit zusammenhängen, dass die Frage zu einer Zeit gepostet wurde, in der viel Betrieb im Forum war, wodurch die Frage nach unten gerutscht ist.
+
+Eine andere Möglichkeit wäre, dass zu diesem Problem z.Zt. niemand was sagen kann, da es vielleicht ein sehr spezielles Problem ist oder nicht einfach nachgestellt werden kann.
+
+Generell ist es empfehlenswert, auch im Forum so viele Angaben wie möglich zu machen (verwendete Version, Typ der Box, exakte Beschreibung der Schritte, die das Problem auftreten lassen etc).
+
+===Wie öffne ich einen Bug-Report?===
+Das komplette Projekt "Project Valerie Media Center" wird auf Google Code gehostet. Dort gibt es neben dem [http://code.google.com/p/project-valerie/wiki/Welcome Wiki] und der [http://code.google.com/p/project-valerie/downloads/list Download-Sektion] auch noch die Möglichkeit, [http://code.google.com/p/project-valerie/issues/entry?template=Defect%20report%20from%20user Fehler zu melden], [http://code.google.com/p/project-valerie/issues/entry?template=Question%20from%20user Fragen zu stellen] und [http://code.google.com/p/project-valerie/issues/entry?template=Enhancement%20report%20from%20user Verbesserungsvorschläge / Feature requests] für zukünftige PVMC-Versionen einzubringen.
+
+Beim Melden eines Fehlers bitte unbedingt darauf achten, dass die Schritte zum Reproduzieren des Fehlers exakt beschrieben werden. Zusätzlich ist ein Valerie-Log bei 90% der Fehler hilfreich und bei Crashs bitte zusätzlich noch das Enigma2 Crashlog mit an den Fehler-Report anhängen! Auch die verwendete Version von PVMC könnte wichtig sein.
