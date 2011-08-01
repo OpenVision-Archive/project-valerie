@@ -1,6 +1,6 @@
 #summary FAQ - Häufig gestellte Fragen...
-<wiki:toc max_depth="1" />
-<br>
+<wiki:toc max_depth="2" />
+----
 ==Installation==
 ===Wie kann ich PVMC installieren?===
 Die Installation funktioniert einfach über ein lokal zu installierendes IPK-Paket. Eine Schritt-für-Schritt Anleitung findet sich [EasyInstallation#Installation hier].
