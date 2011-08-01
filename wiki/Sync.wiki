@@ -4,7 +4,7 @@
 = Synchronisation =
 The synchronisation is done using the synchronisation manager, which can be entered by performing the following steps from the main menu: "System" => "Synchronize". There are two different synchronisation types available:
  * a full synchronisation (available through the green option key)
- * a fast synchronisation (available throught the yellow option key)
+ * a fast synchronisation (available through the yellow option key)
 
 The full synchronisation option is suggested if you're running PVMC for the first time. By doing so the directories defined in the search path are scanned and the contained movie files will be added to the database. If the option "Delete movie if file not found" from the main settings is selected, the related entries from the database will be removed if the related media files are not found any more.
 
@@ -20,31 +20,31 @@ The synchronisation manager settings can be entered using the [blue] key. There 
 <br><br>
 == Media provider ==
 The data for plot, title, genre etc. is retrieved from [http://www.imdb.com IMDB.com], [http://www.themoviedb.org TheMovieDB.org (TMDB)] and [http://www.thetvdb.org TheTVDB.org (TVDB)]. While IMDB is used to uniquely identify the movie (and hence for retrieving the unqiue IMDb-ID) the two remaining sources are used to retrieve Plots, Poster, Backdrops etc.
-The serach order used by PVMC is as follows:
+The search order used by PVMC is as follows:
  * first of all TMDB, resp. TVDB are asked for the plot in the language defined in the synchronisation manager options (= local language)
- * if no plot for the locakl language is found, PVMC will check IMDB for a plot in the local language 
+ * if no plot for the local language is found, PVMC will check IMDB for a plot in the local language 
  * if the IMDB search fails, too PVMC will check TMDB / TCVDB for the english plot
  * finally PVMC will check IMDB for an english plot
 Please note, that poster and backdrops will only be retrieved from TMDB and TVDB. If there are no poster and backdrops available for your movie, then no arts will be displayed later on in the movie lists! If this happens for one some of your movies then it is suggested to just open an account at TMDB and 7 TVDB in order to upload some arts for the desired movies. By doing so everyone has a benefit! :-) 
 <br><br>
 == Search structures ==
-The file `paths.conf` is used to define both the file extensions to be used in order to detect media files (for example "`mkv|ts|avi|m2ts`") and the directories that should be searched together with their categories (movies => category "MOVIE", TV-shows => category "TV" or both => category "MOVIE_AND_TV"). This file can either get edited manually (a file containing some default values will be copied during imnstallation to `/hdd/valerie` - see also => [Resources#Konfigurationsdateien Konfigurationsdateien]) - by using the corresponding setting in the synchronisation manager options. Additionally one can specify for every directory, whether the filenames shall be used for synchronisation - or the name of the corresponding directory 
+The file `paths.conf` is used to define both the file extensions to be used in order to detect media files (for example "`mkv|ts|avi|m2ts`") and the directories that should be searched together with their categories (movies => category "MOVIE", TV-shows => category "TV" or both => category "MOVIE_AND_TV"). This file can either get edited manually (a file containing some default values will be copied during installation to `/hdd/valerie` - see also => [Resources#Configuration_files configuration files]) - by using the corresponding setting in the synchronisation manager options. Additionally one can specify for every directory, whether the file names shall be used for synchronisation - or the name of the corresponding directory.
 
 The video collection could look for example like the following:
  * `/hdd/movie` => category "MOVIE"
  * `/hdd/series` => category "TV"
  * `/hdd/mixed` => category "MOVIE_AND_TV"
-After a full synchronisation the files conatined in directory "`/hdd/movie`" will be added to the "Movie"-list. The files conatined in directory "`/hdd/series`" will be recognized as episodes for series / TV shows and the files contained in the "`mixed`" directory will be parsed as movie - and if that doesn't succeed anotehr try will be started as TV-show.
+After a full synchronisation the files contained in directory "`/hdd/movie`" will be added to the "Movie"-list. The files contained in directory "`/hdd/series`" will be recognized as episodes for series / TV shows and the files contained in the "`mixed`" directory will be parsed as movie - and if that doesn't succeed another try will be started as TV-show.
 
 The following criteria will be used in order to parse a file:
- * the name of the file without extension (default). The string used for the serach query (= search string) can be modified using regular expressions prior executing the search itself (see below)
- * the name of the directory containing the media file (this can be configured in the synchronisation manager options ([Einstellungen s.o.])
+ * the name of the file without extension (default). The string used for the search query (= search string) can be modified using regular expressions prior executing the search itself (see below)
+ * the name of the directory containing the media file (this can be configured in the synchronisation manager options ([Sync#Settings s.o.])
  * an IMDb-ID either provided in the file name itself - or by using an `nfo`-file (see below)
  * if the media is an Enigma2 recording then the related Enigma2 `meta`-file is used in order to retrieve movie name and / or series name and episode name 
-Wrong parsed entries can be corrected manually later on by either using the PVMC GUI or WebIf ([Suchergebnis_manuell_korrigieren see below]).
+Wrong parsed entries can be corrected manually later on by either using the PVMC GUI or WebIf ([Sync#Fix_wrong_parsed_media see below]).
 <br>
 === DVDs ===
-Normally PVMC detects movies split into several files by name. An exception to this rule are directories containg a DVD structure (`*`.vob, `*`.ifo). Since it is not possible to built a search string out of the file name the directory name is used instead.
+Normally PVMC detects movies split into several files by name. An exception to this rule are directories containing a DVD structure (`*`.vob, `*`.ifo). Since it is not possible to built a search string out of the file name the directory name is used instead.
 <br>
 === Fix wrong parsed media ===
 English translation in progress - please be patient... :-)
@@ -85,28 +85,28 @@ If your create the file using Windows (for example using Notepad) it is suggeste
 <code>ignore
 </code>
 
-=== Provide IMDb-ID within the filename ===
-It is possible to provide the IMDb-ID for a video by specifying the ID in the filename of the related media file:
+=== Provide IMDb-ID within the file name ===
+It is possible to provide the IMDb-ID for a video by specifying the ID in the file name of the related media file:
 
-*filename of the media file (old):* {{{WrongDetectedMovie.avi}}}
+*file name of the media file (old):* {{{WrongDetectedMovie.avi}}}
 
-*filename of the media file (new):* {{{WrongDetectedMovie_tt1234567.avi}}}
+*file name of the media file (new):* {{{WrongDetectedMovie_tt1234567.avi}}}
 
-*Please note:* the underscore "`_`" given in the example above is not mandatory. Additionally the location of the IMDb-ID doesn't matter at all, but it has to be ensured, that the ID starts with "`tt`", followed by seven digits. besides that it is important to know, that an IMDb-ID provided by the filename, will be overwritten by the IMDb-ID provided by nfo-file (see upcoming chapter).
+*Please note:* the underscore "`_`" given in the example above is not mandatory. Additionally the location of the IMDb-ID doesn't matter at all, but it has to be ensured, that the ID starts with "`tt`", followed by seven digits. besides that it is important to know, that an IMDb-ID provided by the file name, will be overwritten by the IMDb-ID provided by nfo-file (see upcoming chapter).
 
 === IMDb ID provided by nfo-file===
 Another possibility to provide the correct IMDb-ID for wrong parsed media is a so-called "nfo"-file. Such a file has to be located in the same directory as the media file and it has to have the same name as the media file, but the extension has to be "`nfo`". The content of the file is just the IMDb-ID, but it is important that currently _two lines_ have to be contained in the file! For example:
 
-*filename of the video file:* {{{WrongDetectedMovie.avi}}}
+*file name of the video file:* {{{WrongDetectedMovie.avi}}}
 
-*filename of the nfo-file:* {{{WrongDetectedMovie.nfo}}}
+*file name of the nfo-file:* {{{WrongDetectedMovie.nfo}}}
 
 *content of the nfo-file:*
 
 <code>tt1234567
 </code>
 
-Please note: it doesn't matter if there is additional text preceeding the IMDb-ID, for example the complete link for this movie to IMDb could be contained in the nfo and it would still work:
+Please note: it doesn't matter if there is additional text preceding the IMDb-ID, for example the complete link for this movie to IMDb could be contained in the nfo and it would still work:
 
 *Alternative content of the nfo-file:*
 
@@ -114,24 +114,24 @@ Please note: it doesn't matter if there is additional text preceeding the IMDb-I
 
 </code>
 
-=== Searchstring for whole directories ===
-Besides the above mentioned possibilities another option would allow for the definition of search strings used for the whole directory- This is especially helpful in case of TV-shows since otherwise you'd have to provide a nfo-file for each single episode. 
-To do so, just add a new `valerie.info` to the corresponding directory containing the word to be used for search. As mentioned above the search query should return an amigouous result in order to enhance the parse results.
+=== Search string for whole directories ===
+Besides the above mentioned possibilities another option would allow for the definition of search strings used for the whole directory. This is especially helpful in case of TV-shows since otherwise you'd have to provide a nfo-file for each single episode. 
+To do so, just add a new `valerie.info` to the corresponding directory containing the word to be used for search. As mentioned above the search query should return an ambiguous result in order to enhance the parse results.
 
 *Please note:*
 The search string provided using this way is only valid for the current directory, but not for contained sub-directories.
 
 === XBMC-style nfo-files ===
-Additionally to the previously mentioned nfo-files used to provide just the IMDb-ID it's planned to support nfo files containg the whole set of meta attributes used by PVMC. Currently at lest the following attributes are supported:
+Additionally to the previously mentioned nfo-files used to provide just the IMDb-ID it's planned to support nfo files containing the whole set of meta attributes used by PVMC. Currently at lest the following attributes are supported:
  * `<id>` => IMDb-ID for movies
  * `<episodedetails>` => IMDb-ID for episode
  * `<season>` => season # for TV-shows
  * `<episode>` => episode # for TV-shows
  * `<year>` => year
-Upcoming releases of PVMC will support also reading of plot, title, genres etc. from nfo. These files can be created and edited by additional software, e.g. Ember Media Manager- By doing so it would be possible to also add media files not available at IMDb. Additionally this would be an easy way to have database independent backup of the meta information of your collection.
+Upcoming releases of PVMC will support also reading of plot, title, genres etc. from nfo. These files can be created and edited by additional software, e.g. Ember Media Manager. By doing so it would be possible to also add media files not available at IMDb. Additionally this would be an easy way to have database independent backup of the meta information of your collection.
 
 === Regular expressions ===
-Before a search query is started the used search string can be adpated using regular expressions. These regular expressions con be defined in the following configuration files: "`pre.conf`", "`post_movie.conf`", sowie "`post_tv.conf`":
+Before a search query is started the used search string can be adapted using regular expressions. These regular expressions can be defined in the following configuration files: "`pre.conf`", "`post_movie.conf`" and "`post_tv.conf`":
  * `pre.conf` is used for both movie and TV shows
  * `post_movie.conf` is only applicable for movies
  * `post_tv.conf` is only applicable for TV shows.<br>
