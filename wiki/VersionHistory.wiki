@@ -7,7 +7,7 @@ Also major version will be noted here, e.g. Version 1.1, 1.2 and so on.
 
 
 
-*[881] v1.2*
+*[[881]] v1.2*
  * NEW: Coverflow displays the plot on press KEY_INFO
 
 
