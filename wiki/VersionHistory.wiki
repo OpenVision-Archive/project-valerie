@@ -1,0 +1,17 @@
+#summary Version History
+
+= Version History =
+This wiki page lists the features introduced with each version of project valerie.
+Not every revision will be noted here but only the for the end-user important ones like NEW, REMOVED, FIX_CRASH.
+Also major version will be noted here, e.g. Version 1.1, 1.2 and so on.
+
+
+
+*[881] v1.2*
+ * NEW: Coverflow displays the plot on press KEY_INFO
+
+
+
+Note to developers:
+It would make sense that this page is being displayed when valerie detects a new version. And also that this page is being parsed to only present users the major versions instead of every nightly build.
+For that it would be important that the syntax remains the same for every entry.
