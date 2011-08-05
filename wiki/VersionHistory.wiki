@@ -6,7 +6,8 @@ Not every revision will be noted here but only the for the end-user important on
 Also major version will be noted here, e.g. Version 1.1, 1.2 and so on.
 
 
-
+ * rev887 *v1.3*
+  * NEW: Adding a trailerplugin to the mix (YYTrailer by Dr. Best)
  * rev881 *v1.2*
   * NEW: Coverflow displays the plot on press KEY_INFO
 
