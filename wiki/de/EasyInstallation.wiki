@@ -33,4 +33,15 @@ Um Project Valerie zu deinstallieren gibt es zwei Varianten:
  * entweder über das "Erweiterungen" Menu von Enigma2
  * oder über SSH/Telnet folgendes eingeben:<br>
 _`root@dm8000:~# opkg remove project-valerie*`_
-<br>
+<br><br><br>
+= Update-Konzept =
+Mit Version r960 wurde eine neues Update-Regelung eingeführt, um Nutzern, die PVMC in einem möglichst stabilen Zustand haben wollen, durch die stetige Weiterentwicklung nicht durch unnötige Crashs und Bugs an der "normalen" Nutzung von PVMC zu hindern. Man kann nun zwischen folgenden Optionen wählen:
+ * "Entwicklungs-Version" (o.a. "Nigtly builds") => diese Versionen basieren auf dem aktuellen Code-Stand und enthalten somit die neusten Features (aber auch die neusten Bugs ;-)  ). Es kann daher passieren, dass PVMC u.U. crashed und nicht benutzbar ist.
+ * "Stable builds" (a.k.a. "Release builds") => diese Releases enthalten keine "halben" Features und haben sich als stabil erwiesen. Sie hinken allerdings der Entwicklung ein wenig hinterher und enthalten daher nicht die neueste Funktionalität 
+
+Man kann den gewünschten Typ, den PVMC bei Updates sucht, in den globalen PVMC-Einstellungen wählen:
+ * im WebIf: "Options" => "Global Settings" => "Check for updates of type:"
+ * über das PVMS Enigma2 Menü: "System" => "Einstellungen" => "Check for updates of type:"
+
+*Bitte beachten:*<br>
+Wenn man manuell einen Nightly Build installiert hat (z.B. um einen bestimmten Bugfix zu erhalten) - der Update-Typ in den Einstellungen aber nach wie vor auf "Release" steht, wird man beim nächsten Neustart gefragt, ob man auf die letzte Version "downgraden" möchte. Dies sollt man dann natürlich dankend ablehnen. Man kann in so einem Fall auch wie oben beschrieben den Build-Typ auf "Nightly" umstellen, um dann beim nächsten offiziellen Release build wieder auf "Release" umzustellen. 
