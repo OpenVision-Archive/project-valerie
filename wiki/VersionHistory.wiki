@@ -5,6 +5,10 @@ This wiki page lists the features introduced with each version of project valeri
 Not every revision will be noted here but only the for the end-user important ones like NEW, REMOVED, FIX_CRASH.
 Also major version will be noted here, e.g. Version 1.1, 1.2 and so on.
 
+ * rev984 *v1.4.0*
+  * NEW: The Sync plugin has been moved to the dmc_plugin dir
+  * NEW: The webif has been reworked
+  * FIX: Many fixes ;-)
  * rev960 *v1.3.0*
   * NEW: Initial version with the new update mechanism
  * rev887 *v1.2.3*
