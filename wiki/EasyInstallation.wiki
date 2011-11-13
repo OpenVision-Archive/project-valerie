@@ -18,6 +18,7 @@ Alternately you can download Project Valerie via command line in a Telnet or SSH
 _`root@dm8000:~# wget http://project-valerie.googlecode.com/files/project-valerie_<rev>_<version>.ipk`_  <br><br>
 3. After that you are ready for installing Project Valerie. You can do it via the !MediaScanner (Expansion panel), or via a SSH/Telnet Session:  <br><br>
 _`root@dm8000:~# opkg install <path to file>/project-valerie_<rev>_<version>.ipk`_   <br><br>
+(*Important:* do _not_ install the package using "ipkg" since this might break your installation! Always install the package using "opkg" as shown above!)<br>
 Finally reboot Enigma2 - the Project Valerie assistant will guide you through the first steps. Project Valerie is now ready for use!
 <br><br>
 *Note*<br>
