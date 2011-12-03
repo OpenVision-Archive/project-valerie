@@ -76,14 +76,7 @@ PVMC offers several options in order to affect the parse process and thus to con
 
 The upcoming chapters will describe these options more detailed. But please keep in mind, that it is suggested to always perform a full sync after you added / modified search hints in order to rebuilt the database - perhaps also deleting the database would be helpful to eliminate the risk of getting side effects caused by old entries.   
 === Exclude folders from parsing ===
-A whole folder can be excluded from the parse process by simply adding a new file `valerie.info` to the folder which should be excluded. This file has to contain:
-
-<code>ignore</code>
-
-If your create the file using Windows (for example using Notepad) it is suggested to add an additional line at the end of the file:
-
-<code>ignore
-</code>
+A whole folder and his subfolders can be excluded from the parse process by simply adding a new file `ignore` to the folder which should be excluded.
 
 === Provide IMDb-ID within the file name ===
 It is possible to provide the IMDb-ID for a video by specifying the ID in the file name of the related media file:
