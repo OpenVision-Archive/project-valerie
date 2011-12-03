@@ -72,14 +72,7 @@ Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
 
 Wie das im Detail geht, wird in den nachfolgenden Kapiteln ausführlicher beschrieben. Zu beachten ist dabei aber, dass in allen Fällen nach einer Änderung eine bereits vorhandene Datenbank durch eine *komplette* Synchronisation neu aufgebaut wird (also keine "schnelle" Synchronisation).
 === Ordner von der Suche ausklammern ===
-Um einen kompletten Ordner von der Suche auszuklammern, muss man lediglich eine Datei `valerie.info` mit folgendem Inhalt im auszuschließenden Ordner erstellen:
-
-<code>ignore</code>
-
-Erstellt man die Datei unter Windows (z.B. mit Notepad) sollte noch eine zusätzliche Leerzeile am Ende eingefügt werden:
-
-<code>ignore
-</code>
+Um einen kompletten Ordner sowie desen Unterordner von der Suche auszuklammern, muss man lediglich eine Datei `ignore` in diesen Ordner erstellen.
 
 === IMDb ID aus Dateinamen auslesen ===
 Wird ein Videofile nicht richtig erkannt, obwohl bei IMDb ein Eintrag dafür vorhanden ist, so ist es möglich, Valerie durch die Angabe der "richtigen" IMDb-ID auf die richtige Spur zu bringen. Dazu muss lediglich die IMDb-ID Zeichenkette (incl. den obligatorischen "tt") in den Dateinamen mit aufgenommen werden:
