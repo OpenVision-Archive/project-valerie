@@ -5,7 +5,7 @@ This wiki page lists the features introduced with each version of project valeri
 Not every revision will be noted here but only the for the end-user important ones like NEW, REMOVED, FIX_CRASH.
 Also major version will be noted here, e.g. Version 1.1, 1.2 and so on.
 
- * rev1000 *v1.5.0*
+ * rev1001 *v1.5.1*
   * This is a temporary release to update all version to rev1000 so the db is converted. A real release will follow.
  * rev984 *v1.4.0*
   * NEW: The Sync plugin has been moved to the dmc_plugin dir
