@@ -5,6 +5,12 @@ This wiki page lists the features introduced with each version of project valeri
 Not every revision will be noted here but only the for the end-user important ones like NEW, REMOVED, FIX_CRASH.
 Also major version will be noted here, e.g. Version 1.1, 1.2 and so on.
 
+ * r1162 *v1.7.0*
+  * NEW: Add support for global enigma2 Skins (e.g. dmm-HDr2 für gp3 by JackDaniel)
+  * NEW: Add support for Bluray movie detection
+  * NEW: Add support for User ID in regards to SEEN/UNSEEN
+  * FIX: Fix m2ts playback
+  * FIX: Update German Language translation
  * rev1145 *v1.6.0*
   * NEW: A lot e.g. Sync in WebIf
   * FIX: Many ;-)
