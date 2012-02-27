@@ -42,7 +42,7 @@ Mit Version r960 wurde eine neues Update-Regelung eingeführt, um Nutzern, die P
 
 Man kann den gewünschten Typ, den PVMC bei Updates sucht, in den globalen PVMC-Einstellungen wählen:
  * im WebIf: "Options" => "Global Settings" => "Check for updates of type:"
- * über das PVMS Enigma2 Menü: "System" => "Einstellungen" => "Check for updates of type:"
+ * über das PVMC Enigma2 Menü: "System" => "Einstellungen" => "Check for updates of type:"
 
 *Bitte beachten:*<br>
 Wenn man manuell einen Nightly Build installiert hat (z.B. um einen bestimmten Bugfix zu erhalten) - der Update-Typ in den Einstellungen aber nach wie vor auf "Release" steht, wird man beim nächsten Neustart gefragt, ob man auf die letzte Version "downgraden" möchte. Dies sollt man dann natürlich dankend ablehnen. Man kann in so einem Fall auch wie oben beschrieben den Build-Typ auf "Nightly" umstellen, um dann beim nächsten offiziellen Release build wieder auf "Release" umzustellen. 
