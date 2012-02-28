@@ -111,7 +111,9 @@ There are two different kind of logs that might be helpful for tracking down iss
  
 Both logs can be displayed using the web interface: "!WebIf Home" => "Logs" => "Valerie" or "Enigma2". Please keep in mind: both lists are sorted by date ascending, which means the latest log entry is contained at the end of the list.
 
-Additionally it's important to know that with each Enigma2 restart a new valerie log gets created! If you encounter for example a crash during the synchronization process and Enigma2 restarts automatically after a crash you'd need to check the previous logfile for possible information regarding the crash! 
+*Please consider the following points:*
+ * in order to ease the problem tracking the debug mode for the valerie log should be set to "High". This mode can be configured using the web interface as follows: "!WebIf Home" => "Options" => "Global Settings" => "[Expert] Valerie Debug Modus" - and afterwards clicking the [Save] button!
+ * additionally it's important to know that with each Enigma2 restart a new valerie log gets created! If you encounter for example a crash during the synchronization process and Enigma2 restarts automatically after a crash you'd need to check the previous logfile for possible information regarding the crash! 
 
 ===What's the difference between "Valerie-Log" and "E2-Crashlog"?===
 The valerie log mainly contains useful information while starting-up and running. Additionally in case of synchronization PVMC adds information related to the search strings used in order to identify the medias. By evaluating this log in case of sync problems one can check why PVMC doesn't detect the "correct" videos. 
