@@ -134,12 +134,13 @@ Beispiel-Inhalt für eine valerie.info, mit der man sowohl die IMDb-ID als auch 
 
 
 === Metadaten des Films aus xbmc-style nfo-File lesen ===
-Zusätzlich zu der Möglichkeit, eine IMDb-ID für einen Film in einem nfo-File anzugeben, können noch weitere Attribute aus solchen Filmen gelesen werden. Zur Zeit sind das
+Zusätzlich zu den o.g. Möglichkeiten ist geplant, nfo-Files zu unterstützen, die von XBMC benutzt werden, um die gesamten Metadaten eines Videos auszulesen. Bisher wird von PVMC aber nur eine kleine Anzahl an Parametern unterstützt:
+ * `<id>` => IMDb-ID für Film / Serie
  * `<episodedetails>` => IMDb-ID für Episoden
  * `<season>` => Staffel-Nummer bei Serien
  * `<episode>` => Episoden-Nummer bei Serien
  * `<year>` => Jahr
-Diese Funktionalität ist aber noch nicht komplett implementiert, zumal mit dem "Plot"-Attribut eine wichtige Eigenschaft fehlt, um "unbekannte" Filme oder Dokumentationen unabhängig von IMDb, TheMovieDb oder TheTvDb in die PVMC-Datenbank zu bekommen.
+Diese Funktionalität ist leider noch nicht komplett implementiert, zumal mit dem "Plot"-Attribut eine wichtige Eigenschaft fehlt, um "unbekannte" Filme oder Dokumentationen unabhängig von IMDb, TheMovieDb oder TheTvDb in die PVMC-Datenbank zu bekommen. 
 
 === Regulaere Ausdruecke ===
 Mit Hilfe der in den Config-Files "`pre.conf`", "`post_movie.conf`", sowie "`post_tv.conf`" festgelegten Regulären Ausdrücke können die Suchstrings, die an die Medienprovider übergeben werden, beeinflusst werden:

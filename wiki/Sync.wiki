@@ -135,7 +135,7 @@ Sample content for valerie.info used to specify both the IMDb-ID and the TheTvDB
 </code>
 
 === XBMC-style nfo-files ===
-Additionally to the previously mentioned nfo-files used to provide just the IMDb-ID it's planned to support nfo files containing the whole set of meta attributes used by PVMC. Currently at lest the following attributes are supported:
+Additionally to the previously mentioned nfo-files used to provide just the IMDb-ID it's planned to support nfo files containing the whole set of meta attributes used by XBMC. Currently at least the following attributes are supported:
  * `<id>` => IMDb-ID for movies
  * `<episodedetails>` => IMDb-ID for episode
  * `<season>` => season # for TV-shows
