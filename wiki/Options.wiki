@@ -1,94 +1,135 @@
 #summary Description of PVMC settings.
+<wiki:toc max_depth="1" />
 
-= Main-Settings =
-The main settings are accessible from the main menu and allow for the configuration of PVMC start-up behavior, skin-selection, auto-update functionality and many more. The following chapters describe the different settings together with their possible values. Default values are displayed *bold*.<br>
+= Global Settings =
+The global settings are accessible from both PVMC's Enigma2 main menu and from the [WebIF Web-Interface] ("Home" => "Options" => "Global Settings"). They allow for the configuration of PVMC start-up behavior, skin-selection, auto-update functionality and many more.
+
+The following chapters describe the different settings together with their possible values. Default values are displayed *bold*. Additionally where possible the key used to store the settings in the Enigma2 settings file (`/etc/enigma2/settings`) is given.
+
+*Note*<br>
+The Enigma2 settings file should not be edited while Enigma2 is running, since otherwise the modified settings will be overwritten with their original values when Enigma2 gets shut-down!
 <br>
 === Show wizard on next start ===
 {"yes", *"no"*}<br>
+`config.plugins.pvmc.showwizard`
+
 Configures whether the PVMC installation wizard is displayed after start-up.<br>
 <br>
 === Start Valerie on e2 start ===
 {*"yes"*, "no"}<br>
+`config.plugins.pvmc.autostart`
+
 Allow for the automatic start-up of PVMC if Enigma2 is started. In that case you will see PVMC main menu instead of the TV picture after reboot of your box.<br>
 <br>
 === Check for updates on Valerie start ===
 {*"yes"*, "no"}<br>
+`config.plugins.pvmc.checkforupdate`
+
 Determines whether PVMC shall check for updates right after start-up. If so a message box is displayed for 120 sec. asking whether the new version shall be downloaded and installed or not.<br>
 Please note: since an Enigma2 restart is required after a new version has been installed the default for the message box is "no" in order to not disturb use-cases where an automatic start-up of your box is needed.<br>
 <br>
 === Backdrop quality ===
 {*"High"*, "Low"}<br>
+`config.plugins.pvmc.backdropquality`
+
 Defines the quality of the backdrops used in both movie and TV shows list.<br>
 <br>
 === Skin ===
-{*"default"*, "blackSwan", "greySkies"}<br>
+{*"default"*, "blackSwan", "greySkies"}
+
 Select the skin used by PVMC.<br>
 <br>
 === On Power press ===
-{*"DeepStandby"*, "Standby"}<br>
+{*"!DeepStandby"*, "Standby"}<br>
+`config.plugins.pvmc.onpowerpress`
+
 Configures how your box shall behave if you click the Power button.<br>
 <br>
 === Show Movie and TVShow in main menu ===
 {"yes", *"no"*}<br>
+`config.plugins.pvmc.showmovieandtvinmainmenu`
+
 Determines whether the entries for "Movies" and "Tv Shows" shall be displayed in PVMCs main menu.<br>
 <br>
 === Synchronize: Fast Sync on autostart ===
-{*"yes"*, "no"}<br>
+{*"yes"*, "no"}
+
 This option configures, whether an automatic "fast sync" run shall be performed after PVMC starts-up.<br>
 <br>
 === myEpisodes: Eingeschaltet ===
-{"yes", *"no"*]<br>
+{"yes", *"no"*}
+
 Switch on / off usage of "myEpisodes" TV shows tracking functionality.<br>
 <br>
 === myEpisodes: Benutzername ===
-{*"username"*}<br>
+{*"username"*}
+
 Specify the myEpisodes username to be used when tracking your TV shows.<br>
 <br>
 === myEpisodes: Passwort ===
-{*"password"*}<br>
+{*"password"*}
+
 Specify the myEpisodes password to be used when tracking your TV shows.<br>
 <br>
 === Webinterface: Port ===
-{08888}<br>
+{*08888*}
+
 The port to be used by the [WebIF Web-Interface].<br>
 <br>
 === Use Trakt.tv ===
-{"yes", *"no"*]<br>
+{"yes", *"no"*}
+
 Switch on / off usage of "Trakt.tv" movies tracking functionality.<br>
 <br>
 === Trakt.tv - Username ===
-{*"username"*}<br>
+{*"username"*}
+
 Specify the "Trakt.tv" username to be used when tracking your movies.<br>
 <br>
 === Trakt.tv - Password ===
-{*"password"*}<br>
+{*"password"*}
+
 Specify the "Trakt.tv" password to be used when tracking your movies.<br>
 <br>
 === !SubtitleDownloader: Provider ===
-{*"Opensubtitles"*, "Bierdopje", "Napiprojekt", "Ondertitel", "Sratim", "Subdivx", "Swesub", "Titlovi", "Undertexter"}<br>
+{*"Opensubtitles"*, "Bierdopje", "Napiprojekt", "Ondertitel", "Sratim", "Subdivx", "Swesub", "Titlovi", "Undertexter"}
+
 Specify the subtitle provider to be used by PVMCs subtitle download functionality. Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br> 
 === !SubtitleDownloader: Language 1 ===
-{}<br>
+{}
+
 Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br>
 === !SubtitleDownloader: Language 2 ===
-{}<br>
+{}
+
 Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br>
 === !SubtitleDownloader: Language 3 ===
-{}<br>
+{}
+
 Find out more about PVMC subtitle functionality by checking the corresponding [subtitles wiki page].<br>
 <br>
 === {EXPERT} Valerie Config folder (Database, ...) ===
+{*/hdd/valerie/*}<br>
+`config.plugins.pvmc.configfolderpath`
+
 Option to specify the folder where PVMC shall store its configuration and database files.<br>
 <br>
 === {EXPERT} Valerie media folder (Poster, Backdrops) ===
+{*/hdd/valerie/media*}<br>
+`config.plugins.pvmc.mediafolderpath`
+
 Option to specify the folder where PVMC shall store the media files.<br>
 <br>
 === {EXPERT} Valerie tmp folder (Logs, Cache) ===
+{*/tmp/valerie*}<br>
+`config.plugins.pvmc.tmpfolderpath`
+
 Option to specify the folder where PVMC shall store its temporary files.<br>
 <br>
+
 = Synchronization-Settings =
 TODO
 
