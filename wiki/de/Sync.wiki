@@ -103,34 +103,36 @@ Vor der IMDb-ID kann durchaus noch weiterer Text stehen, z.B. könnte man einfac
 </code>
 
 === Suchwoerter für einen kompletten Ordner (valerie.info) ===
-Neben den o.g. Möglichkeiten kann mittels der Datei valerie.info ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO bereit gestellt werden müsste.
-Im entsprechenden Ordner muss die Datei valerie.info als Inhalt das entsprechende (und möglichst eindeutige Suchwort) enthalten, mit dem der Film auf IMDB gefunden werden kann.
+Neben den o.g. Möglichkeiten kann mittels einer neu zu erstellenden Datei `valerie.info` ein Suchwort bereitgestellt werden, das für den gesamten Ordner gilt. Dies ist Hilfreich bei Serien, bei denen sonst für jeden Episodentitel eine eigene NFO-Datei erstellt werden müsste.
+Im entsprechenden Ordner der Serie muss eine neue Datei `valerie.info` mit einem Text-Editor erzeugt werden, deren Inhalt ein (oder mehrere) möglichst eindeutige Suchworte sein sollte, mit deren Hilfe der Inhalt des Video-Files auf IMDB gefunden werden kann.
 
 *HINWEIS:*
-Der bereitgestellte Suchbegriff gilt nur für den Inhalt des Ordners, aber nicht für etwaige vorhandene Unterordner.
+Der bereitgestellte Suchbegriff gilt nur für den Inhalt des Ordners, aber nicht für etwaige vorhandene Unterordner!
 
-Zusätzlich ist es möglich, mit einer solchen valerie.info entweder 
+Zusätzlich ist es möglich, mit einer solchen `valerie.info` entweder 
  * direkt die IMDb-ID
  * oder die TheTvDB-ID
  * oder beide IDs
 
-in einer valerie.info Datei anzugeben! 
+anzugeben! 
 
-Beispiel-Inhalt für eine valerie.info, mit der man eine IMDb-ID für den Ordner spezifiziert:
+*Bitte beachten:*
+Zur Zeit ist es notwendig, dass der Inhalt der `valerie.info` mit einer Leerzeile beendet wird! Andernfalls ist es möglich, dass die letzte Ziffer der spezifizierten Datei abgeschnitten wird!
+
+Beispiel-Inhalt für eine `valerie.info`, mit der man eine IMDb-ID für den Ordner spezifiziert:
 
 <code>tt1234567
 </code>
 
-Beispiel-Inhalt für eine valerie.info, mit der man eine TheTvDB-ID für den Ordner spezifiziert:
+Beispiel-Inhalt für eine `valerie.info`, mit der man eine TheTvDB-ID für den Ordner spezifiziert:
 
 <code><tvdb>tvdb12345
 </code>
 
-Beispiel-Inhalt für eine valerie.info, mit der man sowohl die IMDb-ID als auch die TheTvDB-ID für den Ordner spezifiziert:
+Beispiel-Inhalt für eine `valerie.info`, mit der man sowohl die IMDb-ID als auch die TheTvDB-ID für den Ordner spezifiziert:
 
 <code>tt1234567 <tvdb>tvdb12345
 </code>
-
 
 
 === Metadaten des Films aus xbmc-style nfo-File lesen ===

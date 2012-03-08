@@ -109,27 +109,30 @@ Please note: it doesn't matter if there is additional text preceding the IMDb-ID
 
 === Search string for whole directories ===
 Besides the above mentioned possibilities another option would allow for the definition of search strings used for the whole directory. This is especially helpful in case of TV-shows since otherwise you'd have to provide a nfo-file for each single episode. 
-To do so, just add a new `valerie.info` to the corresponding directory containing the word to be used for search. As mentioned above the search query should return an ambiguous result in order to enhance the parse results.
+To do so, just add a new `valerie.info` file to the corresponding directory of the TV show, containing the word to be used for search. As mentioned above the search query should return an ambiguous result in order to enhance the parse results.
 
 *Please note:*
 The search string provided using this way is only valid for the current directory, but not for contained sub-directories.
 
-Using a valerie.info it's additionally possible to define the following IDs for the whole folder:
+Using a `valerie.info` it's additionally possible to define the following IDs for the whole folder:
  * the IMDb-ID
  * the TheTvDB-ID
  * or both IDs together
 
-Sample content for valerie.info used to specify the IMDb-ID for the current directory:
+*Please note:*
+Currently an empty line is needed at the end of the file - otherwise it is possible, that the last number of the specified ID may be cut-off!
+
+Sample content for `valerie.info` used to specify the IMDb-ID for the current directory:
 
 <code>tt1234567
 </code>
 
-Sample content for valerie.info used to specify the TheTvDB-ID for the current directory:
+Sample content for `valerie.info` used to specify the TheTvDB-ID for the current directory:
 
 <code><tvdb>tvdb12345
 </code>
 
-Sample content for valerie.info used to specify both the IMDb-ID and the TheTvDB-ID for the current directory::
+Sample content for `valerie.info` used to specify both the IMDb-ID and the TheTvDB-ID for the current directory::
 
 <code>tt1234567 <tvdb>tvdb12345
 </code>
