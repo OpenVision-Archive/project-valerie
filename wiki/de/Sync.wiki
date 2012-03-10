@@ -31,45 +31,65 @@ usw.
 
 Natürlich kann man die Sammlung auch anders aufziehen - meine persönlichen Erfahrungen mit o.g. Schema sind aber gut, weshalb ich davon ausgehe, dass die skizzierte Vorgehensweise nicht die Schlechteste ist... :-)
 
-Der prinzipielle Ablauf ist nun folgender:
- * PVMC lädt alle Video-Files, die in den zu syncenden Ordner enthalten sind
- * anschließend wird versucht zu ermitteln, ob es sich bei dem jeweiligen Video-File um einen Film oder um die Episode einer Serie handelt. Anhaltspunkte dazu liefern sowohl der Ordnertyp aus den Synchronisations-Einstellungen als auch die Dateinamen der einzelnen Video-Files. So wird z.B. überprüft, ob im Dateinamen die "typischen" Muster zum Beschreiben von Staffel- und Episoden-Nummern enthalten sind, also beispielsweise "s01e01" oder "1x01" etc.
- * in jedem Fall wird für jedes Video-File aus dem *Dateinamen* ein Suchstring gebildet, der dann für eine Suche bei der Online-Datenbank IMDb benutzt wird
- * als Ergebnis erhalten wir entweder eine eindeutige ID (die sogenannte IMDb-ID), mit der wir dann - je nach vermutetem Video-Typ (Film oder Serie) zur entsprechenden Online-Datenbank gehen, um Titel, Plot, Poster etc. zu holen. 
+=== Synchronisation von Filmen ===
+In diesem Abschnitt soll nun der prinzipielle Ablauf beim Synchronisieren unseres "filme"-Ordners beschrieben werden - im nächsten Abschnitt folgt dann noch die Beschreibung der Synchronisation von Serien.
+
+Bei Filmen geht PVMC wie folgt vor:
+ * die Dateinamen aller Video-Files, die in den zu synchroniserenden Ordner enthalten sind, werden geladen
+ * anschließend wird versucht zu ermitteln, ob es sich bei dem jeweiligen Video-File um einen Film oder um die Episode einer Serie handelt. Anhaltspunkte dazu liefern sowohl der Ordnertyp aus den Synchronisations-Einstellungen als auch die Dateinamen der einzelnen Video-Files. So wird z.B. überprüft, ob im Dateinamen die "typischen" Muster zum Beschreiben von Staffel- und Episoden-Nummern enthalten sind, also beispielsweise "s01e01" oder "1x01" etc. (s.u.)
+ * in jedem Fall wird für jedes Video-File aus dem *Dateinamen* ein Suchstring gebildet, der dann für eine Suche bei der Online-Datenbank IMDb benutzt wird. Zuvor müssen allerdings aus dem Dateinamen noch solche Zeichenketten herausgefiltert werden, die z.B. benutzt werden, um die Qualität des Videomaterials zu kennzeichnen (z.B. "h264", "720p", "1080i" oder "1080p" etc.)
+ * als Ergebnis der Suchanfrage bei IMDb erhalten wir entweder eine Liste an Filmen, die die gesuchten Wörter enthalten - oder aber eine leere Liste, wenn kein Film den Suchkriterien entspricht. Aus dieser Liste erhalten wir dann die berühmt-berüchtigte IMDb-ID - eine eindeutige ID mit der PVMC dann - je nach vermutetem Video-Typ (Film oder Serie) zur entsprechenden Online-Datenbank geht, um Titel, Plot, Poster etc. zu holen 
 
 Besonders die vorletzte Zeile ist interessant, denn hier wird klar, dass es - ja nach Namensgebung des Videofiles - durchaus zu Problemen kommen kann: zum einen kann PVMC ja nicht "wissen", ob es sich bei dem vorliegenden Video um die Original-Version eines Films handelt - oder um den Remake, der vierzig Jahre später nochmal aufgenommen wurde, aber halt mit gleichem Namen. Oder der Dateiname liefert keine eindeutigen Suchergebnisse und dummerweise ist der eigentlich "richtige" Film in der Ergebnisliste an fünfter oder sechster Position!
 
-Bezogen auf unsere o.g. Sammlung ist also wichtig, in den Synchronisations-Einstellungen den richtigen Ordnertyp für die beiden Ordner "filme" und "serien" zu wählen: der Ordner "filme" sollte als "MOVIE" gekennzeichnet sein - der Ordner "serien" analog als "TV". Den Typ "MOVIE_AND_TV" benötigen wir in diesem Fall nicht, da wir ja eine strikte Trennung zwischen Filmen und Serien haben.
+Bezogen auf unsere o.g. Sammlung ist also wichtig, in den Synchronisations-Einstellungen den richtigen Ordnertyp für die beiden Ordner "filme" und "serien" zu wählen: der Ordner "filme" sollte folglich als "MOVIE" gekennzeichnet sein - der Ordner "serien" analog als "TV". Den Typ "MOVIE_AND_TV" benötigen wir in diesem Fall nicht, da wir ja eine strikte Trennung zwischen Filmen und Serien haben.
 
-Für das erste Video-File "`A_Beatiful_Mind.avi`" würde PVMC also anhand des Ordnertyps "MOVIE" erstmal davon ausgehen, dass es sich bei dem File um einen Film handelt. Dann wird überprüft, ob für dieses File evtl. Synchronisations-Hilfen vorhanden sind. Ist dies nicht der Fall, dann wird der Dateiname noch einw enig gepimpt - und anschließend eine IMDb-Abfrage mit folgendem String durchgeführt:
+Für das erste Video-File "`A_Beatiful_Mind.avi`" würde PVMC also anhand des Ordnertyps "MOVIE" erstmal davon ausgehen, dass es sich bei dem File um einen Film handelt. Dann wird überprüft, ob für dieses File evtl. Synchronisations-Hilfen, z.B. in Form einer `valerie.info` (siehe Abschnitt [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"]) vorhanden sind. Ist dies nicht der Fall, dann wird der Dateiname noch ein wenig gepimpt (z.B. "`_" durch Leerzeichen ersetzt) - und anschließend eine IMDb-Abfrage mit folgendem String durchgeführt:
 
-"a beautiful mind"
+   "a beautiful mind"
 
 Als Ergebnis erhalten wir eine ganze Latte an Filmen, die bei IMDb gespeichert sind und "a beatiful mind" im Namen haben. An erster Stelle steht jedoch (glücklicherweise) der "richtige" Film: "A Beatiful Mind" aus dem Jahre 2001 mit Russell Crowe:
 
-http://m.imdb.com/title/tt0268978/
+   http://m.imdb.com/title/tt0268978/
 
 In diesem Link finden wir nun auch die berühmt-berüchtigte IMDb-ID für diesen Film, nämlich `tt0268978`. Hätte es sich bei dem Video hingegen um das TV-Special "A Beautiful Mind: Creation of the Special Effects" aus dem Jahre 2002 gehandelt:
 
-http://m.imdb.com/title/tt0780995/
+   http://m.imdb.com/title/tt0780995/
 
-dann müssten wir mit Hilfe der Suchhilfen PVMC auf die richtige Spur helfen, z.B. indem wir einfach die richtige IMDb-ID für dieses Special (nämlich `tt0780995`) in den Dateinamen mit aufnehmen, also die Videodatei wie folgt umbenennen:
+dann müssten wir mit Hilfe der oben bereits erwähnten Suchhilfen PVMC auf die richtige Spur helfen, z.B. indem wir einfach die richtige IMDb-ID für dieses Special (nämlich `tt0780995`) in den Dateinamen mit aufnehmen - also die Videodatei wie folgt umbenennen:
 
-`/hdd/videos/filme/A_Beautiful_Mind_tt0780995.avi`
+   `/hdd/videos/filme/A_Beautiful_Mind_tt0780995.avi`
 
-Da es sich bei dem Video also um einen Film handelt, wendet sich PVMC mit dieser IMDb-ID an die Online-Datenbank TheMovieDB, um von dort den offiziellen Titel, den Plot, das Genre, die User-Bewertungen, sowie die Poster und Backdrops zu laden. Diese Daten werden dann in der PVMC-eigenen Datenbank abgelegt und lokal gespeichert. Im ersten Anlauf wird versucht, Titel und Plot in der eingestellten Synchronisations-Sprache zu laden. Ist das nicht möglich, wird es nochmal bei IMDb probiert. Wenn die Texte dort auch nicht in der gewünschten Sprache vorhanden sind, so wird als Fallback "Englisch" benutzt.
+Weitere Hilfsmittel, wie man die Erkennungsrate verbessern kann, sind im Abschnitt [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"] beschrieben!
+
+Da es sich bei dem Video um einen Film handelt, wendet sich PVMC im nächsten Schritt mit dieser IMDb-ID an die Online-Datenbank "TheMovieDB", um von dort die eigentlichen Daten zu laden, die später dann in der Film-Liste von PVMC angezeigt werden, wenn der Film dort selektiert wird:
+ * den "offiziellen" Titel des Films
+ * das Erscheinungsjahr
+ * Laufzeit
+ * die Genres
+ * den Plot
+ * Userbewertungen
+Zusätzlich wird noch ein Filmposter, sowie ein Backdrop geladen, die je nach verwendetem Skin unterschiedlich eingesetzt werden.
+
+Neben dem oben aufgezeigten Problem, dass die Abfrage bei der IMDb-Datenbank nicht zum gewünschten Ergebnis führt, gibt es bei der Abfrage bei "TheMovieDB" weitere potentielle Fehlerquellen, die dazu führen können, dass ein Film später nicht korrekt in der PVMC Film-Liste auftaucht:
+ * der gesuchte Film ist gar nicht in "TheMovieDB" enthalten
+ * der gesuchte Film ist zwar in "TheMovieDB" eingetragen - aber nicht mit der zugehörigen IMDb-ID verknüpft. Dadurch läuft die Abfrage von PVMC nach dieser IMDb-ID natürlich in's Leere.
+ * Titel / und oder Plot sind nicht in der gewünschten Sprache vorhanden
+ * es sind keine Poster / Backdrops vorhanden - oder aber in einer "falschen" Sprache
+In all den oben genannten Fällen ist es ratsam, einfach einen kostenlosen Account bei TheMovieDB anzulegen, um die entsprechenden Informationen zum jeweiligen Film einzupflegen oder entsprechend anzupassen. In aller Regel sind die Daten dann innerhalb von ein bis zwei Tagen auch für die PVMC-Abfragen verfügbar.
+
+=== Synchronisation von Serien ===
 
 TODO
 
-
 <br><br>
 == Starten eines Synchronisationslaufs ==
-In den Synchronisierungsmanager gelangt man über "Hauptmenu" => "System" => "Synchronize". Es stehen zwei Sychronisationsarten zur Auswahl:
- * eine komplette Synchronisation (auswählbar über die grüne Taste)
- * eine "schnelle" Synchronisation (auswählbar über die gelbe Taste)
+Die Synchronisation startet man entweder über des Web-Interface ("Home" => "Sync") oder über den "Synchronisierungsmanager" der PVMC-Benutzeroberfläche: "Hauptmenu" => "System" => "Synchronize". Es stehen zwei Sychronisationsarten zur Auswahl:
+ * eine komplette Synchronisation (im Web-Interface "normal Sync" - im Synchronisierungsmanager auswählbar über die "grüne" Taste)
+ * eine "schnelle" Synchronisation (im Web-Interface "fast Sync" - im Synchronisierungsmanager auswählbar über die "gelbe" Taste)
 
 Die komplette Synchronisation ist zur erstmaligen Einrichtung empfohlen. Sie durchsucht die im Suchpfad angegebenen Verzeichnisse und gleicht die dort gefundenen Medien-Dateien mit der Datenbank ab. Falls die Option "Film löschen wenn Datei nicht gefunden" aus den Haupteinstellungen aktiv ist, werden diejenigen Einträge aus der Datenbank entfernt, zu denen keine Dateien mehr gefunden wurden.<br>
-Während der Synchronisation muss nicht zwingend im Synchronisierungsmanager gewartet werden, bis der Prozess fertig ist. Man kann mit Exit den Synchronisierungsbereich verlassen, dieser läuft dann als Hintergrundprozess weiter und blendet ein Popup Fenster ein, sobald alles abgeglichen ist.
+Während der Synchronisation muss nicht zwingend im Synchronisierungsmanager gewartet werden, bis der Prozess fertig ist. Man kann mit Exit den Synchronisierungsbereich verlassen, dieser läuft dann als Hintergrundprozess weiter und blendet ein Popup Fenster ein, sobald der Vorgang beendet ist.
 
 Die "schnelle Synchronisation" hingegen fügt nur neue Titel hinzu und läuft dadurch bedeutend schneller ab.<br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/sync_small.png
@@ -89,27 +109,27 @@ Zu beachten ist dabei folgendes:
 Poster und Hintergrund werden aktuell ausschließlich von TMDB, bzw. TVDB in der eingestellten Sprache geholt. Sind diese dort *nicht* verfügbar, werden später in den Listen keine Grafiken angezeigt. In diesem Fall einfach selbst bei den entsprechenden Providern die Grafiken hochladen - dann haben alle etwas davon! :-) 
 <br><br>
 == Suchstrukturen ==
-In der Datei `paths.conf` ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird (z.B. Dateiendungen "`mkv|ts|avi|m2ts`"), bzw. wie die Ordner kategorisiert sind (Filme => Kategorie "MOVIE", Serien => Kategorie "TV" oder beides => Kategorie "MOVIE_AND_TV"). Diese Datei kann entweder manuell editiert werden (eine entsprechende Datei mit Default-Werten wird bei der ersten Installation unter `/hdd/valerie` angelegt - siehe => [Resources#Konfigurationsdateien Konfigurationsdateien]) - oder aber über die Einstellungen des Syncmanagers. Zusätzlich kann für jeden Ordner separat konfiguriert werden, ob der Ordnername zum Abgleich benutzt werden soll oder die Dateinamen der einzelnen Files.
+In der Datei `paths.xml`ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird (z.B. Dateiendungen "`mkv|ts|avi|m2ts`"), bzw. wie die Ordner kategorisiert sind (Filme => Kategorie "MOVIE", Serien => Kategorie "TV" oder beides => Kategorie "MOVIE_AND_TV"). Diese Datei kann entweder manuell editiert werden (eine entsprechende Datei mit Default-Werten wird bei der ersten Installation unter `/hdd/valerie` angelegt - siehe => [Resources#Konfigurationsdateien Konfigurationsdateien]) - oder aber über die Einstellungen des Syncmanagers. Zusätzlich kann für jeden Ordner separat konfiguriert werden, ob der Ordnername zum Abgleich benutzt werden soll oder die Dateinamen der einzelnen Files. 
 
-Beispielsweise könnte die eigene Sammlung wie folgt aufgeteilt werden:
- * `/hdd/movie` => Kategorie "MOVIE"
- * `/hdd/series` => Kategorie "TV"
- * `/hdd/gemischt` => Kategorie "MOVIE_AND_TV"
-Nach einem Synchronisationslauf würden die im "`/hdd/movie`"-Ordner enthaltenen Files zur "Film"-Liste zugeordnet. Die im "`/hdd/series`"-Verzeichnis enthaltenen Dateien werden als Serien interpretiert und die im "`gemischt`"-Ordner enthaltenen Dateien werden entweder als Film gesucht - und wenn dort nichts gefunden wird, als Serie interpretiert.
-
-Zur Erkennung der Videos werden folgende Kriterien herangezogen:
- * der Name der Datei ohne Dateityperweiterung (default). Der für die Suchanfrage benutzte String kann aber vor Ausführen der eigentlichen Suche noch durch Reguläre Ausdrücke verändert werden (s.u.)
- * der Name des Ordners, in dem die Datei enthalten ist (einstellbar in den Synchronisationsmanager-Optionen ([Sync#Einstellungen s.o.])
- * eine IMDB-Id, die über eine selbst anzulegende `nfo`-Datei vorgegeben wird
- * bei selbst erstellten Aufnahmen wird der Titel (bzw. Staffel und Episode bei Serien) aus der zugehörigen Enigma2 `meta`-Datei gelesen
 Falsch erkannte Einträge können anschließend manuell korrigiert werden ([Sync#Suchergebnis_manuell_korrigieren s.u.]).
 <br>
 === DVDs ===
 Valerie erkennt Filme die in mehreren Dateien vorliegen anhand des Namens. Eine Ausnahme sind Ordner mit einer DVD Struktur (`*`.vob, `*`.ifo) als Inhalt. Da hier anhand des Dateinamens keine Suche gestartet werden kann, wird in solchen Fällen immer der Ordnername als Suchbegriff verwendet.
 <br>
 === Suchergebnis manuell korrigieren ===
-Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Menu des Synchronisations-Manager korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der Datenbank löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
-Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die IMDB-ID (über "MORE") eingeben und speichern.
+Wurde ein Titel nicht oder falsch erkannt, so kann dies manuell korrigiert werden. Der empfohlene Weg hierzu ist über das Web-Interface - es ist aber auch möglich, die Korrekturen über den Synchronisationsmanager der PVMC Enigma2-Benutzerobefläche vorzunehmen.
+
+*Bitte beachten*
+Momentan überschreibt ein neuer Synchronisationslauf zuvor evtl. durchgeführte manuelle Änderungen. Falls PVMC also einen Film nicht richtig erkennt, ist es daher ratsamer, eine der im Abschnitt [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"] beschriebenen Hilfestellungen zu benutzen, da dann bei jedme Synclauf immer automatisch der richtige Film gefunden wird - und man erst gar keine manuellen Änderungen vornehmen muss!
+
+==== Manuelle Korrekturen mit dem Web-Interface ====
+Über das Web-Interface lassen sich alle wichtigen Eigenschaften eines Films oder einer Serie / Episode editieren, z.B. IMDb-ID, Titel, Plot oder auch Poster und Backdrop. Dazu einfach in die Filmliste oder in die Serien / Episodenliste im Web-Interface wechseln ("Home" => "Movies" oder "Home" => "TvShows" / "Home" => "TvShows" => Knopf "Episoden" anklicken) und dort dann in der rechten "Actions"-Spalte das kleine Icon mit dem Stift anklicken. Dadurch gelangt man auf die jeweilige Bearbeitungsseite, auf der die gewünschten Änderungen vorgenommen werden können.
+
+*Wichtig* Anschließend müssen die Änderungen mit dem roten Button oben links "Save to Database" gespeichert werden!
+
+==== Manuelle Korrekturen mit dem Synchronisationsmanager ====
+Falsch erkannte Filme lassen sich über den Menupunkt "Verwalten" im Menu des Synchronisations-Manager korrigieren. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der Datenbank löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
+Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die "richtige" IMDb-ID (über "MORE") eingeben und speichern.
 <br><br>
 http://project-valerie.googlecode.com/svn/trunk/images/manage_small.png<br>
 <br>
