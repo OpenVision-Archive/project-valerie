@@ -143,8 +143,16 @@ Additionally to the previously mentioned nfo-files used to provide just the IMDb
  * `<episodedetails>` => IMDb-ID for episode
  * `<season>` => season # for TV-shows
  * `<episode>` => episode # for TV-shows
+ * `<title> => title of movie / Tv show
  * `<year>` => year
-Upcoming releases of PVMC will support also reading of plot, title, genres etc. from nfo. These files can be created and edited by additional software, e.g. Ember Media Manager. By doing so it would be possible to also add media files not available at IMDb. Additionally this would be an easy way to have database independent backup of the meta information of your collection.
+ * `<plot>` => plot of video
+ * `<runtime>` => total runtime in minutes
+ * `<genre>` => genre
+ * `<rating>` => user rating
+ * `<tagline>` => tagline of movie
+ * `<codec>` => used video codec
+ * `<width>` => resolution
+*Please note:* The implementation of this functionality is somehow "experimental" - hence you should expect problems, especially when parsing complex NFO's...
 
 === Regular expressions ===
 Before a search query is started the used search string can be adapted using regular expressions. These regular expressions can be defined in the following configuration files: "`pre.conf`", "`post_movie.conf`" and "`post_tv.conf`":

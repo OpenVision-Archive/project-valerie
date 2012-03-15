@@ -223,8 +223,17 @@ Zusätzlich zu den o.g. Möglichkeiten ist geplant, nfo-Files zu unterstützen, 
  * `<episodedetails>` => IMDb-ID für Episoden
  * `<season>` => Staffel-Nummer bei Serien
  * `<episode>` => Episoden-Nummer bei Serien
+ * `<title> => Titel des Films / der Serie
  * `<year>` => Jahr
-Diese Funktionalität ist leider noch nicht komplett implementiert, zumal mit dem "Plot"-Attribut eine wichtige Eigenschaft fehlt, um "unbekannte" Filme oder Dokumentationen unabhängig von IMDb, TheMovieDb oder TheTvDb in die PVMC-Datenbank zu bekommen. 
+ * `<plot>` => Handlung
+ * `<runtime>` => Spielzeit
+ * `<genre>` => Genre
+ * `<rating>` => Bewertung
+ * `<tagline>` =>
+ * `<codec>` => verwendete Video-Kodierung
+ * `<width>` => Auflösung
+*Bitte beachten:*
+Die Implementierung dieser Funktionalität ist momentan eher experimenteller Natur, weshalb sie u.U. nicht wie gewünscht funktioniert!
 
 === Regulaere Ausdruecke ===
 Mit Hilfe der in den Config-Files "`pre.conf`", "`post_movie.conf`", sowie "`post_tv.conf`" festgelegten Regulären Ausdrücke können die Suchstrings, die an die Medienprovider übergeben werden, beeinflusst werden:
