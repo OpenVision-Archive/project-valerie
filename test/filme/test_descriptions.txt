@@ -1,0 +1,24 @@
+10000BC.HQ.tt0443649.mkv
+Overwrite wrong movie with IMDb-ID in file name
+
+20120201 1319 - Sky Cinema HD - The Roommate.ts
+Enigma2-recording => use info from meta file
+
+Bangkok_Dangerous_(1999).avi
+Remake-Test:
+a) parse: replace "_" by " "
+b) retrieve year from file name
+c) select correct movie matching retrieved year
+
+Das_Vermächtnis_des_geheimen_Buches.HQ.avi
+UTF8-Test:
+a) parse: replace "_" by " "
+b) handle "ä" correctly
+
+Topgun.avi
+Nothing special :-)
+
+nfo-testfilm.mkv
+Use related nfo to retrieve IMDb-ID => should be "X-Men"
+
+
