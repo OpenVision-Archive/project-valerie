@@ -21,4 +21,14 @@ Nothing special :-)
 nfo-testfilm.mkv
 Use related nfo to retrieve IMDb-ID => should be "X-Men"
 
+Star Trek.mkv
+Related nfo ends with <LF> 
 
+Star Trek - Der Aufstand.mkv
+Related nfo ends with <CR><LF> 
+
+Star Trek - Nemesis.mkv
+Related nfo ends with <LF><LF> 
+
+Der KGB Dissident.HQ.mkv
+Related nfo is a xbmc-style nfo

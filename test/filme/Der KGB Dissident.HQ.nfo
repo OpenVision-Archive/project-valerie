@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<movie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id>tt1758686</id>
+  <title>Der KGB-Dissident</title>
+  <originaltitle>Le dissident du KGB</originaltitle>
+  <year>2010</year>
+  <releasedate>18.11.2010</releasedate>
+  <rating>6.7</rating>
+  <genre>Dokumentation</genre>
+  <studio>Arte France</studio>
+  <director>Nicolas Jallot</director>
+  <credits>Nicolas Jallot (writer)</credits>
+  <outline>Der KGB vergibt niemandem, der ihn einmal verraten hat. Aus diesem Grund lebt Viktor Orekhov seit seiner Flucht unter falschem Namen in den USA.</outline>
+  <plot>Es gab zahlreiche Spione, die in den Westen übergesiedelt sind oder zu Doppelagenten wurden. Doch Viktor Orekhov war der einzige KGB-Agent, der auf die Seite der Regimegegner wechselte. 
+Bevor er 1978 zu zehn Jahren Lager verurteilt wurde, half er über zwei Jahre lang den Dissidenten, die er eigentlich überwachen sollte. Zwei Jahre vor dem Fall der Mauer wurde er wieder aus der Haft entlassen, und die Geschichte gab ihm Recht. Aber 1995 ließ ihn ein ehemaliger Vorgesetzter des KGB, der zwischenzeitlich zum Leiter des russischen Geheimdienstes FSB aufgestiegen war, aus fadenscheinigem Grund erneut zu drei Jahren Zwangsarbeit verurteilen. 
+Der KGB vergibt niemandem, der ihn einmal verraten hat. Umso mehr, als Orekhov nicht mit seiner Meinung über frühere Vorgesetzte hinterm Berg gehalten hatte. Unter dem Druck westeuropäischer Nachbarländer, Menschenrechtsorganisationen und ehemaliger Dissidenten ließen die russischen Behörden Orekhov zwei Jahre später wieder frei. Orekhov flüchtet in die USA. Dort lebt er noch heute unter falschem Namen, hat jeden Kontakt zu Russland abgebrochen und schlägt sich als Pizzalieferant durch.
+
+Nach monatelangen Ermittlungen fand Filmemacher Nicolas Jallot im Juli 2008 die Spur des ehemaligen KGB-Mitarbeiters Viktor Orekhov. Die Dokumentation enthüllt seine unglaubliche Lebensgeschichte. Zu Wort kommen neben Viktor Orekhov selbst auch Dissidenten, die ihn früher kannten und enge Freunde, die seit elf Jahren keine Kontakte mehr zu ihm haben. Ergänzt wird das Porträt durch Archivbilder und präzise szenische Nachstellungen.</plot>
+  <runtime>72 min</runtime>
+  <actor>
+    <name>Viktor Orekhov</name>
+    <role>Himself</role>
+    <thumb />
+  </actor>
+  <fileinfo>
+    <streamdetails>
+      <audio>
+        <channels>2</channels>
+        <codec>mp3</codec>
+      </audio>
+      <video>
+        <aspect>1.250</aspect>
+        <codec>h264</codec>
+        <duration>71 mins</duration>
+        <height>576</height>
+        <width>720</width>
+      </video>
+    </streamdetails>
+  </fileinfo>
+</movie>
