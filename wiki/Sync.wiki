@@ -67,6 +67,7 @@ z.B: Film XY - disk1.avi, Film XY - disk2.avi
 == Excludes and search hints ==
 PVMC offers several options in order to affect the parse process and thus to control what is synced and how:
 
+ * add release year to file name
  * exclude whole folders from search process - even if they are contained in the search path
  * provide the IMDb-Id within the media file name 
  * provide the IMDb-Id in a dedicated `*.nfo`-file
@@ -75,6 +76,22 @@ PVMC offers several options in order to affect the parse process and thus to con
  * using regular expressions 
 
 The upcoming chapters will describe these options more detailed. But please keep in mind, that it is suggested to always perform a full sync after you added / modified search hints in order to rebuilt the database - perhaps also deleting the database would be helpful to eliminate the risk of getting side effects caused by old entries.   
+=== Add release year to file name ===
+Especially in case of syncing a remake it's important to tell PVMC which movie ist the correct one to sync. The IMDb search for "Bangkok Dangerous" for example returns multiple results with exact the same name:
+ 
+ http://m.imdb.com/find?q=bangkok+dangerous
+ 
+ * "Bangkok Dangerous" released in 2008
+ * "Bangkok Dangerous" released in 1999
+ 
+Without any hints regarding the year PVMC would use the movie released in 2008 since this one is the first movie returned by IMDb. But what to do if one has the second movie released in 1999? In order to get PVMC back on track you just need to rename your video file as described below:
+
+*file name of the media file (old):* {{{Bangkok_Dangerous.avi}}}
+
+*file name of the media file (new):* {{{Bangkok_Dangerous_(1999).avi}}}
+
+=> It is important to specify the year with four digits and enclosed by braces - if everything's OK then PVMC will retrieve the year from the filename and uses that year specification later on in the sync process as additional search criteria!
+
 === Exclude folders from parsing ===
 A whole folder and his subfolders can be excluded from the parse process by simply adding a new file `ignore` to the folder which should be excluded.
 

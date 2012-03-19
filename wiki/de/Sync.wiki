@@ -146,6 +146,7 @@ z.B: Film XY - disk1.avi, Film XY - disk2.avi
 == Excludes und Suchhilfen ==
 Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
 
+ * Erscheinungsjahr im Dateinamen angeben
  * komplette Ordner von der Suche ausklammern
  * die IMDb-Id im Namen der Videodatei angeben
  * die IMDb-Id in einer nfo-Datei angeben
@@ -153,6 +154,22 @@ Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
  * zusätzliche Meta-Daten in einer nfo-Datei angeben
 
 Wie das im Detail geht, wird in den nachfolgenden Kapiteln ausführlicher beschrieben. Zu beachten ist dabei aber, dass in allen Fällen nach einer Änderung eine bereits vorhandene Datenbank durch eine *komplette* Synchronisation neu aufgebaut wird (also keine "schnelle" Synchronisation).
+=== Erscheinungsjahr im Dateinamen angeben ===
+Gerade im Falle von Remakes ist es hilfreich, wenn man PVMC "irgendwie" mitgeben kann, welcher der gefundenen Filme denn jetzt der "richtige" ist. So liefert z.B. die Suche bei IMDb nach "Bangkok Dangerous" mehrere Treffer mit exakt dem gleichen Namen:
+ 
+ http://m.imdb.com/find?q=bangkok+dangerous
+ 
+ * "Bangkok Dangerous" aus dem Jahre 2008
+ * "Bangkok Dangerous" aus dem Jahre 1999
+ 
+Ohne Jahresangabe würde PVMC den Film aus dem Jahre 2008 benutzen, da dieser zuerst in der Ergebnisliste auftaucht. Wenn man hingegen den zweiten Film aus dem Jahre 1999 auf der Platte hat, lässt sich PVMC wie folgt dazu überreden, die Daten dieses Films zu syncen:
+
+*Dateiname des Videofiles (alt):* {{{Bangkok_Dangerous.avi}}}
+
+*Dateiname des Videofiles (neu):* {{{Bangkok_Dangerous_(1999).avi}}}
+
+=> Wichtig ist, das Jahr vierstellig anzugeben und in runde Klammern zu setzen - dann holt sich PVMC die Jahresangabe aus dem Dateinamen und nimmt dieses später bei der IMDb-Suche als zusätzliches Kriterium!
+
 === Ordner von der Suche ausklammern ===
 Um einen kompletten Ordner sowie desen Unterordner von der Suche auszuklammern, muss man lediglich eine Datei `ignore` in diesen Ordner erstellen.
 
