@@ -2,9 +2,98 @@
 <wiki:toc max_depth="2" />
 ----
 = Synchronisation =
-The synchronisation is done using the synchronisation manager, which can be entered by performing the following steps from the main menu: "System" => "Synchronize". There are two different synchronisation types available:
- * a full synchronisation (available through the green option key)
- * a fast synchronisation (available through the yellow option key)
+== Basics ==
+PVMC differs from a "regular" video player mainly because of the fact, that for all the videos several additional information will be displayed on your TV while digging around your video collection - for example: movie poster, description / plot, release year or genre the video belongs to. Since this additional information can not be retrieved just from the video's file name and since PVMC has not the capability to somehow "analyze" the video content this information needs to be retrived from somewhere else - and in order to do so PVMC needs to somehow "identify" your locally stored video files. This (unique) process of ientifying your videos and retrieving the necessary information is called "synchronisation": if a video has been successfully identified and the related information has been successfully retrieved this data will be stored in a local database and can be displayed later on in the movie list without a new synchronisation run.
+
+In order to understand why PVMC doesn't always manage it to identify 100% of your videos - or maybe sometimes identifies a wrong video - it's important to understand how the synchronisation process works in principle. This helps, to identify problems and to help PVMC by so-called "synchronisation hints" to identify your videos corrrectly with the next synchronisation run (see below).
+
+As mentioned previously PVMC has to retrieve the additional video data from external sources. Hence it is necessary to have an active internet connection during any synchronisation run. The following online database are used as sources during a synchronisation run:
+ * [http://www.imdb.com IMDB.com] => for both TV shows and movies
+ * [http://www.themoviedb.org TheMovieDB.org (TMDB)] => additionally for movies
+ * [http://www.thetvdb.org TheTVDB.org (TVDB)] => additionally for TV shows
+For the upcoming chapters and examples we use the following assumptions for the structure of our video collection:
+
+<code>
+/hdd/videos/movies/A_Beautiful_Mind.avi
+/hdd/videos/movies/Matrix.avi
+/hdd/videos/movies/TopGun.avi
+/hdd/videos/movies/X-Men.avi
+...
+/hdd/videos/tv/Breaking Bad/breaking_bad_s01e01_Titel.avi #Season #1 / Episode #1
+/hdd/videos/tv/Breaking Bad/breaking_bad_s01e02_Titel.avi #Season #1 / Episode #2
+...
+/hdd/videos/tv/Breaking Bad/breaking_bad_s02e01_Titel.avi #Season #2 / Episode #1
+/hdd/videos/tv/Breaking Bad/breaking_bad_s02e02_Titel.avi #Season #2 / Episode #2
+...
+/hdd/videos/tv/Criminal Minds/criminal_minds_s01e01_Titel.avi
+...</code>
+and so on.
+
+Of course there are countless ways on how a video collection can be structured and is ureley depends on the number of TV shows and movies one has, but my personal experience with the above described structure is quite good, so my best guess on that is, that it shouldn't be that bad.... :-)
+
+=== Synchronisation of movies ===
+This chapter will describe the principle workflow while synchronizing our "movie" folder shown above - the upcoming chapter will then take a closer look on the synchronisation process of TV shows.  
+
+Now for movies PVMC performs the following steps:
+ * the names of all files contained in that "movies" directory will be loaded
+ * afterwards PVMC tries to detect, if those files represent a movie or a TV show. You know, that those are movies (at least you are supposed to do so ;-)  ) - but PVMC has only some indications, for example the folder type you specify in the synchronisation settings or the filename itself, which can be helpful by evaluating if the name contains some typical patterns used to enumerate season and episodes of TV show episodes (for example the typical "s01e01" or "1x01" stuff) 
+ * next PVMC will start a search at IMDb by using the filename of the video file - but prior starting the query we need to clean-up the video's filename from characters and strings usually used to indicate the video quality or the used audio / video codec (for example stuff like "h264", "720p", "1080i" or "1080p" and so on), since these might badly influence the search results at IMDb! 
+ * IMDb will then (hopefully) return a list of movies matching the words used in the search query - or an empty result set in case no movie was found that matches our search.
+ * assuming that we do get a list of possible movies PVMC will then apply further plausibility checks and if a movie is assumed to be the correct one it takes the "famous" unique IMDb-ID out of that movie list.
+ * this IMDb-ID is then used to retrieve Title, Plot, Poster and so on from TheMovieDB     
+
+As can be seen from the sreps above it mainly depends from the name of the video file whether the try to identify the "correct" movie will be successful or not: for example PVMC does not know, if the current video file contains to original film (from for example 1955) - or if the video file contains the remake from 1988, which has the same name. Another problem could rise, if the search at IMDb-ID returns multiple results and the correct movie is not listed at first place (and also the year information was missing in the file name).
+
+Now back to our sample video collection it is important to choose the correct folder type for both "movies" and "tv" in the synchronisation settings: the folder "movies" should be flagged as "MOVIE" and the folder "tv" should be flagged as "TV". In that case there's no need for the third folder type "MOVIE_AND_TV" since we strictly seperated movies and TV shows.
+
+For the first video file "`A_Beatiful_Mind.avi`" PVMC will assume a "movie" because the containing directory is of type "MOVIE". Next it is checked whether for this file some synchronisation hints exist or not, for example a `valerie.info` (see [Sync#Excludes_and_search_hints "Excludes and search hints"]). Since we don't have any search hints the file name will be parsed in order to remove unnecessary phrases and characters that could disturb our upcoming search query. For example all "_" chars get replaced by " " and things like "divx" or "h.264" will be dropped. Finally an IMDb-Query with the following search string will be started:
+
+   "a beautiful mind"
+
+As a result we get a list with all videos available at IMDb matching that query. For heavens sake the "correct" film is located at position #1: "A beautiful mind" with Russell Crowe, released in 2001:
+
+   http://m.imdb.com/title/tt0268978/
+
+In this link we find additionally the famous "IMDb-ID" of that movie: `tt0268978`. Now what would have happened, if our video in our collection would be the TV-Special "A Beautiful Mind: Creation of the Special Effects" released in 2002:
+
+   http://m.imdb.com/title/tt0780995/
+
+?
+
+In that case we'd the video still sync as the movie "A beautiful mind", but by using the previously mentioned "search hints" it would be possible to guide PVMC to the correct IMDb-entry, for example by adding the correct IMDb-ID `tt0780995` to the file:
+
+   `/hdd/videos/filme/A_Beautiful_Mind_tt0780995.avi`
+
+Additional search hints are described more detailed in the upcoming chapter [Sync#Excludes_and_search_hints "Excludes and search hints"]!
+
+Now back to our original example: we have found our movie "A beautiful mind" and get the correct IMDb-ID `tt0268978` from IMDb. Next we need to get "official" title, plot and poster / backdrop for that movie, which will shown later on in the PVMC movie list. This is done by submitting a corresponding query to Online database "TheMovieDB". The following attributes will then be loaded from there:
+ * the official title of the film
+ * the release year
+ * runtime of the movie
+ * one or more genres
+ * the plot of the movie
+ * user ratings
+Additionally also the poster and backdrop will be retrieved, which could be displayed in the PVMC video list, depending on the used skin.
+
+Besides the already shown problems that could rise during the IMDb-query we could face additional errors by asking TheMovieDB about the current movie, that might result in a failed sync of the video - for example:
+ * the searched movie is not contained in "TheMovieDB" at all
+ * the searched movie is contained in "TheMovieDB", but the entry is not linked to the related IMDb-ID. If that's the case then the PVMC-query doesn't return any results!
+ * title and / or plot are not available in the desired sync language
+ * there are no poster / backdrops available for that movie - or the posters are only available in the "wrong" language
+In all cases listed above it is suggested to create a new TheMovieDB account (for free) and to add / correct the information for the corresponding movie. Normally the adapted record is then available for new PVMC queries within a few days!
+
+=== Synchronisation of TV-shows ===
+
+TODO
+
+<br><br>
+== Starting a sync run ==
+
+The synchronisation can be started by either using the Web Interface ("Home" => "Sync") or by using the synchronisation manager of PVMC E2 GUI, which can be entered by performing the following steps from the main menu: "System" => "Synchronize". 
+
+In any case there are two different synchronisation types available:
+ * a full synchronisation (when using the PVMC Enigma2 sync manager available through the "green" option key - in the WebIF labeled "normal Sync")
+ * a fast synchronisation (when using the PVMC Enigma2 sync manager available through the "yellow" option key - in the WebIF labeled "fast Sync")
 
 The full synchronisation option is suggested if you're running PVMC for the first time. By doing so the directories defined in the search path are scanned and the contained movie files will be added to the database. If the option "Delete movie if file not found" from the main settings is selected, the related entries from the database will be removed if the related media files are not found any more.
 
@@ -28,7 +117,14 @@ The search order used by PVMC is as follows:
 Please note, that poster and backdrops will only be retrieved from TMDB and TVDB. If there are no poster and backdrops available for your movie, then no arts will be displayed later on in the movie lists! If this happens for one some of your movies then it is suggested to just open an account at TMDB and 7 TVDB in order to upload some arts for the desired movies. By doing so everyone has a benefit! :-) 
 <br><br>
 == Search structures ==
-The file `paths.conf` is used to define both the file extensions to be used in order to detect media files (for example "`mkv|ts|avi|m2ts`") and the directories that should be searched together with their categories (movies => category "MOVIE", TV-shows => category "TV" or both => category "MOVIE_AND_TV"). This file can either get edited manually (a file containing some default values will be copied during installation to `/hdd/valerie` - see also => [Resources#Configuration_files configuration files]) - by using the corresponding setting in the synchronisation manager options. Additionally one can specify for every directory, whether the file names shall be used for synchronisation - or the name of the corresponding directory.
+The file `paths.xml` is used to define both the file extensions to be used in order to detect media files (for example "`mkv|ts|avi|m2ts`") and the directories that should be searched together with their categories (movies => category "MOVIE", TV-shows => category "TV" or both => category "MOVIE_AND_TV"). 
+
+There are three ways on how the mentioned settings can be done:
+ * editing the file manually (a file containing some default values will be copied during installation to `/hdd/valerie` - see also => [Resources#Configuration_files configuration files])
+ * by using the corresponding setting in the synchronisation manager options
+ * by editing the corresponding settings in the WebIF ("Home" => "Options" => "Sync Settings")
+
+Besides the above mentioned options it can als be specified for every directory in the `paths.xml`, if the file names or the name of the corresponding directories shall be used for the sync.
 
 The video collection could look for example like the following:
  * `/hdd/movie` => category "MOVIE"
@@ -36,33 +132,36 @@ The video collection could look for example like the following:
  * `/hdd/mixed` => category "MOVIE_AND_TV"
 After a full synchronisation the files contained in directory "`/hdd/movie`" will be added to the "Movie"-list. The files contained in directory "`/hdd/series`" will be recognized as episodes for series / TV shows and the files contained in the "`mixed`" directory will be parsed as movie - and if that doesn't succeed another try will be started as TV-show.
 
-The following criteria will be used in order to parse a file:
- * the name of the file without extension (default). The string used for the search query (= search string) can be modified using regular expressions prior executing the search itself (see below)
- * the name of the directory containing the media file (this can be configured in the synchronisation manager options ([Sync#Settings s.o.])
- * an IMDb-ID either provided in the file name itself - or by using an `nfo`-file (see below)
- * if the media is an Enigma2 recording then the related Enigma2 `meta`-file is used in order to retrieve movie name and / or series name and episode name 
 Wrong parsed entries can be corrected manually later on by either using the PVMC GUI or WebIf ([Sync#Fix_wrong_parsed_media see below]).
 <br>
 === DVDs ===
 Normally PVMC detects movies split into several files by name. An exception to this rule are directories containing a DVD structure (`*`.vob, `*`.ifo). Since it is not possible to built a search string out of the file name the directory name is used instead.
 <br>
 === Fix wrong parsed media ===
-English translation in progress - please be patient... :-)
+One can manually correct videos that has not been synced at all - or in case they have been identified as a different video. Additionally all attributes of a database entry can be modified, for example title, plot, genres, user-rating, poster and backdrops etc. The suggested way of doing things is by using the web interface! 
 
-There are several ways in order to fix wrong detected movies / TV show episodesIn case of one or several movies have been parsed wrong Wurde ein Titel nicht oder falsch erkannt, so kann dies über den Punkt "Verwalten" im Menu des Synchronisations-Manager korrigiert werden. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der Datenbank löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
-Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die IMDB-ID (über "MORE") eingeben und speichern.
-<br><br>
-http://project-valerie.googlecode.com/svn/trunk/images/manage_small.png<br>
-<br>
-*HINWEIS:*<br>
-Besteht ein Titel aus mehreren Dateien, so wird nur der erste Teil in die Datenbank aufgenommen, die anderen Teile landen in der failded.db. Wird der erste Teil abgespielt, so startet im Anschluss an den ersten der nächste Teil. Damit Valerie erkennt, dass es sich um Multipart Titel handelt, muss eine der folgenden Syntaxmöglichkeiten (+ laufende Nummer, startend mit 1) verwendet werden:<br>
-  * disk<br>
-  * cd<br>
-  * dvd<br>
-  * part<br>
-  * pt
-<br>
-z.B: Film XY - disk1.avi, Film XY - disk2.avi
+==== Video has not been identified at all ====
+In that case PVMC was not able to find any information for the current video and hence the video has been added to the "failed" section of the Web interface. Hence please open the web interface and click "Home" => "Failed". Identify the desired in the list of all failed entries and proceed as follows:
+ * if the video is a movie, please click "M" in order to add it as a movie. On the next page you can now enter all relevant data for a movie such as title, plot IMDb-ID, poster, backdrop etc. manually. 
+ * if the video is an episode of a TV show please click the "E" button. On the next page you can enter all relevant data suitable for an Episode mahually. 
+
+*Important* After entering all data you'll have to save your modifications by clikcing the red "Save to Database" button in the upper left corner!
+
+*Please note*
+Currently all manually edited data gets lost after a new full sync. hence it is suggested to use one of the search hints described in chapter [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"] since PVMC will then detect the movie correctly with every sync run - without the need of manually editing stuff again and again.
+
+==== Video has been identified as a different one ====
+In that case PVMC identified the video as a different video and thus has retrieved the wrong information from the online database. Hence one has a "wrong" entry in the Movie / TV show list, which makes it hard especially in large video collections to identify such a wrong entry!...
+
+In order to fix that problem by using the web interface one has to first open the corresponding video list in the Web-Interface, i.e. either "Home" => "Movie" or "Home" => "TV show" / "Home" => "TV show" => "Episodes" and then to identify the wrong entry.
+
+Next look at the column "Actions" located at the right side of the table and notice the tiny little pencil icon. Click that one in order to get to the "Edit" page where you can proceed with your modifications.
+
+*Important* After entering all data you'll have to save your modifications by clikcing the red "Save to Database" button in the upper left corner!
+
+==== Manually fixing wrong entries using the synchronisation manager ====
+TODO
+
 <br><br>
 == Excludes and search hints ==
 PVMC offers several options in order to affect the parse process and thus to control what is synced and how:

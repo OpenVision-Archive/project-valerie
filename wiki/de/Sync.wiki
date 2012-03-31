@@ -109,7 +109,14 @@ Zu beachten ist dabei folgendes:
 Poster und Hintergrund werden aktuell ausschließlich von TMDB, bzw. TVDB in der eingestellten Sprache geholt. Sind diese dort *nicht* verfügbar, werden später in den Listen keine Grafiken angezeigt. In diesem Fall einfach selbst bei den entsprechenden Providern die Grafiken hochladen - dann haben alle etwas davon! :-) 
 <br><br>
 == Suchstrukturen ==
-In der Datei `paths.xml`ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird (z.B. Dateiendungen "`mkv|ts|avi|m2ts`"), bzw. wie die Ordner kategorisiert sind (Filme => Kategorie "MOVIE", Serien => Kategorie "TV" oder beides => Kategorie "MOVIE_AND_TV"). Diese Datei kann entweder manuell editiert werden (eine entsprechende Datei mit Default-Werten wird bei der ersten Installation unter `/hdd/valerie` angelegt - siehe => [Resources#Konfigurationsdateien Konfigurationsdateien]) - oder aber über die Einstellungen des Syncmanagers. Zusätzlich kann für jeden Ordner separat konfiguriert werden, ob der Ordnername zum Abgleich benutzt werden soll oder die Dateinamen der einzelnen Files. 
+In der Datei `paths.xml`ist festgelegt, nach welchen Dateitypen in welchen Verzeichnissen gesucht wird (z.B. Dateiendungen "`mkv|ts|avi|m2ts`"), bzw. wie die Ordner kategorisiert sind (Filme => Kategorie "MOVIE", Serien => Kategorie "TV" oder beides => Kategorie "MOVIE_AND_TV"). 
+
+Es gibt drei Möglichkeiten, wie man diese Settings konfigurieren kann:
+ * durch manuelles Editieren der `paths.xml` (ein Beispiel-File mit default-Werten wird während der Installation in das Verzeichnis `/hdd/valerie` kopiert - siehe auch => [Resources#Konfigurationsdateien Konfigurationsdateien])
+ * durch die entsprechenden Einstellungen in den Synchronisationsmanager-Optionen
+ * durch die ensprechenden Einstellungen im Web-Interface ("Home" => "Options" => "Sync Settings")
+
+Zusätzlich zu den genannten Optionen kann über dieses File auch noch gesteuert werden, ob der Ordnername zum Abgleich benutzt werden soll oder die Dateinamen der einzelnen Video-Files. 
 
 Falsch erkannte Einträge können anschließend manuell korrigiert werden ([Sync#Suchergebnis_manuell_korrigieren s.u.]).
 <br>
@@ -117,17 +124,28 @@ Falsch erkannte Einträge können anschließend manuell korrigiert werden ([Sync
 Valerie erkennt Filme die in mehreren Dateien vorliegen anhand des Namens. Eine Ausnahme sind Ordner mit einer DVD Struktur (`*`.vob, `*`.ifo) als Inhalt. Da hier anhand des Dateinamens keine Suche gestartet werden kann, wird in solchen Fällen immer der Ordnername als Suchbegriff verwendet.
 <br>
 === Suchergebnis manuell korrigieren ===
-Wurde ein Titel nicht oder falsch erkannt, so kann dies manuell korrigiert werden. Der empfohlene Weg hierzu ist über das Web-Interface - es ist aber auch möglich, die Korrekturen über den Synchronisationsmanager der PVMC Enigma2-Benutzerobefläche vorzunehmen.
+Wurde ein Video nicht oder falsch erkannt, so kann dies manuell korrigiert werden. Zusätzlich können alle Attribute eines Datenbank-Eintrags einzeln korrigiert werden (Titel, Plot, Genres, User-Bewertungen, Poster und Backdrop etc.). Der empfohlene Weg hierzu ist über das Web-Interface. 
+
+==== Editieren eines nicht erkannten Videos ====
+In desem Fall konnte PVMC mit dieser Video-Datei überhaupt nichts "anfangen" und folglich befindet sich das Video im "Failed"-Bereich des Web-Interfaces - also Web-Interface öffnen und anschließend "Home" => "Failed" anklicken. Dort aus der Liste den entsprechenden Eintrag heraussuchen und wie folgt vorgehen:
+ * handelt es sich bei der Datei um einen Film, dann mit dem Button "M" die Datei als "Movie" hinzufügen. Auf der nächsten Seite kann man dann alle relevanten Daten manuell eintragen. 
+ * handelt es sich bei der Datei hingegen um die Episode einer Serie, dann mit dem Button "E" die Datei als Episode zur Datenbank hinzufügen. Auch hier kann man dann auf der nächsten Seite nach klicken des "E"-buttons alle Daten manuell eingeben.  
+
+*Wichtig* Anschließend müssen die Änderungen mit dem roten Button oben links "Save to Database" gespeichert werden!
 
 *Bitte beachten*
-Momentan überschreibt ein neuer Synchronisationslauf zuvor evtl. durchgeführte manuelle Änderungen. Falls PVMC also einen Film nicht richtig erkennt, ist es daher ratsamer, eine der im Abschnitt [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"] beschriebenen Hilfestellungen zu benutzen, da dann bei jedme Synclauf immer automatisch der richtige Film gefunden wird - und man erst gar keine manuellen Änderungen vornehmen muss!
+Momentan überschreibt ein neuer Synchronisationslauf zuvor evtl. durchgeführte manuelle Änderungen. Falls PVMC also einen Film nicht richtig erkennt, ist es daher ratsamer, eine der im Abschnitt [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"] beschriebenen Hilfestellungen zu benutzen, da dann bei jedem Synclauf immer automatisch der richtige Film gefunden wird - und man erst gar keine manuellen Änderungen vornehmen muss!
 
-==== Manuelle Korrekturen mit dem Web-Interface ====
-Über das Web-Interface lassen sich alle wichtigen Eigenschaften eines Films oder einer Serie / Episode editieren, z.B. IMDb-ID, Titel, Plot oder auch Poster und Backdrop. Dazu einfach in die Filmliste oder in die Serien / Episodenliste im Web-Interface wechseln ("Home" => "Movies" oder "Home" => "TvShows" / "Home" => "TvShows" => Knopf "Episoden" anklicken) und dort dann in der rechten "Actions"-Spalte das kleine Icon mit dem Stift anklicken. Dadurch gelangt man auf die jeweilige Bearbeitungsseite, auf der die gewünschten Änderungen vorgenommen werden können.
+==== Editieren eines falsch erkannten Videos ====
+In diesem Fall für wurde die zugehörige Video-Datei zwar etwas erkannt - aber leider nicht die richtigen Informationen, d.h. man hat jetzt einen "falschen" Film / Serie oder Episode einer Serie in der Datenbank, eas besonders fies ist, da solche Fehler bei einer großen Sammlung u.U. erst spät auffallen...
+
+Um das Problem über das Web-Interface zu korrigieren, zuerst die entsprechende Liste öffnen also entweder "Home" => "Movie" oder "Home" => "TV show" / "Home" => "TV show" => "Episoden" und dort den falschen Eintrag identifizieren. Anschließend  in der rechten "Actions"-Spalte das kleine Icon mit dem Stift anklicken. Dadurch gelangt man auf die jeweilige Bearbeitungsseite, auf der die gewünschten Änderungen vorgenommen werden können.
 
 *Wichtig* Anschließend müssen die Änderungen mit dem roten Button oben links "Save to Database" gespeichert werden!
 
 ==== Manuelle Korrekturen mit dem Synchronisationsmanager ====
+*Wichtig* die nachfolgenden Beschreibungen können veraltet sein!
+
 Falsch erkannte Filme lassen sich über den Menupunkt "Verwalten" im Menu des Synchronisations-Manager korrigieren. Ausserdem kann man gezielt einzelne Filme dort aktualisieren, oder aus der Datenbank löschen. Dazu muss der jeweilige Film (entsprechenen aus der Rubrik "Fehlgeschlagen|Filme|TV Shows|TV Shows (all)") ausgewählt und mit OK bestätigt werden.
 Dann kann man entweder über "Alternativen" das richtige Suchergebnis auswählen und bestätigen (sofern nicht als UNKNOWN markiert), oder aber gezielt die "richtige" IMDb-ID (über "MORE") eingeben und speichern.
 <br><br>
