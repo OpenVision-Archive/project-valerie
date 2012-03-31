@@ -2,6 +2,13 @@
 <wiki:toc max_depth="1" />
 <br>
 = Installation of Project Valerie =
+== Special hint for AAF-Iamge users ==
+Users of AAF-Images should consider the following important points:
+ * in order to install PVMC using the supposed method with `opkg` an additional library is needed that might be missing on your image 
+ * some AAF image versions are missing some additonal python libraries needed by PVMC in order to run correctly
+For more details on those issues and a possible solution for that please see [http://www.i-have-a-dreambox.com/wbb2/thread.php?postid=1691077#post1691077 here].
+<br>
+== Setp-by-step installation guide ==
 You want to install and use Project Valerie, but you don´t know how? Here you will find all necessary information!
 
 1. Depending on the architecture of your box download the latest version of Project Valerie from our [http://code.google.com/p/project-valerie/downloads/list download-page]:
@@ -34,7 +41,7 @@ You can remove Project Valerie by using one of the following ways:
  * select the de-installation option for Project Valerie through the Enigma2 extension panel
  * execute the following command through an SSH/Telnet-session:<br>
 _`root@dm8000:~# opkg remove project-valerie*`_
-<br><br><br>
+<br><br>
 = Update Policy =
 Since PVMC r960 a new update policy has been introduced in order to avoid breaks and crashes for people who just want to use PVMC "as is" without the need of having the latest fancy development enhancements. You can now choose between the following options:
  * "Development builds" (a.k.a. "Nigtly builds") => these are builds based on the latest development enhancements, and hence contain the latest features. The major drawback of these builds is, that they may contain severe bugs and cause PVMC to crash

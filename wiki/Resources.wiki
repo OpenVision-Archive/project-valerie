@@ -3,25 +3,23 @@
 ----
 = Database files =
 Valerie uses Python Pickle files located in `/hdd/valerie` (editable in the [Options main-settings]) in order to manage information for both movies and TV shows:
-  * `movies.db` (for movies)
-  * `tvshows.db` (for TV shows)
-  * `episodes.db` (for TV shows episodes)
-  * `failed.db` (all files failed to sync, plus additionally multipart movies, e.g. `*_cd2`, `*_part2`, etc.)
+  * `mediafiles.db` 
+  * `tables.db` 
 *Please note* (since it has been asked every now and then):<br>These files don't contain "database tables", but serialized Python objects used by PVMC - and thus can neither get edited by using a text-editor nor by any other database application / SQL editor / whatever.<br>
 = Configuration files =
 The configuration files of Valerie are located in `/hdd/valerie` and can be edited by using the PVMC [Options main-settings]) or - more comfortable - through the [WebIF "Webinterface"].
-  * `valerie.conf`:
-    * language used for synchronisation of plots
+  * `sync.xml`:
+    * language used for synchronisation of titles, plots etc.
     * flag how to handle media files not found any more
-  * `paths.conf`:
-    * _old, but still supported way of defining search paths and related attributes_
+  * `paths.xml`:
     * contains all search paths to be considered for synchronisation
     * list of file extansions to be considered during synchronisation (=> `avi`, `mkv`, ...)
     * categorization of folders contained in the search path => "Movie", TV-show" or both
     * dedicated setting for each folder whether to use foldername or filename for synchronisation
-  * `paths.xml` (=> see `paths.conf`):
-    * _new way of defining search paths and related attributes_
-    * additionally using this file it's possible to enable / disable a search path! 
+    * it's possible to switch on / off each search path seperately!
+  * `paths.conf` (=> see `paths.xml`):
+    * _old, but still supported file in case paths.xml is not present for whatever reason_
+    * it's not possible to switch on / off search paths using this file!
   * `pre.conf`:
     * contains regular expressions allowing for the manipulation of the search string used for synchronisation
     * regular expressions taken from this file will be applied for both movies and TV-shows
@@ -35,9 +33,6 @@ The configuration files of Valerie are located in `/hdd/valerie` and can be edit
     * movies manually removed from the database
 <br>
 = Special files =
-== Startup script ==
-The script `/hdd/valerie/start.sh` can be used in order to start additional services or scripts together with Valerie.<br>
-<br>
 == valerie.info ==
 This file can be used to ignore directories from synchronisation - or to enhance the search results by providing the IMDB-Link for a special movie or TV-Show.<br>
 For more details on this file check section [Sync#Excludes_and_search_hints "excludes and search hints"].<br> 

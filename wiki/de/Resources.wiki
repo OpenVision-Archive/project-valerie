@@ -3,25 +3,23 @@
 ----
 = Datenbankdateien =
 Valerie verwaltet die Film und Serieninformationen in einer internen Datenbank (Python Pickle Dateien). Diese befindet sich defaultmässig im Verzeichnis "`/hdd/valerie`", welches aber in den [Options "Einstellungen"] angepasst werden kann, und besteht aus den Dateien:
-  * `movies.db` (alle Filme)
-  * `tvshows.db` (alle Serien)
-  * `episodes.db` (alle Episoden der Serien)
-  * `failed.db` (alle fehlgeschlagenen Syncs sowie multipart Filme, wie z.B. `*`_cd, `*`_part2, etc.)
+  * `mediafiles.db` 
+  * `tables.db` 
 *Bitte beachten* (da diese Frage immer mal wieder aufkommt):<br>Die oben genannten Dateien enthalten keine Datenbank-Tabellen im eigentlichen Sinne, sondern serialisierte Python-Objekte, die von PVMC benutzt werden. Die Files können daher weder mit einem Texteditor - noch mit einer der üblichen verdächtigen Datenbank-Applikationen oder einem SQL-Editor geöffnet werden!<br>
 = Konfigurationsdateien =
 Die Konfigurationsdateien von Valerie befinden sich defaultmässig im Verzeichnis `/hdd/valerie`, welches entweder in den [Options "Einstellungen"] angepasst werden kann, oder aber - weitaus komfortabler - über das [WebIF "Webinterface"]:
-  * `valerie.conf`
-    * Suchsprache, die beim Synchronisieren von Plots benutzt werden soll
-    * Verhalten bei nicht mehr vorhanden Medien-Files im Suchpfad
-  * `paths.conf`
-    * _alte, aber nach wie vor unterstützte Konfigurationsdatei zum definieren der Suchpfade und der zugehörigen Eigenschaften_
+  * `sync.xml`
+    * Suchsprache, die beim Synchronisieren von Titel, Plots etc. benutzt werden soll
+    * Verhalten bei nicht mehr vorhanden Medien-Files im Suchpfad 
+  * `paths.xml`
     * enthält alle Suchpfade, die zum Synchronisieren benutzt werden sollen
     * Liste aller zu berücksichtigenden Dateierweiterungenlist (=> `avi`, `mkv`, ...)
     * Kategorieren der einzelnen Suchverzeichnisse "Movie", "TV-show" oder beides
     * für jedes Verzeichnis kann getrennt eingestellt werden, ob zur Synchronisation der Verzeichnisname oder die Namen der enthaltenen Dateien benutzt werden soll
-  * `paths.xml` (=> siehe `paths.conf`):
-    * _neue Konfigurationsdatei zum definieren der Suchpfade und der zugehörigen Eigenschaften_
-    * zusätzlich können mit Hilfe dieser Datei einzelne Suchpfade aktiviert / deaktiviert werden! 
+    * jedes Verzeichnis kann getrennt aktiviert / deaktiviert werden
+  * `paths.conf` (=> siehe `paths.xml`):
+    * _alte, aber nach wie vor unterstützte Konfigurationsdatei, falls eine paths.xml nicht gefunden wird_
+    * diese Datei unterstützt kein aktivieren / deaktivieren von Suchpfaden! 
   * `pre.conf`:
     * enthält reguläre Ausdrücke um die während der Synchronisation verwendeten Suchausdrücke zu verändern
     * die in diesem File enthaltenen regulären Ausdrücke werden sowohl für Filme als auch für Serien benutzt
@@ -35,9 +33,6 @@ Die Konfigurationsdateien von Valerie befinden sich defaultmässig im Verzeichni
     * enthält manuell aus der Datenbank ausgeblendete Einträge
 <br>
 = Spezielle Dateien =
-== Startup-Datei ==
-Das Shellskript `/hdd/valerie/start.sh` kann verwendet werden, um mit Valerie weitere Dienste oder Skripte zu starten.
-<br>
 == valerie.info ==
 Diese Datei kann benutzt werden, um einzelne Verzeichnisse vom Synchronisations-Prozess auszuschließen - oder um einen IMDB-Link als Suchhilfe anzugeben. Mehr dazu findet sich im Kapitel [Sync#Excludes_und_Suchhilfen "Excludes und Suchhilfen"].<br>
 <br>

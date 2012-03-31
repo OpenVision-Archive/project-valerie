@@ -52,11 +52,13 @@ Als Ergebnis erhalten wir eine ganze Latte an Filmen, die bei IMDb gespeichert s
 
    http://m.imdb.com/title/tt0268978/
 
-In diesem Link finden wir nun auch die berühmt-berüchtigte IMDb-ID für diesen Film, nämlich `tt0268978`. Hätte es sich bei dem Video hingegen um das TV-Special "A Beautiful Mind: Creation of the Special Effects" aus dem Jahre 2002 gehandelt:
+In diesem Link finden wir nun auch die berühmt-berüchtigte IMDb-ID für diesen Film, nämlich `tt0268978`. 
+
+Hätte es sich bei "unserem" Video hingegen um das TV-Special "A Beautiful Mind: Creation of the Special Effects" aus dem Jahre 2002 gehandelt:
 
    http://m.imdb.com/title/tt0780995/
 
-dann müssten wir mit Hilfe der oben bereits erwähnten Suchhilfen PVMC auf die richtige Spur helfen, z.B. indem wir einfach die richtige IMDb-ID für dieses Special (nämlich `tt0780995`) in den Dateinamen mit aufnehmen - also die Videodatei wie folgt umbenennen:
+dann müssten wir mit Hilfe der oben bereits erwähnten Suchhilfen PVMC auf die richtige Spur helfen, z.B. indem wir einfach die richtige IMDb-ID für dieses Special (nämlich `tt0780995` - siehe zweiter Link oben) in den Dateinamen mit aufnehmen - also die Videodatei wie folgt umbenennen:
 
    `/hdd/videos/filme/A_Beautiful_Mind_tt0780995.avi`
 
@@ -71,7 +73,7 @@ Da es sich bei dem Video um einen Film handelt, wendet sich PVMC im nächsten Sc
  * Userbewertungen
 Zusätzlich wird noch ein Filmposter, sowie ein Backdrop geladen, die je nach verwendetem Skin unterschiedlich eingesetzt werden.
 
-Neben dem oben aufgezeigten Problem, dass die Abfrage bei der IMDb-Datenbank nicht zum gewünschten Ergebnis führt, gibt es bei der Abfrage bei "TheMovieDB" weitere potentielle Fehlerquellen, die dazu führen können, dass ein Film später nicht korrekt in der PVMC Film-Liste auftaucht:
+Neben dem oben aufgezeigten Problem, dass die Abfrage bei der IMDb-Datenbank nicht immer zum gewünschten Ergebnis führt, gibt es bei der Abfrage bei "TheMovieDB" weitere potentielle Fehlerquellen, die dazu führen können, dass ein Film später nicht korrekt in der PVMC Film-Liste auftaucht:
  * der gesuchte Film ist gar nicht in "TheMovieDB" enthalten
  * der gesuchte Film ist zwar in "TheMovieDB" eingetragen - aber nicht mit der zugehörigen IMDb-ID verknüpft. Dadurch läuft die Abfrage von PVMC nach dieser IMDb-ID natürlich in's Leere.
  * Titel / und oder Plot sind nicht in der gewünschten Sprache vorhanden
