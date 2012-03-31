@@ -3,11 +3,11 @@
 <br>
 = Installation =
 == Spezielle Hinweise für AAF-Iamges ==
-Benutzer eines AAF-Images bitte folgende beiden Punkte beachten:<br>
+Benutzer eines "Don't Cry" AAF Beta-Images mit SVN-Versionsstand < M15000 bitte folgende beiden Punkte beachten:
  * für die unten beschriebene Installation mittels `opkg` wird ggf. eine zusätzliche Bibliothek benötigt, die auf einigen AAF-Images nicht vorhanden ist 
  * einige Versionen des AAF-Images haben nicht alle von PVMC benötigten Python-Libraries an Board. Deshalb kann es während der Ausführung von PVMC zu Fehlern kommen, da die entsprechenden Python-Bibliotheken nicht gefunden werden
-Für weitere Details zu diesen Problemen, sowie eine Lösung in Form eines ZIP-Archivs, das alle benötigten Dateien enthält, siehe [http://www.i-have-a-dreambox.com/wbb2/thread.php?postid=1691077#post1691077 hier].
-
+Für weitere Details zu diesen Problemen, sowie eine Lösung in Form eines ZIP-Archivs, das alle benötigten Dateien enthält, siehe [http://www.i-have-a-dreambox.com/wbb2/thread.php?postid=1691077#post1691077 hier]. Alternativ sollte bei Verwendung des finalen "Don't Cry" releases die Fehler ebenfalls nicht mehr zeigen.
+<br>
 == Schritt-fuer-Schritt Anweisungen ==
 Du willst Project Valerie installieren und verwenden, weißt jedoch nicht wie? Dann bist du hier genau richtig:
 
