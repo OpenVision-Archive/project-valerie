@@ -46,7 +46,7 @@ As can be seen from the sreps above it mainly depends from the name of the video
 
 Now back to our sample video collection it is important to choose the correct folder type for both "movies" and "tv" in the synchronisation settings: the folder "movies" should be flagged as "MOVIE" and the folder "tv" should be flagged as "TV". In that case there's no need for the third folder type "MOVIE_AND_TV" since we strictly seperated movies and TV shows.
 
-For the first video file "`A_Beatiful_Mind.avi`" PVMC will assume a "movie" because the containing directory is of type "MOVIE". Next it is checked whether for this file some synchronisation hints exist or not, for example a `valerie.info` (see [Sync#Excludes_and_search_hints "Excludes and search hints"]). Since we don't have any search hints the file name will be parsed in order to remove unnecessary phrases and characters that could disturb our upcoming search query. For example all "_" chars get replaced by " " and things like "divx" or "h.264" will be dropped. Finally an IMDb-Query with the following search string will be started:
+For the first video file "`A_Beatiful_Mind.avi`" PVMC will assume a "movie" because the containing directory is of type "MOVIE". Next it is checked whether for this file some synchronisation hints exist or not, for example a `valerie.info` (see [Sync#Excludes_and_search_hints "Excludes and search hints"]). Since we don't have any search hints the file name will be parsed in order to remove unnecessary phrases and characters that could disturb our upcoming search query. For example all "`_`" chars get replaced by " " and things like "divx" or "h.264" will be dropped. Finally an IMDb-Query with the following search string will be started:
 
    "a beautiful mind"
 
@@ -66,7 +66,7 @@ In that case we'd the video still sync as the movie "A beautiful mind", but by u
 
 Additional search hints are described more detailed in the upcoming chapter [Sync#Excludes_and_search_hints "Excludes and search hints"]!
 
-Now back to our original example: we have found our movie "A beautiful mind" and get the correct IMDb-ID `tt0268978` from IMDb. Next we need to get "official" title, plot and poster / backdrop for that movie, which will shown later on in the PVMC movie list. This is done by submitting a corresponding query to Online database "TheMovieDB". The following attributes will then be loaded from there:
+Now back to our original example: we have found our movie "A beautiful mind" and get the correct IMDb-ID `tt0268978` from IMDb. Next we need to get "official" title, plot and poster / backdrop for that movie, which will be shown later on in the PVMC movie list. This is done by submitting a corresponding query to online database "TheMovieDB". The following attributes will then be loaded from there:
  * the official title of the film
  * the release year
  * runtime of the movie
