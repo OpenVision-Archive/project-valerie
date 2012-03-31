@@ -104,7 +104,7 @@ Es gibt zwei Arten von Logs: das sogenannte "Valerie"-Log, in dem sich hauptsäc
 Beide Logs lassen sich am einfachsten über das Web-Interface einsehen: "!WebIf Home" => "Logs" => "Valerie" oder "Enigma2". Die Logfiles sind aufsteigend nach Datum sortiert, d.h. das neueste File befindet sich immer am Ende der Liste!
 
 *Zu beachten sind dabei aber zwei Dinge:*
- * zur Fehlersuche sollte der Debug Modus für das Valerie Log-File auf "high" gestellt werden. Dieser Modus wird über das Web-Interface wie folgt konfiguriert: "!WebIf Home" => "Options" => "Global Settings" => "`[Experte]` Valerie Debug Modus" und anschließend den `[Save]` Knopf drücken!
+ * zur Fehlersuche sollte der Debug Modus für das Valerie Log-File auf "high" gestellt werden. Dieser Modus wird über das Web-Interface wie folgt konfiguriert: "!WebIf Home" => "Options" => "Global Settings" => "`[Experte]` Valerie Debug Modus" und anschließend den `[Save]` Knopf drücken! Nach ändern dieser Einstellung muss allerdings Enigma2 neu gestartet werden, um die Einstellungen zu übernehmen!
  * mit jedem Enigma2 Neustart wird auch ein neues Valerie-Log angelegt. Das heisst, wenn man z.B. Synchronisationsprobleme hat und sich nach dem Sync-Lauf das neueste Logfile anschaut, sind dort KEINE Informationen über den letzten Synclauf mehr enthalten. Man muss in so einem Fall also das vorletzte Logfile anschauen.
 
 ===Was ist der Unterschied zwischen "Valerie-Log" und "E2-Crashlog"?===
