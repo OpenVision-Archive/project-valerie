@@ -29,9 +29,8 @@ _`root@dm8000:~# opkg install <path to file>/project-valerie_<rev>_<version>.ipk
 Finally reboot Enigma2 - the Project Valerie assistant will guide you through the first steps. Project Valerie is now ready for use!
 <br><br>
 *Note*<br>
-Project Valerie will be installed in the following directories, which can currently *not* be configured:<br>
- * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie` (the application itself)<br>
- * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerieSync` (the sync plugin)<br>
+Project Valerie will be installed in the following directory, which can currently *not* be configured:<br>
+ * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie` (the application itself)
 Additionally the following default directories for configuration files, database, log-files and cache are used, which can be adapted in the settings:
  * `/hdd/valerie` (config and database)<br>
  * `/tmp/valerie` (log and cache)

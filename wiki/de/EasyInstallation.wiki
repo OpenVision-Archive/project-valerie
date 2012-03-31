@@ -30,8 +30,7 @@ Nach einem Neustart von Enigma2 wird der Project Valerie Assistent ausgeführt. 
 <br><br>
 *Hinweis*<br>
 Project Valerie installiert sich in folgenden, z.Zt. *nicht* konfigurierbaren, Verzeichnissen:<br>
- * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie` (die Anwendung selbst)<br>
- * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerieSync` (das Sync-Plugin)<br>
+ * `/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie` (die Anwendung selbst)
 Ausserdem werden folgende Default-Verzeichnisse für DAB, Log, Cache und Konfigurationsfiles benutzt, die in den Einstellungen änderbar sind: 
  * `/hdd/valerie` (Konfigurationsfiles und Datenbank)<br>
  * `/tmp/valerie` (Log und Cache)
