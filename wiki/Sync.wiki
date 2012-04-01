@@ -167,9 +167,9 @@ TODO
 PVMC offers several options in order to affect the parse process and thus to control what is synced and how:
 
  * add release year to file name
- * exclude whole folders from search process - even if they are contained in the search path
  * provide the IMDb-Id within the media file name 
  * provide the IMDb-Id in a dedicated `*.nfo`-file
+ * exclude whole folders from search process - even if they are contained in the search path
  * define search phrases for whole directories
  * define meta information in a dedicated (XBMC-sytle) `*.nfo`-file
  * using regular expressions 
@@ -190,9 +190,6 @@ Without any hints regarding the year PVMC would use the movie released in 2008 s
 *file name of the media file (new):* {{{Bangkok_Dangerous_(1999).avi}}}
 
 => It is important to specify the year with four digits and enclosed by braces - if everything's OK then PVMC will retrieve the year from the filename and uses that year specification later on in the sync process as additional search criteria!
-
-=== Exclude folders from parsing ===
-A whole folder and his subfolders can be excluded from the parse process by simply adding a new file `ignore` to the folder which should be excluded.
 
 === Provide IMDb-ID within the file name ===
 It is possible to provide the IMDb-ID for a video by specifying the ID in the file name of the related media file:
@@ -221,6 +218,12 @@ Please note: it doesn't matter if there is additional text preceding the IMDb-ID
 
 <code>http://www.imdb.com/title/tt1234567/
 
+</code>
+
+=== Exclude folders from parsing ===
+A whole folder and his subfolders can be excluded from the parse process by simply adding to the folder which should be excluded a new file `valerie.info` simply containing the word `ignore`:
+ 
+<code>ignore
 </code>
 
 === Search string for whole directories ===

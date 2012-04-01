@@ -167,9 +167,9 @@ z.B: Film XY - disk1.avi, Film XY - disk2.avi
 Valerie bietet mehrere Möglichkeiten, das Suchergebnis zu beeinflussen:
 
  * Erscheinungsjahr im Dateinamen angeben
- * komplette Ordner von der Suche ausklammern
  * die IMDb-Id im Namen der Videodatei angeben
  * die IMDb-Id in einer nfo-Datei angeben
+ * komplette Ordner von der Suche ausklammern
  * Suchwörter oder IMDb-ID / TheTvDB-iD für einen kompletten Ordner definieren
  * zusätzliche Meta-Daten in einer nfo-Datei angeben
 
@@ -189,9 +189,6 @@ Ohne Jahresangabe würde PVMC den Film aus dem Jahre 2008 benutzen, da dieser zu
 *Dateiname des Videofiles (neu):* {{{Bangkok_Dangerous_(1999).avi}}}
 
 => Wichtig ist, das Jahr vierstellig anzugeben und in runde Klammern zu setzen - dann holt sich PVMC die Jahresangabe aus dem Dateinamen und nimmt dieses später bei der IMDb-Suche als zusätzliches Kriterium!
-
-=== Ordner von der Suche ausklammern ===
-Um einen kompletten Ordner sowie desen Unterordner von der Suche auszuklammern, muss man lediglich eine Datei `ignore` in diesen Ordner erstellen.
 
 === IMDb ID aus Dateinamen auslesen ===
 Wird ein Videofile nicht richtig erkannt, obwohl bei IMDb ein Eintrag dafür vorhanden ist, so ist es möglich, Valerie durch die Angabe der "richtigen" IMDb-ID auf die richtige Spur zu bringen. Dazu muss lediglich die IMDb-ID Zeichenkette (incl. den obligatorischen "tt") in den Dateinamen mit aufgenommen werden:
@@ -219,6 +216,12 @@ Vor der IMDb-ID kann durchaus noch weiterer Text stehen, z.B. könnte man einfac
 *Alternativer Inhalt des nfo-Files:*
 
 <code>http://www.imdb.com/title/tt1234567/
+</code>
+
+=== Ordner von der Suche ausklammern ===
+Um einen kompletten Ordner sowie desen Unterordner von der Suche auszuklammern, muss man lediglich eine Datei `valerie.info` mit folgendem Inhalt in diesem Ordner anlegen:
+
+<code>ignore
 </code>
 
 === Suchwoerter für einen kompletten Ordner (valerie.info) ===
