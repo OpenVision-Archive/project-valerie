@@ -8,9 +8,17 @@ PVMC unterscheidet sich von einem "normalen" Videoplayer vor allem dadurch, dass
 Um zu verstehen, warum PVMC manchmal einen Film nicht erkennt - oder vielleicht sogar falsch erkennt, ist es wichtig, sich etwas näher mit dem Ablauf des Synchronisierens zu beschäftigen. Das hilft, Synchronisations-Probleme zu erkennen - und durch gezielte Hilfestellungen PVMC bei der Erkennungsrate auf die Sprünge zu helfen (s.u.). 
 
 Wie eingangs erwähnt, müssen die Daten zu einem Film von irgendwoher geladen werden - folglich muss während eines Synchronisationslaufs eine funktionierende Internetverbindung bestehen. Als Datenquellen verwendet PVMC folgende Online-Datenbanken:
- * [http://www.imdb.com IMDB.com] => für Serien und Filme
+ * [http://www.imdb.com IMDB.com] => für die Ermittlung der eindeutigen IMDb-ID (s.u.)
  * [http://www.themoviedb.org TheMovieDB.org (TMDB)] => für Filme
  * [http://www.thetvdb.org TheTVDB.org (TVDB)] => für Serien
+Diese Datenbanken sind kostenlos nutzbar und können mit einem kostenlosen Account von jedermann entweder mit zusätzlichen Filmen / Serien "gefüttert" werden - oder es können bbereits bestehende Informationen erweitert / korrigiert werden!
+
+*Hinweis*<br>
+Da es an dieser Stelle immer wieder zu Missverständnissen kommt, hier nochmal explizit der Hinweis, dass PVMC nur solche Filme syncen kann, für die sowohl in der Online-Datenbank "[http://www.imdb.com IMDB.com]" als auch in "[http://www.themoviedb.org TheMovieDB.org]" von anderen Usern bereits Informationen eingetragen wurden.<br> 
+Analog dazu kann PVMC nur solche Serien syncen, die sowohl in "[http://www.imdb.com IMDB.com]" als auch in "[http://www.thetvdb.org TheTVDB.org]" eingetragen sind!<br> 
+*Es reicht nicht aus, wenn ein Film zwar auf [http://www.imdb.com IMDB.com] "bekannt" ist - aber auf [http://www.themoviedb.org TheMovieDB.org] für diesen Film noch von keinem User Informationen hinterlegt wurden!*<br>
+In einem solchen Fall bitte einfach einen kostenlosen Account bei der jeweiligen Datenbank erzeugen und die fehlenden Filme oder Serien / Episoden eintragen. Das dauert nicht lange und dann haben alle etwas von! 
+
 Für die weiteren Erklärungen sollen folgende Annahmen gelten: wir haben unsere Videosammlung getrennt nach Serien und Filmen in folgenden Verzeichnissen:
 
 <code>

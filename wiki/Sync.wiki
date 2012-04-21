@@ -8,9 +8,16 @@ PVMC differs from a "regular" video player mainly because of the fact, that for 
 In order to understand why PVMC doesn't always manage it to identify 100% of your videos - or maybe sometimes identifies a wrong video - it's important to understand how the synchronisation process works in principle. This helps, to identify problems and to help PVMC by so-called "synchronisation hints" to identify your videos corrrectly with the next synchronisation run (see below).
 
 As mentioned previously PVMC has to retrieve the additional video data from external sources. Hence it is necessary to have an active internet connection during any synchronisation run. The following online database are used as sources during a synchronisation run:
- * [http://www.imdb.com IMDB.com] => for both TV shows and movies
+ * [http://www.imdb.com IMDB.com] => used to retrieve the unique IMDb-ID (see below)
  * [http://www.themoviedb.org TheMovieDB.org (TMDB)] => additionally for movies
  * [http://www.thetvdb.org TheTVDB.org (TVDB)] => additionally for TV shows
+These databases are free of charge and can be edited / enhanced with new movies and TV shows / episodes by creating a feee account!
+
+*Please note*<br>
+It is important to understand, that PVMC can sync only such movies that are contained in *both* IMDb.com and TheMovieDb.org databases. Similarly PVMC can only sync such TV shows that are contained in *both* databases IMDb.com and TheTvDb.com!<br> 
+*It is not sufficient, that for example a movie is contained in IMDb.com - but the corresponding entry in TheMovieDb is missing!*<br>
+In such a case the most easiest way is to create a free account for the corresponding database and to just add the needed information. This won't take long and you'll support the whole community by contributing some stuff! 
+
 For the upcoming chapters and examples we use the following assumptions for the structure of our video collection:
 
 <code>
