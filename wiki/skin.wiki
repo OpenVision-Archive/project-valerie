@@ -2,19 +2,22 @@
 <wiki:toc max_depth="2" />
 <br>
 = Skins =
-This chapter contains short descriptions and screen shots of all skins currently available for Project Valerie.<br>
+This chapter contains short descriptions and screen shots of all skins currently available for Project Valerie. New skins can be added by manually copying the related folder to the following directory on your box:<br>
 
-*Note*:<br>
-Due to the fast development progress of Project Valerie not all features are available in every skin, but we will do our very best to update the skins from time to time.
-== Default ==
+`/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/skins`
+
+*Afterwards a restart of Enigma2 is necessary in order to make the new skin available for selection in the settings!*
+<br><br>
+
+== Default skin ==
 This is the default skin of Project Valerie<br>
 
 http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br>
 
-== blackSwan ==
+== Skin blackSwan ==
 http://project-valerie.googlecode.com/svn/trunk/images/blackswan_small.png<br>
 
-== greySkies ==
+== Skin greySkies ==
 http://project-valerie.googlecode.com/svn/trunk/images/greyskies_small.png
 <br><br>
 = Animated Main-Menu =
