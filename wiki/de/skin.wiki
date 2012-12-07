@@ -2,19 +2,22 @@
 <wiki:toc max_depth="2" />
 <br>
 = Skins =
-Dieses Kapitel enthält kurze Beschreibungen und Fotos von allen Skins, die z.Zt. für Project Valerie zur Verfügung stehen.<br>
+Diese Seite enthält Kurzbeschreibungen und Screenshots aller Skins, die mit PVMC installiert werden. Zusätzliche Skins können nachträglich manuell hinzugefügt werden, indem der zugehörige Skin-Ordner in folgendes Verzeichnis auf der Box kopiert wird:
 
-*Hinweis*:<br>
-Aufgrund der derzeitigen rasanten Entwicklung von Valerie stehen nicht immer alle neu entwickelten Punkte unter jedem Skin zur Verfügung - wir sind jedoch bestrebt dies nach und nach zu aktualisieren.
-== Default ==
+`/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/skins`
+
+*Anschließend Enigma2 bitte neu starten, damit der neue Skin in den Settings auch ausgewählt werden kann!*
+<br><br>
+
+== Default Skin ==
 Dies ist der standard-skin von Project Valerie<br>
 
 http://project-valerie.googlecode.com/svn/trunk/images/movie_mini.png<br>
 
-== blackSwan ==
+== Skin blackSwan ==
 http://project-valerie.googlecode.com/svn/trunk/images/blackswan_small.png<br>
 
-== greySkies ==
+== Skin greySkies ==
 http://project-valerie.googlecode.com/svn/trunk/images/greyskies_small.png
 <br><br>
 = Animiertes Hauptmenue =
