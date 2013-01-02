@@ -14,3 +14,4 @@
     * [Media#Videos Videos]
     * [Media#Screenshots Screenshots]
   * [MediaProviders Media Providers]
+  * [https://code.google.com/p/project-valerie/wiki/VersionHistory Version History]
