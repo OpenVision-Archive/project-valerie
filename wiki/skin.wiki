@@ -54,7 +54,7 @@ The complete "<!-- PVMC Main Menu -->" section should now look similar to the fo
 }}}
 <br><br>
 3. Finally the file containing the animation has to be renamed according to the used skin. A choice of different animated main menu files can be found here:<br>
-[http://duckbox.info/files/public/val/dreamscene/]
+[http://uploaded.net/file/pwkl86yv]
 <br>
 http://project-valerie.googlecode.com/svn/trunk/images/dreamscene-banner.jpg
 <br>
